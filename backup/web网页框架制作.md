@@ -1,4 +1,9 @@
-预览网页→[hmho000.github.io/web-learning/index.html](https://hmho000.github.io/web-learning/index.html)
+<h1>web网页框架制作</h1>
+
+_2024年11月15日web实践_
+
+> 预览网页→[hmho000.github.io/web-learning/index.html](https://hmho000.github.io/web-learning/index.html)
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
