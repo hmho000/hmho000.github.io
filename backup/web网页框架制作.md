@@ -1,6 +1,5 @@
-<h1>2024年11月15日web实践</h1>
-→→→→→→[网页预览](https://hmho000.github.io/web-learning/index.html)
-```
+预览网页→[hmho000.github.io/web-learning/index.html](https://hmho000.github.io/web-learning/index.html)
+```html
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -173,5 +172,4 @@
     <div class="end-2"><p style="font-size: 40px">分隔栏2</p></div>
     <div class="kj">kj制作 2024年11月15日 14:07:44</div>
     </body>
-</html>
-```
+</html>```

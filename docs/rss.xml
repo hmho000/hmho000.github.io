@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Kj的Blog</title><link>https://hmho000.github.io</link><description>童话是一种生活态度，仅此而已。</description><copyright>Kj的Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://hmho000.github.io</link></image><lastBuildDate>Fri, 15 Nov 2024 08:24:40 +0000</lastBuildDate><managingEditor>Kj的Blog</managingEditor><ttl>60</ttl><webMaster>Kj的Blog</webMaster><item><title>web网页框架制作</title><link>https://hmho000.github.io/post/web-wang-ye-kuang-jia-zhi-zuo.html</link><description>&lt;h1&gt;2024年11月15日web实践&lt;/h1&gt;&#13;
-→→→→→→[网页预览](https://hmho000.github.io/web-learning/index.html)&#13;
-```&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Kj的Blog</title><link>https://hmho000.github.io</link><description>童话是一种生活态度，仅此而已。</description><copyright>Kj的Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://hmho000.github.io</link></image><lastBuildDate>Fri, 15 Nov 2024 08:36:18 +0000</lastBuildDate><managingEditor>Kj的Blog</managingEditor><ttl>60</ttl><webMaster>Kj的Blog</webMaster><item><title>web网页框架制作</title><link>https://hmho000.github.io/post/web-wang-ye-kuang-jia-zhi-zuo.html</link><description>预览网页→[hmho000.github.io/web-learning/index.html](https://hmho000.github.io/web-learning/index.html)&#13;
+```html&#13;
 &lt;!DOCTYPE html&gt;&#13;
 &lt;html lang='en'&gt;&#13;
     &lt;head&gt;&#13;
@@ -174,8 +173,8 @@
     &lt;div class='end-2'&gt;&lt;p style='font-size: 40px'&gt;分隔栏2&lt;/p&gt;&lt;/div&gt;&#13;
     &lt;div class='kj'&gt;kj制作 2024年11月15日 14:07:44&lt;/div&gt;&#13;
     &lt;/body&gt;&#13;
-&lt;/html&gt;&#13;
-```。</description><guid isPermaLink="true">https://hmho000.github.io/post/web-wang-ye-kuang-jia-zhi-zuo.html</guid><pubDate>Fri, 15 Nov 2024 08:21:24 +0000</pubDate></item><item><title>记录一下</title><link>https://hmho000.github.io/post/ji-lu-yi-xia.html</link><description>[vscode图片](https://ts3.cn.mm.bing.net/th?id=OSAAS.2EDE2687427BC7CA3EAF885ECCA36DF8&amp;w=72&amp;h=72&amp;c=1&amp;rs=1&amp;o=6&amp;pid=5.1)&#13;
+&lt;/html&gt;```&#13;
+。</description><guid isPermaLink="true">https://hmho000.github.io/post/web-wang-ye-kuang-jia-zhi-zuo.html</guid><pubDate>Fri, 15 Nov 2024 08:21:24 +0000</pubDate></item><item><title>记录一下</title><link>https://hmho000.github.io/post/ji-lu-yi-xia.html</link><description>[vscode图片](https://ts3.cn.mm.bing.net/th?id=OSAAS.2EDE2687427BC7CA3EAF885ECCA36DF8&amp;w=72&amp;h=72&amp;c=1&amp;rs=1&amp;o=6&amp;pid=5.1)&#13;
 &lt;h1&gt;测试&lt;/h1&gt;&#13;
 &lt;h2&gt;测试&lt;/h2&gt;&#13;
 &lt;h3&gt;测试&lt;/h3&gt;&#13;
