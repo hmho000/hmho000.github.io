@@ -119,12 +119,29 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 <h2>那么开始吧</h2>
 许多高校使用的校园网登录机制都是利用网关拦截数据包，当用户接入校园网且未登录时，进行上网操作发出的数据包就会被网关所拦截，但是用于域名解析(DNS)的UDP53端口发出的数据包就不会被拦截。
+<blockquote>
+<p>来自百度上的解释：<br>
+53端口：端口说明:53端口为DNS(Domain Name Server，域名服务器)服务器所开放，主要用于域名解析，DNS服务在NT系统中使用的最为广泛。通过DNS服务器可以实现域名与IP地址之间的转换，只要记住域名就可以快速访问网站。</p>
+</blockquote>
 <h3>一、分析免认证上网的可行性</h3>
 <p>1.此处可以用一个简单的命令进行测试，连接校园网，然后打开cmd输入<br>
 <code class="notranslate">ping www.baidu.com</code><br>
 然后回车，会显示如下界面<br>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/a327255c-b9a4-43a8-8442-e857ef878451"><img src="https://github.com/user-attachments/assets/a327255c-b9a4-43a8-8442-e857ef878451" alt="cmd-ping百度-校园网" style="max-width: 100%;"></a><br>
-如图所示<code class="notranslate">220.181.38.149</code>也就是百度的DNS</p></div>
+如图所示<code class="notranslate">220.181.38.149</code>也就是百度的DNS解析地址，说明我们可以利用53端口将所有流量都伪装为DNS解析流量来绕过登录系统来进行上网！<br>
+当然，如果学校进行了53端口的封锁那么将无法解析出<code class="notranslate">220.181.38.149</code>的ipv4地址</p>
+<h3>二、准备环境</h3>
+<p>我这里用的是</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> CentOS7.5（一台具有公网IP的云服务器哪家云厂商的都行，个人比较推荐阿里云）</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> <a href="https://github.com/user-attachments/files/17800849/softether-vpnserver-v4.43-9799-beta-2023.08.31-linux-x64-64bit.tar.gz">softether-vpnserver-v4.43-9799-beta-2023.08.31-linux-x64-64bit.tar.gz</a>（本文提供镜像文件，官网有墙）</li>
+</ul>
+<hr>
+<p>这里使用一台 <strong>CentOS7.5</strong> 系统服务器做为示例，实测CentOS7.X版本都可以，8.0貌似会出bug</p>
+<p>1.首先使用SSH工具(推荐使用<a href="https://github.com/user-attachments/files/17801081/MobaXterm_Professinal_20.3.zip">MobaXterm_Professinal_20.3.zip</a>）连接上准备好的服务器，也可使用Windows或linux命令行连接。</p>
+<ol start="2">
+<li></li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
