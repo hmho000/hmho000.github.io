@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Kj的Blog</title><link>https://hmho000.github.io</link><description>童话是一种生活态度，仅此而已。</description><copyright>Kj的Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://hmho000.github.io</link></image><lastBuildDate>Fri, 15 Nov 2024 08:39:01 +0000</lastBuildDate><managingEditor>Kj的Blog</managingEditor><ttl>60</ttl><webMaster>Kj的Blog</webMaster><item><title>web网页框架制作</title><link>https://hmho000.github.io/post/web-wang-ye-kuang-jia-zhi-zuo.html</link><description>&lt;h1&gt;web网页框架制作&lt;/h1&gt;&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Kj的Blog</title><link>https://hmho000.github.io</link><description>童话是一种生活态度，仅此而已。</description><copyright>Kj的Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://hmho000.github.io</link></image><lastBuildDate>Mon, 18 Nov 2024 07:52:30 +0000</lastBuildDate><managingEditor>Kj的Blog</managingEditor><ttl>60</ttl><webMaster>Kj的Blog</webMaster><item><title>校园网的破解与53端口</title><link>https://hmho000.github.io/post/xiao-yuan-wang-de-po-jie-yu-53-duan-kou.html</link><description>&lt;h2&gt;起因&lt;\h2&gt;
+
+- 以前就经常看到过疯狂的校园卡推销以及有关校园卡、校园网坑人的文章或者段子，不过一直是当个乐子来看的，看完也就不了了之了，自从大一报道开始，可谓是深有体会，真正在现实中体验到了校园卡/网营销的“**疯狂**”，让我印象深刻的是，一进学校除了能一眼看到的_欢迎新同学_这一类的字样和新生签到点，最好玩的是随处可见的校园网络办理点（你可能找不到自己的宿舍楼在哪里，但是你绝不会找不到哪里能办理校园网），现在还记得他们一直在说的套餐
+- 首月免费，次月开始......（ps第一个版本）
+- 充100，送100！！（ps你怎么不提你月销49呢？）
+ - 现在办校园网送电脑端/手机端双端设备上网（&gt;ps最资本的一集！不过后面还发现真的有人只能用一个设备上网，有的人两个）
+&gt; 不过在我优（po）化（jie）完网络后这些都将不复存在。</description><guid isPermaLink="true">https://hmho000.github.io/post/xiao-yuan-wang-de-po-jie-yu-53-duan-kou.html</guid><pubDate>Mon, 18 Nov 2024 07:52:04 +0000</pubDate></item><item><title>web网页框架制作</title><link>https://hmho000.github.io/post/web-wang-ye-kuang-jia-zhi-zuo.html</link><description>&lt;h1&gt;web网页框架制作&lt;/h1&gt;&#13;
 &#13;
 _2024年11月15日web实践_&#13;
 &#13;
