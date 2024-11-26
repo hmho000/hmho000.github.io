@@ -188,6 +188,8 @@ _2024年11月15日web网格制作实践_
 
 ## web商品页面小米su7（结合图片）
 
+_2024年11月20日web网格与图片练习_
+
 > 预览网页→[https://hmho000.github.io/web-learning/1120web21](https://hmho000.github.io/web-learning/1120web21.html)
 
 <details>
@@ -348,7 +350,7 @@ _2024年11月15日web网格制作实践_
 ```
 </details>
 
-> 于2024年11月26日 15:07:22更新
+> 于2024年11月26日 15:07:22由kj更新
 
 
 
