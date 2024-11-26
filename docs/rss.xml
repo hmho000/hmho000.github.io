@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Kj的Blog</title><link>https://hmho000.github.io</link><description>童话是一种生活态度，仅此而已。</description><copyright>Kj的Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://hmho000.github.io</link></image><lastBuildDate>Tue, 26 Nov 2024 14:05:30 +0000</lastBuildDate><managingEditor>Kj的Blog</managingEditor><ttl>60</ttl><webMaster>Kj的Blog</webMaster><item><title>校园网的破解与53端口</title><link>https://hmho000.github.io/post/xiao-yuan-wang-de-po-jie-yu-53-duan-kou.html</link><description>&lt;h2&gt;起因&lt;/h2&gt;&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Kj的Blog</title><link>https://hmho000.github.io</link><description>童话是一种生活态度，仅此而已。</description><copyright>Kj的Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://hmho000.github.io</link></image><lastBuildDate>Tue, 26 Nov 2024 14:06:30 +0000</lastBuildDate><managingEditor>Kj的Blog</managingEditor><ttl>60</ttl><webMaster>Kj的Blog</webMaster><item><title>校园网的破解与53端口</title><link>https://hmho000.github.io/post/xiao-yuan-wang-de-po-jie-yu-53-duan-kou.html</link><description>&lt;h2&gt;起因&lt;/h2&gt;&#13;
 &#13;
 以前就经常看到过疯狂的校园卡推销以及有关校园卡、校园网坑人的文章或者段子，不过一直是当个乐子来看的，看完也就不了了之了，自从大一报道开始，可谓是深有体会，真正在现实中体验到了校园卡/网营销的“**疯狂**”，让我印象深刻的是，一进学校除了能一眼看到的 _欢迎新同学_ 这一类的字样和新生签到点，最好玩的是随处可见的校园网络办理点（你可能找不到自己的宿舍楼在哪里，但是你绝不会找不到哪里能办理校园网），现在还记得他们一直在说的套餐&#13;
  - &lt;u&gt;首月免费，次月开始......&lt;/u&gt;（ps第一个版本）&#13;
@@ -14,7 +14,7 @@
 &gt;请注意，一次项目的完成可能会遇到各种奇奇怪怪无法解释的bug，请[擅用互联网](https://yangh9.github.io/baidu/?s=%E9%A1%B9%E7%9B%AE%E5%87%BA%E7%8E%B0bug%E6%80%8E%E4%B9%88%E5%8A%9E)（当然！查找问题建议还是用bing、google，实在解决不了就用ChatGPT！）&#13;
 &#13;
 &lt;h2&gt;那么开始吧&lt;/h2&gt;&#13;
-许多高校使用的校园网登录机制都是利用网关拦截数据包，当用户接入校园网且未登录时，进行上网操作发出的数据包就会被网关所拦截，但是用于域名解析(DNS)的UDP53端口发出的数据包就不会被拦截。</description><guid isPermaLink="true">https://hmho000.github.io/post/xiao-yuan-wang-de-po-jie-yu-53-duan-kou.html</guid><pubDate>Mon, 18 Nov 2024 07:52:04 +0000</pubDate></item><item><title>web网页框架制作</title><link>https://hmho000.github.io/post/web-wang-ye-kuang-jia-zhi-zuo.html</link><description>## web商品网页制作（整体）&#13;
+许多高校使用的校园网登录机制都是利用网关拦截数据包，当用户接入校园网且未登录时，进行上网操作发出的数据包就会被网关所拦截，但是用于域名解析(DNS)的UDP53端口发出的数据包就不会被拦截。</description><guid isPermaLink="true">https://hmho000.github.io/post/xiao-yuan-wang-de-po-jie-yu-53-duan-kou.html</guid><pubDate>Mon, 18 Nov 2024 07:52:04 +0000</pubDate></item><item><title>web网页框架制作（持续更新ing）</title><link>https://hmho000.github.io/post/web-wang-ye-kuang-jia-zhi-zuo-%EF%BC%88-chi-xu-geng-xin-ing%EF%BC%89.html</link><description>## web商品网页制作（整体）&#13;
 &#13;
 _2024年11月15日web网格制作实践_&#13;
 &#13;
@@ -445,7 +445,7 @@ _2024年11月22日web网格图片文字结合练习_&#13;
 &#13;
 &#13;
 &#13;
-。</description><guid isPermaLink="true">https://hmho000.github.io/post/web-wang-ye-kuang-jia-zhi-zuo.html</guid><pubDate>Fri, 15 Nov 2024 08:21:24 +0000</pubDate></item><item><title>记录一下</title><link>https://hmho000.github.io/post/ji-lu-yi-xia.html</link><description>[vscode图片](https://ts3.cn.mm.bing.net/th?id=OSAAS.2EDE2687427BC7CA3EAF885ECCA36DF8&amp;w=72&amp;h=72&amp;c=1&amp;rs=1&amp;o=6&amp;pid=5.1)&#13;
+。</description><guid isPermaLink="true">https://hmho000.github.io/post/web-wang-ye-kuang-jia-zhi-zuo-%EF%BC%88-chi-xu-geng-xin-ing%EF%BC%89.html</guid><pubDate>Fri, 15 Nov 2024 08:21:24 +0000</pubDate></item><item><title>记录一下</title><link>https://hmho000.github.io/post/ji-lu-yi-xia.html</link><description>[vscode图片](https://ts3.cn.mm.bing.net/th?id=OSAAS.2EDE2687427BC7CA3EAF885ECCA36DF8&amp;w=72&amp;h=72&amp;c=1&amp;rs=1&amp;o=6&amp;pid=5.1)&#13;
 &lt;h1&gt;测试&lt;/h1&gt;&#13;
 &lt;h2&gt;测试&lt;/h2&gt;&#13;
 &lt;h3&gt;测试&lt;/h3&gt;&#13;
