@@ -188,7 +188,7 @@ _2024年11月15日web网格制作实践_
 
 ## web商品页面小米su7（结合图片）
 
-> 预览网页→[https://hmho000.github.io/web-learning/24_11_15web2.1](https://hmho000.github.io/web-learning/24_11_15web2.1.html)
+> 预览网页→[https://hmho000.github.io/web-learning/1120web21](https://hmho000.github.io/web-learning/1120web21.html)
 
 <details>
 <summary>代码展示</summary>
@@ -198,7 +198,7 @@ _2024年11月15日web网格制作实践_
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>2024-11-15 web作业</title>
+        <title>2024-11-20 web作业</title>
         <style>
             .center{
                 display: flex; 
