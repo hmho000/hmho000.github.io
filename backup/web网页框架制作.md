@@ -2,7 +2,10 @@
 
 _2024年11月15日web实践_
 
-> 预览网页→[hmho000.github.io/web-learning/index.html](https://hmho000.github.io/web-learning/index.html)
+> 预览网页→[hmho000.github.io/web-learning/24_11_15_web2.html](https://hmho000.github.io/web-learning/24_11_15_web2.html)
+
+<details>
+<summary>代码展示</summary>
 
 ```html
 <!DOCTYPE html>
@@ -178,3 +181,5 @@ _2024年11月15日web实践_
     <div class="kj">kj制作 2024年11月15日 14:07:44</div>
     </body>
 </html>```
+
+</details>
