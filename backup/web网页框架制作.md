@@ -2,7 +2,7 @@
 
 _2024年11月15日web网格制作实践_
 
-> 预览网页→[hmho000.github.io/web-learning/24_11_15web2.html](https://hmho000.github.io/web-learning/24_11_15web2.html)
+> 预览网页→[hmho000.github.io/web-learning/1115web2.html](https://hmho000.github.io/web-learning/1115web2.html)
 
 <details>
 <summary>代码展示（史山）</summary>
