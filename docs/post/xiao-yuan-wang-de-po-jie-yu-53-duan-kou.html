@@ -10,7 +10,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="<h2>起因</h2>
+<meta name="description" content="# 起因
 
 以前就经常看到过疯狂的校园卡推销以及有关校园卡、校园网坑人的文章或者段子，不过一直是当个乐子来看的，看完也就不了了之了，自从大一报道开始，可谓是深有体会，真正在现实中体验到了校园卡/网营销的“**疯狂**”，让我印象深刻的是，一进学校除了能一眼看到的 _欢迎新同学_ 这一类的字样和新生签到点，最好玩的是随处可见的校园网络办理点（你可能找不到自己的宿舍楼在哪里，但是你绝不会找不到哪里能办理校园网），现在还记得他们一直在说的套餐
  - <u>首月免费，次月开始......</u>（ps第一个版本）
@@ -24,10 +24,10 @@
 > [!WARNING]
 >请注意，一次项目的完成可能会遇到各种奇奇怪怪无法解释的bug，请[擅用互联网](https://yangh9.github.io/baidu/?s=%E9%A1%B9%E7%9B%AE%E5%87%BA%E7%8E%B0bug%E6%80%8E%E4%B9%88%E5%8A%9E)（当然！查找问题建议还是用bing、google，实在解决不了就用ChatGPT！）
 
-<h2>那么开始吧</h2>
+# 那么开始吧
 许多高校使用的校园网登录机制都是利用网关拦截数据包，当用户接入校园网且未登录时，进行上网操作发出的数据包就会被网关所拦截，但是用于域名解析(DNS)的UDP53端口发出的数据包就不会被拦截。">
 <meta property="og:title" content="校园网的破解与53端口">
-<meta property="og:description" content="<h2>起因</h2>
+<meta property="og:description" content="# 起因
 
 以前就经常看到过疯狂的校园卡推销以及有关校园卡、校园网坑人的文章或者段子，不过一直是当个乐子来看的，看完也就不了了之了，自从大一报道开始，可谓是深有体会，真正在现实中体验到了校园卡/网营销的“**疯狂**”，让我印象深刻的是，一进学校除了能一眼看到的 _欢迎新同学_ 这一类的字样和新生签到点，最好玩的是随处可见的校园网络办理点（你可能找不到自己的宿舍楼在哪里，但是你绝不会找不到哪里能办理校园网），现在还记得他们一直在说的套餐
  - <u>首月免费，次月开始......</u>（ps第一个版本）
@@ -41,7 +41,7 @@
 > [!WARNING]
 >请注意，一次项目的完成可能会遇到各种奇奇怪怪无法解释的bug，请[擅用互联网](https://yangh9.github.io/baidu/?s=%E9%A1%B9%E7%9B%AE%E5%87%BA%E7%8E%B0bug%E6%80%8E%E4%B9%88%E5%8A%9E)（当然！查找问题建议还是用bing、google，实在解决不了就用ChatGPT！）
 
-<h2>那么开始吧</h2>
+# 那么开始吧
 许多高校使用的校园网登录机制都是利用网关拦截数据包，当用户接入校园网且未登录时，进行上网操作发出的数据包就会被网关所拦截，但是用于域名解析(DNS)的UDP53端口发出的数据包就不会被拦截。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hmho000.github.io/post/xiao-yuan-wang-de-po-jie-yu-53-duan-kou.html">
@@ -103,7 +103,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h2>起因</h2>
+<div class="markdown-body" id="postBody"><h1>起因</h1>
 <p>以前就经常看到过疯狂的校园卡推销以及有关校园卡、校园网坑人的文章或者段子，不过一直是当个乐子来看的，看完也就不了了之了，自从大一报道开始，可谓是深有体会，真正在现实中体验到了校园卡/网营销的“<strong>疯狂</strong>”，让我印象深刻的是，一进学校除了能一眼看到的 <em>欢迎新同学</em> 这一类的字样和新生签到点，最好玩的是随处可见的校园网络办理点（你可能找不到自己的宿舍楼在哪里，但是你绝不会找不到哪里能办理校园网），现在还记得他们一直在说的套餐</p>
 <ul>
 <li>首月免费，次月开始......（ps第一个版本）</li>
@@ -117,21 +117,21 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 <div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p><p>请注意，一次项目的完成可能会遇到各种奇奇怪怪无法解释的bug，请<a href="https://yangh9.github.io/baidu/?s=%E9%A1%B9%E7%9B%AE%E5%87%BA%E7%8E%B0bug%E6%80%8E%E4%B9%88%E5%8A%9E" rel="nofollow">擅用互联网</a>（当然！查找问题建议还是用bing、google，实在解决不了就用ChatGPT！）</p>
 </div>
-<h2>那么开始吧</h2>
-许多高校使用的校园网登录机制都是利用网关拦截数据包，当用户接入校园网且未登录时，进行上网操作发出的数据包就会被网关所拦截，但是用于域名解析(DNS)的UDP53端口发出的数据包就不会被拦截。
+<h1>那么开始吧</h1>
+<p>许多高校使用的校园网登录机制都是利用网关拦截数据包，当用户接入校园网且未登录时，进行上网操作发出的数据包就会被网关所拦截，但是用于域名解析(DNS)的UDP53端口发出的数据包就不会被拦截。</p>
 <blockquote>
 <p>来自百度上的解释：<br>
 53端口：端口说明:53端口为DNS(Domain Name Server，域名服务器)服务器所开放，主要用于域名解析，DNS服务在NT系统中使用的最为广泛。通过DNS服务器可以实现域名与IP地址之间的转换，只要记住域名就可以快速访问网站。</p>
 </blockquote>
-<h3>一、分析免认证上网的可行性</h3>
-<p>1.此处可以用一个简单的命令进行测试，连接校园网，然后打开cmd输入<br>
-<code class="notranslate">ping www.baidu.com</code><br>
+<h1>一、分析免认证上网的可行性</h1>
+<h3>1.此处可以用一个简单的命令进行测试，连接校园网，然后打开cmd输入</h3>
+<p><code class="notranslate">ping www.baidu.com</code><br>
 然后回车，会显示如下界面<br>
 <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6cf065e8c61faaca7cd3ce72b51712f2e5a56cd2f8fe67d944a4372129c0f603/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48436f4b442e706e67"><img src="https://camo.githubusercontent.com/6cf065e8c61faaca7cd3ce72b51712f2e5a56cd2f8fe67d944a4372129c0f603/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48436f4b442e706e67" alt="cmd-ping百度-校园网" data-canonical-src="https://ooo.0x0.ooo/2024/11/26/OHCoKD.png" style="max-width: 100%;"></a><br>
 如图所示<code class="notranslate">220.181.38.149</code>也就是百度的DNS解析地址，说明我们可以利用53端口将所有流量都伪装为DNS解析流量来绕过登录系统来进行上网！<br>
 当然，如果学校进行了53端口的封锁那么将无法解析出<code class="notranslate">220.181.38.149</code>的ipv4地址，如图<br>
 <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/64320dd71b838697525a2c9fa3ed51c028013696abb2852f1a3a9a7a63b521d0/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48436135492e706e67"><img src="https://camo.githubusercontent.com/64320dd71b838697525a2c9fa3ed51c028013696abb2852f1a3a9a7a63b521d0/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48436135492e706e67" alt="cmd-ping百度无法解析-校园网" data-canonical-src="https://ooo.0x0.ooo/2024/11/26/OHCa5I.png" style="max-width: 100%;"></a></p>
-<h3>二、准备环境</h3>
+<h1>二、准备环境</h1>
 <p>我这里用的是</p>
 <ul class="contains-task-list">
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> CentOS7.5（一台 <strong>具有公网IP</strong> 的云服务器哪家云厂商的都行，个人比较推荐阿里云）</li>
@@ -139,23 +139,70 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 如无法下载可用蓝奏云备用链接下载 <a href="https://wwb.lanzouv.com/iRdS02gdbg5e" rel="nofollow">备用下载 密码ak8d</a></li>
 </ul>
 <hr>
+<h1>三、部署环境(Linux端）</h1>
 <p>这里使用一台 <code class="notranslate">CentOS7.5</code> 系统服务器做为示例，实测CentOS7.X版本都可以，8.0貌似会出bug</p>
-<ol>
-<li>首先使用SSH工具(推荐使用<a href="https://github.com/user-attachments/files/17801081/MobaXterm_Professinal_20.3.zip">点我下载 MobaXterm_Professinal_20.3.zip</a>）<a href="https://wwb.lanzouv.com/ifhir2gdb9tg" rel="nofollow">备用下载</a>连接上准备好的服务器，也可使用Windows或linux命令行连接。</li>
-</ol>
-<p>2.然后上传准备好的 <code class="notranslate">softether-vpnserver</code> 服务端文件，如图<br>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/bf990dd663371f888982cc13193a66636a256b6ff1b529fe4c0d60d7fcb4a393/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48437130462e706e67"><img src="https://camo.githubusercontent.com/bf990dd663371f888982cc13193a66636a256b6ff1b529fe4c0d60d7fcb4a393/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48437130462e706e67" alt="ssh连接" data-canonical-src="https://ooo.0x0.ooo/2024/11/26/OHCq0F.png" style="max-width: 100%;"></a></p>
-<p>3.第一次登录的时候需要更新软件源，在控制台输入<br>
+<h3>1. 使用SSH工具连接服务器</h3>
+<p>推荐使用<a href="https://github.com/user-attachments/files/17801081/MobaXterm_Professinal_20.3.zip">点我下载 MobaXterm_Professinal_20.3.zip</a>或者<a href="https://wwb.lanzouv.com/ifhir2gdb9tg" rel="nofollow">备用下载地址</a>连接上准备好的服务器，也可使用Windows或linux命令行连接。</p>
+<h3>2.上传准备好的 <code class="notranslate">softether-vpnserver</code> 服务端文件</h3>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/bf990dd663371f888982cc13193a66636a256b6ff1b529fe4c0d60d7fcb4a393/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48437130462e706e67"><img src="https://camo.githubusercontent.com/bf990dd663371f888982cc13193a66636a256b6ff1b529fe4c0d60d7fcb4a393/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48437130462e706e67" alt="ssh连接" data-canonical-src="https://ooo.0x0.ooo/2024/11/26/OHCq0F.png" style="max-width: 100%;"></a></p>
+<h3>3.更新软件源</h3>
+<p>第一次登录的时候需要更新软件源，在控制台输入<br>
 <code class="notranslate">yum update</code><br>
 如果用的是Ubuntu系统则输入<br>
 <code class="notranslate">apt update</code></p>
-<p>4.完成后安装编译环境<br>
-CentOS<br>
+<h3>4.安装编译环境</h3>
+<p>CentOS<br>
 <code class="notranslate">yum install -y make gcc gcc-c++</code><br>
 Ubuntu<br>
 <code class="notranslate">apt install -y make gcc gcc-c++</code></p>
-<p>5.通常默认都是用的root目录，即/root目录，同时这时候也能看见 <code class="notranslate">softether-vpnserver</code> 文件已经在这个目录下了，现在需要将他进行解压<br>
-输入<code class="notranslate">tar  -zxvf  soft</code>（然后按tab键自动补全压缩包文件名）</p></div>
+<h3>5.文件解压缩</h3>
+<p>通常默认都是用的root目录，即/root目录，同时这时候也能看见 <code class="notranslate">softether-vpnserver</code> 文件已经在这个目录下了，现在需要将他进行解压<br>
+输入<code class="notranslate">tar  -zxvf  soft</code>（然后按tab键自动补全压缩包文件名）并按回车键<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/12a827a59887b5d4a73ad47e2846c200231c539ba03ffb1e3e7d51959c78724f/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48437258692e706e67"><img src="https://camo.githubusercontent.com/12a827a59887b5d4a73ad47e2846c200231c539ba03ffb1e3e7d51959c78724f/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48437258692e706e67" alt="tab自动填充图" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCrXi.png" style="max-width: 100%;"></a></p>
+<h3>6.运行及配置文件</h3>
+<p>依次输入<br>
+<code class="notranslate">cd vpnserver/</code></p>
+<blockquote>
+<p>进入解压好的vpnserver目录下</p>
+</blockquote>
+<p><code class="notranslate">ls</code></p>
+<blockquote>
+<p>列出目录</p>
+</blockquote>
+<p><code class="notranslate">make</code></p>
+<blockquote>
+<p>运行主程序</p>
+</blockquote>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f0e44302e11727053291153940a32a073594cdb2f1309a1da9e82d3dce1b3c0d/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48435a4a742e706e67"><img src="https://camo.githubusercontent.com/f0e44302e11727053291153940a32a073594cdb2f1309a1da9e82d3dce1b3c0d/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48435a4a742e706e67" alt="运行软件" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCZJt.png" style="max-width: 100%;"></a></p>
+<h3>7.设置 SoftEther VPN 服务</h3>
+<p>依次输入<br>
+<code class="notranslate">./vpnserver start</code><br>
+<code class="notranslate">./vpncmd</code><br>
+紧接着会出现3个问题，看到问题依次输入<br>
+<code class="notranslate">1</code> <code class="notranslate">回车</code> 第一个问题<br>
+<code class="notranslate">回车</code> 第二个问题<br>
+<code class="notranslate">回车</code> 第三个问题</p>
+<h3>8.设置管理员密码</h3>
+<p>在提示符下输入 <code class="notranslate">ServerPasswordSet</code><br>
+输入管理服务器的密码，两次确定之后，按 ctrl+D退出管理。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/5e5c42f91f55c783444791c6c04a49878b053756c89a8720eb1ab02ad6fb9358/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f484367426a2e706e67"><img src="https://camo.githubusercontent.com/5e5c42f91f55c783444791c6c04a49878b053756c89a8720eb1ab02ad6fb9358/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f484367426a2e706e67" alt="设置服务端管理密码" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCgBj.png" style="max-width: 100%;"></a></p>
+<h3>9.添加开机自启动服务</h3>
+<p><code class="notranslate">vi /etc/rc.local</code></p>
+<blockquote>
+<p>进入配置文件</p>
+</blockquote>
+<p><code class="notranslate">/root/vpnserver/vpnserver start</code></p>
+<blockquote>
+<p>在 exit 0 之前写入</p>
+</blockquote>
+<p>保存退出即可</p>
+<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>不会使用vi编辑器的可以看<a href="https://www.runoob.com/linux/linux-vim.html" rel="nofollow">这个教程</a>,本步操作使用的是<code class="notranslate">i</code> <code class="notranslate">ESC</code> <code class="notranslate">:wq</code>等操作</p>
+</div>
+<h1>四、部署环境（Windows）</h1>
+<p>接下来就是在Windows上进行图形化操作了</p>
+<h3>下载Windows端图形化管理软件</h3>
+<p>下载<a href="https://wwb.lanzouv.com/ioV7Z2gfyqaj" rel="nofollow">softether-vpnserver_vpnbridge</a>安装<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/d0cee96907cb1b924e72f7e1e4386b56a2bd554e186b6cb281fa54bc1d0932f1/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48437063552e74682e706e67"><img src="https://camo.githubusercontent.com/d0cee96907cb1b924e72f7e1e4386b56a2bd554e186b6cb281fa54bc1d0932f1/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48437063552e74682e706e67" alt="安装界面" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCpcU.th.png" style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f409a7ddb1bb872833fc7be9e175d4397cc360e6942120ac70f1ef0d1193309c/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436d5a702e74682e706e67"><img src="https://camo.githubusercontent.com/f409a7ddb1bb872833fc7be9e175d4397cc360e6942120ac70f1ef0d1193309c/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436d5a702e74682e706e67" alt="安装界面2" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCmZp.th.png" style="max-width: 100%;"></a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处，拜谢！</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
