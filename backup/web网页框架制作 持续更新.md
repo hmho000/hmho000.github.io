@@ -424,8 +424,69 @@ _2024年11月22日web网格图片文字结合练习_
 ```
 </details>
 
+## web链接导航练习
 
-- 于2024年11月26日 22:03:25由kj更新
+_2024年11月27日web链接定位导航练习_
+
+> 预览网页→[https://hmho000.github.io/web-learning/1127web23.html](https://hmho000.github.io/web-learning/1127web23.html)
+
+<details>
+<summary>代码展示</summary>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>链接练习（docker介绍）</title>
+</head>
+<body>
+   <div style="text-align: center;">
+    <a href="#Docker简介">Docker简介</a>
+    <a href="#Docker的工作原理">Docker的工作原理</a>
+    <a href="#Docker的组件">Docker的组件</a>
+    <a href="#Docker的优势">Docker的优势</a>
+    <a href="#Docker的应用场景">Docker的应用场景</a>
+    <a href="#Docker的发展">Docker的发展</a>
+    <a href="#总结">总结</a>
+   </div>
+   <br><hr>
+    <h2 id="Docker简介">Docker简介</h2>
+        <p>Docker是一个开源的应用容器引擎，它允许开发者将应用及其依赖打包成一个轻量级、可移植的容器，然后可以在任何支持Docker的Linux机器上运行。这种容器化的方法使得应用可以在不同的环境中以一致的方式运行，无论是开发者的个人笔记本电脑还是高端的云平台。</p>
+    <h2 id="Docker的工作原理">Docker的工作原理</h2>
+        <p>Docker利用Linux内核的cgroup、namespace以及OverlayFS等技术，对进程进行封装隔离，实现了操作系统层面的虚拟化。在Docker中，每个容器都是独立的，并且与宿主机和其他容器隔离。Docker容器的性能开销极低，因为容器直接运行于宿主的内核，没有自己的内核，也不需要像传统虚拟机那样进行硬件虚拟化。</p>
+    <h2 id="Docker的组件">Docker的组件</h2>
+        <p>Docker的架构包括几个关键的组件：
+
+            Docker守护进程（Docker daemon）：负责管理Docker的镜像、容器、网络和数据卷。
+            
+            Docker客户端（Client）：用户通过客户端发送指令来管理和运行容器。
+            
+            Docker镜像（Image）：容器的模板，可以通过Dockerfile文件定义，并且可以继承。
+            
+            Docker仓库（Registry）：用于存储和管理镜像的服务，类似于git仓库。
+            
+            Docker容器（Container）：通过镜像创建的运行实例，类似于面向对象编程中类和对象的关系。</p>
+    <h2 id="Docker的优势">Docker的优势</h2>
+        <p>Docker的优势在于其轻量级和高效性。与传统虚拟机相比，Docker容器不需要额外的操作系统，启动速度更快，资源消耗更少。此外，Docker的镜像使用分层存储，使得镜像的复用和定制变得更加容易。开发者可以基于已有的镜像添加新的层，构建自己所需的应用环境。</p>
+    <h2 id="Docker的应用场景">Docker的应用场景</h2>
+        <p>Docker广泛应用于微服务架构中，因为它可以轻松地将应用容器化，实现快速部署和扩展。Docker也被用于持续集成和持续部署（CI/CD）的流程中，自动化应用的构建、测试和部署。此外，Docker还支持数据卷和网络配置，为复杂应用的部署提供了灵活性。</p>
+    <h2 id="Docker的发展">Docker的发展</h2>
+        <p>Docker自2013年开源以来，已经成为容器技术中的佼佼者，并且得到了广泛的实践和应用。Docker的社区版（CE）和企业版（EE）为不同用户提供了丰富的选择。Docker的项目代码主要在GitHub上维护，其星标和fork数量持续增长，显示了其在开发者社区中的受欢迎程度。</p>
+    <h2 id="总结">总结</h2>
+        <p>Docker通过容器化技术，为软件的开发、交付和运行提供了一个高效、标准化的平台。它不仅改变了软件的部署方式，也推动了DevOps文化的发展。Docker的出现，使得“构建一次，运行任何地方”的理念成为可能，极大地促进了软件开发和运维的协作。
+        </p>
+</body>
+</html>
+
+```
+</details>
+
+
+
+
+- 于2024年11月27日 11：32由kj更新
 
 
 
