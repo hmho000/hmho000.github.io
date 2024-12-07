@@ -10,7 +10,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="# 起因
+<meta name="description" content="# 起因  
 
 以前就经常看到过疯狂的校园卡推销以及有关校园卡、校园网坑人的文章或者段子，不过一直是当个乐子来看的，看完也就不了了之了，自从大一报道开始，可谓是深有体会，真正在现实中体验到了校园卡/网营销的“**疯狂**”，让我印象深刻的是，一进学校除了能一眼看到的 _欢迎新同学_ 这一类的字样和新生签到点，最好玩的是随处可见的校园网络办理点（你可能找不到自己的宿舍楼在哪里，但是你绝不会找不到哪里能办理校园网），现在记得他们所说的套餐
  - <u>首月免费，次月开始......</u>（ps第一个版本）
@@ -27,7 +27,7 @@
 # 那么开始吧
 许多高校使用的校园网登录机制都是利用网关拦截数据包，当用户接入校园网且未登录时，进行上网操作发出的数据包就会被网关所拦截，但是用于域名解析(DNS)的UDP53端口发出的数据包就不会被拦截。">
 <meta property="og:title" content="校园网的破解与53端口">
-<meta property="og:description" content="# 起因
+<meta property="og:description" content="# 起因  
 
 以前就经常看到过疯狂的校园卡推销以及有关校园卡、校园网坑人的文章或者段子，不过一直是当个乐子来看的，看完也就不了了之了，自从大一报道开始，可谓是深有体会，真正在现实中体验到了校园卡/网营销的“**疯狂**”，让我印象深刻的是，一进学校除了能一眼看到的 _欢迎新同学_ 这一类的字样和新生签到点，最好玩的是随处可见的校园网络办理点（你可能找不到自己的宿舍楼在哪里，但是你绝不会找不到哪里能办理校园网），现在记得他们所说的套餐
  - <u>首月免费，次月开始......</u>（ps第一个版本）
@@ -336,7 +336,11 @@ console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
-
+cmButton=document.getElementById("cmButton");
+    span=document.createElement("span");
+    span.setAttribute("class","Counter");
+    span.innerHTML="2";
+    cmButton.appendChild(span);
 
 
 function openComments(){
