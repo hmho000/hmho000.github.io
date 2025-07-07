@@ -129,10 +129,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>在未进行身份验证的时候打开cmd输入<br>
 <code class="notranslate">ping www.baidu.com</code></li>
 <li>回车，会显示如下界面<br>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/64320dd71b838697525a2c9fa3ed51c028013696abb2852f1a3a9a7a63b521d0/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48436135492e706e67"><img src="https://camo.githubusercontent.com/64320dd71b838697525a2c9fa3ed51c028013696abb2852f1a3a9a7a63b521d0/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48436135492e706e67" alt="cmd-ping百度解析出dns-校园网" data-canonical-src="https://ooo.0x0.ooo/2024/11/26/OHCa5I.png" style="max-width: 100%; height: auto;"></a><br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/64320dd71b838697525a2c9fa3ed51c028013696abb2852f1a3a9a7a63b521d0/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48436135492e706e67"><img src="https://camo.githubusercontent.com/64320dd71b838697525a2c9fa3ed51c028013696abb2852f1a3a9a7a63b521d0/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48436135492e706e67" alt="cmd-ping百度解析出dns-校园网" data-canonical-src="https://ooo.0x0.ooo/2024/11/26/OHCa5I.png" style="max-width: 100%;"></a><br>
 如图所示<code class="notranslate">220.181.38.149</code>也就是百度的DNS解析地址，即使显示请求超时，但DNS已经正常解析出来了，说明我们可以利用53端口将所有流量都封装为DNS解析流量来绕过登录系统来进行上网！<br>
 当然，如果学校进行了53端口的封锁那么将无法解析出<code class="notranslate">220.181.38.149</code>的ipv4地址，如图<br>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/dc5aa6a54effcd717b12af631140d0f91bf0f91008e4ea10df51a35ff727f5a4/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30312f30322f4f45744158672e706e67"><img src="https://camo.githubusercontent.com/dc5aa6a54effcd717b12af631140d0f91bf0f91008e4ea10df51a35ff727f5a4/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30312f30322f4f45744158672e706e67" alt="53端口被封禁ping百度" data-canonical-src="https://ooo.0x0.ooo/2025/01/02/OEtAXg.png" style="max-width: 100%; height: auto;"></a></li>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/dc5aa6a54effcd717b12af631140d0f91bf0f91008e4ea10df51a35ff727f5a4/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30312f30322f4f45744158672e706e67"><img src="https://camo.githubusercontent.com/dc5aa6a54effcd717b12af631140d0f91bf0f91008e4ea10df51a35ff727f5a4/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30312f30322f4f45744158672e706e67" alt="53端口被封禁ping百度" data-canonical-src="https://ooo.0x0.ooo/2025/01/02/OEtAXg.png" style="max-width: 100%;"></a></li>
 </ul>
 <h1>二、准备环境</h1>
 <p>我这里用的是</p>
@@ -149,7 +149,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>推荐使用<a href="https://github.com/user-attachments/files/17801081/MobaXterm_Professinal_20.3.zip">点我下载 MobaXterm_Professinal_20.3.zip</a>或者<a href="https://wwb.lanzouv.com/ifhir2gdb9tg" rel="nofollow">备用下载地址</a>连接上准备好的服务器，也可使用Windows或linux命令行连接。</li>
 </ul>
 <h3>2.上传准备好的 <code class="notranslate">softether-vpnserver</code> 服务端文件</h3>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/bf990dd663371f888982cc13193a66636a256b6ff1b529fe4c0d60d7fcb4a393/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48437130462e706e67"><img src="https://camo.githubusercontent.com/bf990dd663371f888982cc13193a66636a256b6ff1b529fe4c0d60d7fcb4a393/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48437130462e706e67" alt="ssh连接" data-canonical-src="https://ooo.0x0.ooo/2024/11/26/OHCq0F.png" style="max-width: 100%; height: auto;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/bf990dd663371f888982cc13193a66636a256b6ff1b529fe4c0d60d7fcb4a393/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48437130462e706e67"><img src="https://camo.githubusercontent.com/bf990dd663371f888982cc13193a66636a256b6ff1b529fe4c0d60d7fcb4a393/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32362f4f48437130462e706e67" alt="ssh连接" data-canonical-src="https://ooo.0x0.ooo/2024/11/26/OHCq0F.png" style="max-width: 100%;"></a></p>
 <h3>3.更新软件源</h3>
 <ul>
 <li>第一次登录的时候需要更新软件源，在控制台输入<br>
@@ -166,7 +166,7 @@ Ubuntu<br>
 <p>通常默认都是用的root目录，即/root目录，同时这时候也能看见 <code class="notranslate">softether-vpnserver</code> 文件已经在这个目录下了，现在需要将他进行解压</p>
 <ul>
 <li>输入<code class="notranslate">tar  -zxvf  soft</code>（然后按tab键自动补全压缩包文件名）并按回车键<br>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/12a827a59887b5d4a73ad47e2846c200231c539ba03ffb1e3e7d51959c78724f/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48437258692e706e67"><img src="https://camo.githubusercontent.com/12a827a59887b5d4a73ad47e2846c200231c539ba03ffb1e3e7d51959c78724f/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48437258692e706e67" alt="tab自动填充图" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCrXi.png" style="max-width: 100%; height: auto;"></a></li>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/12a827a59887b5d4a73ad47e2846c200231c539ba03ffb1e3e7d51959c78724f/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48437258692e706e67"><img src="https://camo.githubusercontent.com/12a827a59887b5d4a73ad47e2846c200231c539ba03ffb1e3e7d51959c78724f/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48437258692e706e67" alt="tab自动填充图" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCrXi.png" style="max-width: 100%;"></a></li>
 </ul>
 <h3>6.运行及配置文件</h3>
 <ul>
@@ -184,7 +184,7 @@ Ubuntu<br>
 <blockquote>
 <p>运行主程序</p>
 </blockquote>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f0e44302e11727053291153940a32a073594cdb2f1309a1da9e82d3dce1b3c0d/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48435a4a742e706e67"><img src="https://camo.githubusercontent.com/f0e44302e11727053291153940a32a073594cdb2f1309a1da9e82d3dce1b3c0d/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48435a4a742e706e67" alt="运行软件" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCZJt.png" style="max-width: 100%; height: auto;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f0e44302e11727053291153940a32a073594cdb2f1309a1da9e82d3dce1b3c0d/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48435a4a742e706e67"><img src="https://camo.githubusercontent.com/f0e44302e11727053291153940a32a073594cdb2f1309a1da9e82d3dce1b3c0d/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48435a4a742e706e67" alt="运行软件" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCZJt.png" style="max-width: 100%;"></a></p>
 <h3>7.设置 SoftEther VPN 服务</h3>
 <ul>
 <li>依次输入</li>
@@ -201,7 +201,7 @@ Ubuntu<br>
 <ul>
 <li>在提示符下输入 <code class="notranslate">ServerPasswordSet</code></li>
 <li>输入管理服务器的密码，两次确定之后，按 ctrl+D退出管理。<br>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/5e5c42f91f55c783444791c6c04a49878b053756c89a8720eb1ab02ad6fb9358/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f484367426a2e706e67"><img src="https://camo.githubusercontent.com/5e5c42f91f55c783444791c6c04a49878b053756c89a8720eb1ab02ad6fb9358/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f484367426a2e706e67" alt="设置服务端管理密码" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCgBj.png" style="max-width: 100%; height: auto;"></a></li>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/5e5c42f91f55c783444791c6c04a49878b053756c89a8720eb1ab02ad6fb9358/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f484367426a2e706e67"><img src="https://camo.githubusercontent.com/5e5c42f91f55c783444791c6c04a49878b053756c89a8720eb1ab02ad6fb9358/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f484367426a2e706e67" alt="设置服务端管理密码" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCgBj.png" style="max-width: 100%;"></a></li>
 </ul>
 <h3>9.添加开机自启动服务</h3>
 <p><code class="notranslate">vi /etc/rc.local</code></p>
@@ -220,13 +220,13 @@ Ubuntu<br>
 <h3>1.下载Windows端图形化管理软件并安装</h3>
 <ul>
 <li>下载<a href="https://wwb.lanzouv.com/ioV7Z2gfyqaj" rel="nofollow">softether-vpnserver_vpnbridge</a>安装<br>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/d0cee96907cb1b924e72f7e1e4386b56a2bd554e186b6cb281fa54bc1d0932f1/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48437063552e74682e706e67"><img src="https://camo.githubusercontent.com/d0cee96907cb1b924e72f7e1e4386b56a2bd554e186b6cb281fa54bc1d0932f1/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48437063552e74682e706e67" alt="安装界面" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCpcU.th.png" style="max-width: 100%; height: auto;"></a> <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f409a7ddb1bb872833fc7be9e175d4397cc360e6942120ac70f1ef0d1193309c/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436d5a702e74682e706e67"><img src="https://camo.githubusercontent.com/f409a7ddb1bb872833fc7be9e175d4397cc360e6942120ac70f1ef0d1193309c/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436d5a702e74682e706e67" alt="安装界面2" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCmZp.th.png" style="max-width: 100%; height: auto;"></a></li>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/d0cee96907cb1b924e72f7e1e4386b56a2bd554e186b6cb281fa54bc1d0932f1/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48437063552e74682e706e67"><img src="https://camo.githubusercontent.com/d0cee96907cb1b924e72f7e1e4386b56a2bd554e186b6cb281fa54bc1d0932f1/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48437063552e74682e706e67" alt="安装界面" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCpcU.th.png" style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f409a7ddb1bb872833fc7be9e175d4397cc360e6942120ac70f1ef0d1193309c/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436d5a702e74682e706e67"><img src="https://camo.githubusercontent.com/f409a7ddb1bb872833fc7be9e175d4397cc360e6942120ac70f1ef0d1193309c/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436d5a702e74682e706e67" alt="安装界面2" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCmZp.th.png" style="max-width: 100%;"></a></li>
 </ul>
 <h3>2.添加服务器</h3>
 <ul>
 <li>点击新设置，</li>
 <li>设置名称、主机名，ip，管理密码等。<br>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e12f68bf8dbdd9e66ff6f73c1f65d27a5893d5f55a424afd75342bb945f9b826/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f4843487a722e706e67"><img src="https://camo.githubusercontent.com/e12f68bf8dbdd9e66ff6f73c1f65d27a5893d5f55a424afd75342bb945f9b826/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f4843487a722e706e67" alt="管理工具连接服务器" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCHzr.png" style="max-width: 100%; height: auto;"></a></li>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e12f68bf8dbdd9e66ff6f73c1f65d27a5893d5f55a424afd75342bb945f9b826/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f4843487a722e706e67"><img src="https://camo.githubusercontent.com/e12f68bf8dbdd9e66ff6f73c1f65d27a5893d5f55a424afd75342bb945f9b826/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f4843487a722e706e67" alt="管理工具连接服务器" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCHzr.png" style="max-width: 100%;"></a></li>
 </ul>
 <h3>3.添加用户</h3>
 <ul>
@@ -235,13 +235,13 @@ Ubuntu<br>
 <li>左下角 <code class="notranslate">新建</code></li>
 <li>输入用户名（可以使用匿名的方式认证、也可以使用账号密码、甚至是证书认证也可以。安全策略那里可以设置此用户的最大下载速度、最大上传速度、mac地址、ip地址数量、黑名单id、限制总流量等等策略）</li>
 </ul>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/cfdb80b0daa4972f44fbb04bb3fca6d211bbb3dc0111f785e4510ede17043ca0/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f4843456c472e706e67"><img src="https://camo.githubusercontent.com/cfdb80b0daa4972f44fbb04bb3fca6d211bbb3dc0111f785e4510ede17043ca0/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f4843456c472e706e67" alt="添加新用户" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCElG.png" style="max-width: 100%; height: auto;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/cfdb80b0daa4972f44fbb04bb3fca6d211bbb3dc0111f785e4510ede17043ca0/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f4843456c472e706e67"><img src="https://camo.githubusercontent.com/cfdb80b0daa4972f44fbb04bb3fca6d211bbb3dc0111f785e4510ede17043ca0/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f4843456c472e706e67" alt="添加新用户" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCElG.png" style="max-width: 100%;"></a></p>
 <h3>4.启用SecureNAT设置</h3>
 <ul>
 <li>返回  <code class="notranslate">管理虚拟HUB - XXX</code> 界面</li>
 <li>点击 <code class="notranslate">虚拟 NAT 和虚拟 DHCP服务器</code> 按钮</li>
 <li>点击 <code class="notranslate">启用 SecureNAT</code> 按钮<br>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/698c62d704f667e359dc42806be3e0edd5f0505aa9d404129fe3ad662fc4a40d/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436c7a6c2e706e67"><img src="https://camo.githubusercontent.com/698c62d704f667e359dc42806be3e0edd5f0505aa9d404129fe3ad662fc4a40d/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436c7a6c2e706e67" alt="启用 SecureNAT" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHClzl.png" style="max-width: 100%; height: auto;"></a></li>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/698c62d704f667e359dc42806be3e0edd5f0505aa9d404129fe3ad662fc4a40d/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436c7a6c2e706e67"><img src="https://camo.githubusercontent.com/698c62d704f667e359dc42806be3e0edd5f0505aa9d404129fe3ad662fc4a40d/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436c7a6c2e706e67" alt="启用 SecureNAT" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHClzl.png" style="max-width: 100%;"></a></li>
 </ul>
 <blockquote>
 <p>因为我之前已经开启过了，所以图示为灰色</p>
@@ -255,7 +255,7 @@ Ubuntu<br>
 <li>点击 <code class="notranslate">OpenVPN / MS-SSTP</code></li>
 <li>设置一个UDP端口（通常校园网可用的为53/67/68端口），我这里选择的是53</li>
 <li>点击 <code class="notranslate">为 OpenVPN Cliernt 生成配置样本文件</code> 将配置文件存在本地<br>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/7294c2e4988883ed9d21f27138b2cf511755d5bfccbf55466a570deb036145b8/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48433950672e706e67"><img src="https://camo.githubusercontent.com/7294c2e4988883ed9d21f27138b2cf511755d5bfccbf55466a570deb036145b8/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48433950672e706e67" alt="生成OpenVPN配置文件" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHC9Pg.png" style="max-width: 100%; height: auto;"></a></li>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/7294c2e4988883ed9d21f27138b2cf511755d5bfccbf55466a570deb036145b8/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48433950672e706e67"><img src="https://camo.githubusercontent.com/7294c2e4988883ed9d21f27138b2cf511755d5bfccbf55466a570deb036145b8/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48433950672e706e67" alt="生成OpenVPN配置文件" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHC9Pg.png" style="max-width: 100%;"></a></li>
 </ul>
 <h3>2.修改下载下来的OpenVPN配置文件</h3>
 <ul>
@@ -265,13 +265,13 @@ Ubuntu<br>
 <blockquote>
 <p>如果用vscode打开则在第 <code class="notranslate">67</code> 行</p>
 </blockquote>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/11f3f70bf6f5d54e4cb326f8f6f63b9c3ebb098c6fe42143317594ff7bf8af5a/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436a39422e706e67"><img src="https://camo.githubusercontent.com/11f3f70bf6f5d54e4cb326f8f6f63b9c3ebb098c6fe42143317594ff7bf8af5a/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436a39422e706e67" alt="修改配置文件" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCj9B.png" style="max-width: 100%; height: auto;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/11f3f70bf6f5d54e4cb326f8f6f63b9c3ebb098c6fe42143317594ff7bf8af5a/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436a39422e706e67"><img src="https://camo.githubusercontent.com/11f3f70bf6f5d54e4cb326f8f6f63b9c3ebb098c6fe42143317594ff7bf8af5a/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48436a39422e706e67" alt="修改配置文件" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCj9B.png" style="max-width: 100%;"></a></p>
 <ul>
 <li>修改如下，并保存<br>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f9f767a267c1878f0314a3f0d85fe97d11db8ebd158e899f74f5fbe1fb475fe5/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f484338764b2e706e67"><img src="https://camo.githubusercontent.com/f9f767a267c1878f0314a3f0d85fe97d11db8ebd158e899f74f5fbe1fb475fe5/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f484338764b2e706e67" alt="修改配置文件成品" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHC8vK.png" style="max-width: 100%; height: auto;"></a></li>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f9f767a267c1878f0314a3f0d85fe97d11db8ebd158e899f74f5fbe1fb475fe5/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f484338764b2e706e67"><img src="https://camo.githubusercontent.com/f9f767a267c1878f0314a3f0d85fe97d11db8ebd158e899f74f5fbe1fb475fe5/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f484338764b2e706e67" alt="修改配置文件成品" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHC8vK.png" style="max-width: 100%;"></a></li>
 </ul>
 <h1>六、成功</h1>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6b71bef165a76302dc6c1b55aba48f6d698eb89073af93189513bd9412bcd873/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48435864612e706e67"><img src="https://camo.githubusercontent.com/6b71bef165a76302dc6c1b55aba48f6d698eb89073af93189513bd9412bcd873/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48435864612e706e67" alt="配置文件截图" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCXda.png" style="max-width: 100%; height: auto;"></a><br>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6b71bef165a76302dc6c1b55aba48f6d698eb89073af93189513bd9412bcd873/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48435864612e706e67"><img src="https://camo.githubusercontent.com/6b71bef165a76302dc6c1b55aba48f6d698eb89073af93189513bd9412bcd873/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032342f31312f32372f4f48435864612e706e67" alt="配置文件截图" data-canonical-src="https://ooo.0x0.ooo/2024/11/27/OHCXda.png" style="max-width: 100%;"></a><br>
 如果你看到这里，并做到了这里，那么恭喜你，已经成功搭建了针对于校园网上网的服务器，你可以将生成好的配置文件集中保存并可以修改其为适合的名字，之后如需多台服务器则重做上述操作！</p>
 <h1>七、计划</h1>
 <p>这篇文章是关于如何从零开始搭建服务器，针对于管理人员的教程，接下来我还会再出一篇针对三端（iOS、安卓、Windows）用户如何使用的教程，那么这篇文章也就到这里了，感谢阅读！</p>
