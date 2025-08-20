@@ -75,7 +75,7 @@
 <meta property="og:url" content="https://hmho000.github.io/post/C%2B%2B-ji-chu-ru-men-%28by--hei-ma-cheng-xu-yuan-%EF%BC%89.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>C++基础入门(by:黑马程序员）</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -99,7 +99,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     body {padding: 8px;}
     .postTitle{font-size:24px;}
 }
-
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
 </style>
 
 
@@ -151,18 +161,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>给C++文件起个名称，然后点击添加即可。</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/567c82700fc1210f18e6d044ce89b066fa2a01775a36234fe4cbf7ebb2c695ef/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f313534313338343134303034322e706e67"><img src="https://camo.githubusercontent.com/567c82700fc1210f18e6d044ce89b066fa2a01775a36234fe4cbf7ebb2c695ef/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f313534313338343134303034322e706e67" alt="1541384140042" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2025/05/1541384140042.png" style="max-width: 100%;"></a></p>
 <h4>1.1.3 编写代码</h4>
-<pre lang="c++" class="notranslate"><code class="notranslate">#include&lt;iostream&gt;
-using namespace std;
+<div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span>
+<span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	cout &lt;&lt; "Hello world" &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>Hello world<span class="pl-pds">"</span></span> &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h4>1.1.4 运行程序</h4>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/687416ace16315431954567d6b3dd84029445cf59c36eee1cdfd8dc307bfa251/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f313534313338343831383638382e706e67"><img src="https://camo.githubusercontent.com/687416ace16315431954567d6b3dd84029445cf59c36eee1cdfd8dc307bfa251/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f313534313338343831383638382e706e67" alt="1541384818688" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2025/05/1541384818688.png" style="max-width: 100%;"></a></p>
 <h3>1.2 注释</h3>
@@ -187,23 +196,22 @@ int main() {
 <p><strong>作用</strong>：给一段指定的内存空间起名，方便操作这段内存</p>
 <p><strong>语法</strong>：<code class="notranslate">数据类型 变量名 = 初始值;</code></p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">#include&lt;iostream&gt;
-using namespace std;
+<div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span>
+<span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//变量的定义
-	//语法：数据类型  变量名 = 初始值
+	<span class="pl-c"><span class="pl-c">//</span>变量的定义</span>
+	<span class="pl-c"><span class="pl-c">//</span>语法：数据类型  变量名 = 初始值</span>
 
-	int a = 10;
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
 
-	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>a = <span class="pl-pds">"</span></span> &lt;&lt; a &lt;&lt; endl;
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>注意：C++在创建变量时，必须给变量一个初始值，否则会报错</p>
 </blockquote>
@@ -225,25 +233,24 @@ int main() {
 </li>
 </ol>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//1、宏常量
-#define day 7
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>1、宏常量</span>
+#<span class="pl-k">define</span> <span class="pl-en">day</span> <span class="pl-c1">7</span>
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	cout &lt;&lt; "一周里总共有 " &lt;&lt; day &lt;&lt; " 天" &lt;&lt; endl;
-	//day = 8;  //报错，宏常量不可以修改
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>一周里总共有 <span class="pl-pds">"</span></span> &lt;&lt; day &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 天<span class="pl-pds">"</span></span> &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>day = 8;  //报错，宏常量不可以修改</span>
 
-	//2、const修饰变量
-	const int month = 12;
-	cout &lt;&lt; "一年里总共有 " &lt;&lt; month &lt;&lt; " 个月份" &lt;&lt; endl;
-	//month = 24; //报错，常量是不可以修改的
+	<span class="pl-c"><span class="pl-c">//</span>2、const修饰变量</span>
+	<span class="pl-k">const</span> <span class="pl-k">int</span> month = <span class="pl-c1">12</span>;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>一年里总共有 <span class="pl-pds">"</span></span> &lt;&lt; month &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 个月份<span class="pl-pds">"</span></span> &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>month = 24; //报错，常量是不可以修改的</span>
 	
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h3>1.5 关键字</h3>
 <p>**作用：**关键字是C++中预先保留的单词（标识符）</p>
 <ul>
@@ -399,21 +406,20 @@ int main() {
 <p>**作用：**利用sizeof关键字可以==统计数据类型所占内存大小==</p>
 <p><strong>语法：</strong> <code class="notranslate">sizeof( 数据类型 / 变量)</code></p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	cout &lt;&lt; "short 类型所占内存空间为： " &lt;&lt; sizeof(short) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>short 类型所占内存空间为： <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(<span class="pl-k">short</span>) &lt;&lt; endl;
 
-	cout &lt;&lt; "int 类型所占内存空间为： " &lt;&lt; sizeof(int) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>int 类型所占内存空间为： <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(<span class="pl-k">int</span>) &lt;&lt; endl;
 
-	cout &lt;&lt; "long 类型所占内存空间为： " &lt;&lt; sizeof(long) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>long 类型所占内存空间为： <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(<span class="pl-k">long</span>) &lt;&lt; endl;
 
-	cout &lt;&lt; "long long 类型所占内存空间为： " &lt;&lt; sizeof(long long) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>long long 类型所占内存空间为： <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(<span class="pl-k">long</span> <span class="pl-k">long</span>) &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p><strong>整型结论</strong>：==short &lt; int &lt;= long &lt;= long long==</p>
 </blockquote>
@@ -447,29 +453,28 @@ int main() {
 </tbody>
 </table></markdown-accessiblity-table>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	float f1 = 3.14f;
-	double d1 = 3.14;
+	<span class="pl-k">float</span> f1 = <span class="pl-c1">3</span>.<span class="pl-c1">14f</span>;
+	<span class="pl-k">double</span> d1 = <span class="pl-c1">3.14</span>;
 
 	cout &lt;&lt; f1 &lt;&lt; endl;
 	cout &lt;&lt; d1&lt;&lt; endl;
 
-	cout &lt;&lt; "float  sizeof = " &lt;&lt; sizeof(f1) &lt;&lt; endl;
-	cout &lt;&lt; "double sizeof = " &lt;&lt; sizeof(d1) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>float  sizeof = <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(f1) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>double sizeof = <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(d1) &lt;&lt; endl;
 
-	//科学计数法
-	float f2 = 3e2; // 3 * 10 ^ 2 
-	cout &lt;&lt; "f2 = " &lt;&lt; f2 &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>科学计数法</span>
+	<span class="pl-k">float</span> f2 = <span class="pl-c1">3e2</span>; <span class="pl-c"><span class="pl-c">//</span> 3 * 10 ^ 2 </span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>f2 = <span class="pl-pds">"</span></span> &lt;&lt; f2 &lt;&lt; endl;
 
-	float f3 = 3e-2;  // 3 * 0.1 ^ 2
-	cout &lt;&lt; "f3 = " &lt;&lt; f3 &lt;&lt; endl;
+	<span class="pl-k">float</span> f3 = <span class="pl-c1">3e-2</span>;  <span class="pl-c"><span class="pl-c">//</span> 3 * 0.1 ^ 2</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>f3 = <span class="pl-pds">"</span></span> &lt;&lt; f3 &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h3>2.4 字符型</h3>
 <p>**作用：**字符型变量用于显示单个字符</p>
 <p><strong>语法：</strong><code class="notranslate">char ch = 'a';</code></p>
@@ -484,24 +489,23 @@ int main() {
 <li>字符型变量并不是把字符本身放到内存中存储，而是将对应的ASCII编码放入到存储单元</li>
 </ul>
 <p>示例：</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 	
-	char ch = 'a';
+	<span class="pl-k">char</span> ch = <span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>;
 	cout &lt;&lt; ch &lt;&lt; endl;
-	cout &lt;&lt; sizeof(char) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-k">sizeof</span>(<span class="pl-k">char</span>) &lt;&lt; endl;
 
-	//ch = "abcde"; //错误，不可以用双引号
-	//ch = 'abcde'; //错误，单引号内只能引用一个字符
+	<span class="pl-c"><span class="pl-c">//</span>ch = "abcde"; //错误，不可以用双引号</span>
+	<span class="pl-c"><span class="pl-c">//</span>ch = 'abcde'; //错误，单引号内只能引用一个字符</span>
 
-	cout &lt;&lt; (int)ch &lt;&lt; endl;  //查看字符a对应的ASCII码
-	ch = 97; //可以直接用ASCII给字符型变量赋值
+	cout &lt;&lt; (<span class="pl-k">int</span>)ch &lt;&lt; endl;  <span class="pl-c"><span class="pl-c">//</span>查看字符a对应的ASCII码</span>
+	ch = <span class="pl-c1">97</span>; <span class="pl-c"><span class="pl-c">//</span>可以直接用ASCII给字符型变量赋值</span>
 	cout &lt;&lt; ch &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <p>ASCII码表格：</p>
 <markdown-accessiblity-table><table role="table">
 <thead>
@@ -929,18 +933,17 @@ int main() {
 </tbody>
 </table></markdown-accessiblity-table>
 <p>示例：</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 	
 	
-	cout &lt;&lt; "\\" &lt;&lt; endl;
-	cout &lt;&lt; "\tHello" &lt;&lt; endl;
-	cout &lt;&lt; "\n" &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\\</span><span class="pl-pds">"</span></span> &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\t</span>Hello<span class="pl-pds">"</span></span> &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h3>2.6 字符串型</h3>
 <p><strong>作用</strong>：用于表示一串字符</p>
 <p><strong>两种风格</strong></p>
@@ -948,16 +951,15 @@ int main() {
 <li>
 <p><strong>C风格字符串</strong>： <code class="notranslate">char 变量名[] = "字符串值"</code></p>
 <p>示例：</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	char str1[] = "hello world";
+	<span class="pl-k">char</span> str1[] = <span class="pl-s"><span class="pl-pds">"</span>hello world<span class="pl-pds">"</span></span>;
 	cout &lt;&lt; str1 &lt;&lt; endl;
     
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 </li>
 </ol>
 <blockquote>
@@ -967,16 +969,15 @@ int main() {
 <li>
 <p><strong>C++风格字符串</strong>：  <code class="notranslate">string  变量名 = "字符串值"</code></p>
 <p>示例：</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	string str = "hello world";
+	string str = <span class="pl-s"><span class="pl-pds">"</span>hello world<span class="pl-pds">"</span></span>;
 	cout &lt;&lt; str &lt;&lt; endl;
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <p>​</p>
 </li>
 </ol>
@@ -992,61 +993,59 @@ int main() {
 </ul>
 <p><strong>bool类型占==1个字节==大小</strong></p>
 <p>示例：</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	bool flag = true;
-	cout &lt;&lt; flag &lt;&lt; endl; // 1
+	<span class="pl-k">bool</span> flag = <span class="pl-c1">true</span>;
+	cout &lt;&lt; flag &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span> 1</span>
 
-	flag = false;
-	cout &lt;&lt; flag &lt;&lt; endl; // 0
+	flag = <span class="pl-c1">false</span>;
+	cout &lt;&lt; flag &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span> 0</span>
 
-	cout &lt;&lt; "size of bool = " &lt;&lt; sizeof(bool) &lt;&lt; endl; //1
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>size of bool = <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(<span class="pl-k">bool</span>) &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span>1</span>
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h3>2.8 数据的输入</h3>
 <p><strong>作用：用于从键盘获取数据</strong></p>
 <p>**关键字：**cin</p>
 <p><strong>语法：</strong> <code class="notranslate">cin &gt;&gt; 变量 </code></p>
 <p>示例：</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main(){
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>(){
 
-	//整型输入
-	int a = 0;
-	cout &lt;&lt; "请输入整型变量：" &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>整型输入</span>
+	<span class="pl-k">int</span> a = <span class="pl-c1">0</span>;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>请输入整型变量：<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	cin &gt;&gt; a;
 	cout &lt;&lt; a &lt;&lt; endl;
 
-	//浮点型输入
-	double d = 0;
-	cout &lt;&lt; "请输入浮点型变量：" &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>浮点型输入</span>
+	<span class="pl-k">double</span> d = <span class="pl-c1">0</span>;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>请输入浮点型变量：<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	cin &gt;&gt; d;
 	cout &lt;&lt; d &lt;&lt; endl;
 
-	//字符型输入
-	char ch = 0;
-	cout &lt;&lt; "请输入字符型变量：" &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>字符型输入</span>
+	<span class="pl-k">char</span> ch = <span class="pl-c1">0</span>;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>请输入字符型变量：<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	cin &gt;&gt; ch;
 	cout &lt;&lt; ch &lt;&lt; endl;
 
-	//字符串型输入
+	<span class="pl-c"><span class="pl-c">//</span>字符串型输入</span>
 	string str;
-	cout &lt;&lt; "请输入字符串型变量：" &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>请输入字符串型变量：<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	cin &gt;&gt; str;
 	cout &lt;&lt; str &lt;&lt; endl;
 
-	//布尔类型输入
-	bool flag = true;
-	cout &lt;&lt; "请输入布尔型变量：" &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>布尔类型输入</span>
+	<span class="pl-k">bool</span> flag = <span class="pl-c1">true</span>;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>请输入布尔型变量：<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	cin &gt;&gt; flag;
 	cout &lt;&lt; flag &lt;&lt; endl;
-	system("pause");
-	return EXIT_SUCCESS;
-}
-</code></pre>
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
+	<span class="pl-k">return</span> EXIT_SUCCESS;
+}</pre></div>
 <h2>3 运算符</h2>
 <p>**作用：**用于执行代码的运算</p>
 <p>本章我们主要讲解以下几类运算符：</p>
@@ -1158,104 +1157,101 @@ int main() {
 </tbody>
 </table></markdown-accessiblity-table>
 <p><strong>示例1：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//加减乘除
-int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>加减乘除</span>
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a1 = 10;
-	int b1 = 3;
+	<span class="pl-k">int</span> a1 = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b1 = <span class="pl-c1">3</span>;
 
 	cout &lt;&lt; a1 + b1 &lt;&lt; endl;
 	cout &lt;&lt; a1 - b1 &lt;&lt; endl;
 	cout &lt;&lt; a1 * b1 &lt;&lt; endl;
-	cout &lt;&lt; a1 / b1 &lt;&lt; endl;  //两个整数相除结果依然是整数
+	cout &lt;&lt; a1 / b1 &lt;&lt; endl;  <span class="pl-c"><span class="pl-c">//</span>两个整数相除结果依然是整数</span>
 
-	int a2 = 10;
-	int b2 = 20;
+	<span class="pl-k">int</span> a2 = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b2 = <span class="pl-c1">20</span>;
 	cout &lt;&lt; a2 / b2 &lt;&lt; endl; 
 
-	int a3 = 10;
-	int b3 = 0;
-	//cout &lt;&lt; a3 / b3 &lt;&lt; endl; //报错，除数不可以为0
+	<span class="pl-k">int</span> a3 = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b3 = <span class="pl-c1">0</span>;
+	<span class="pl-c"><span class="pl-c">//</span>cout &lt;&lt; a3 / b3 &lt;&lt; endl; //报错，除数不可以为0</span>
 
 
-	//两个小数可以相除
-	double d1 = 0.5;
-	double d2 = 0.25;
+	<span class="pl-c"><span class="pl-c">//</span>两个小数可以相除</span>
+	<span class="pl-k">double</span> d1 = <span class="pl-c1">0.5</span>;
+	<span class="pl-k">double</span> d2 = <span class="pl-c1">0.25</span>;
 	cout &lt;&lt; d1 / d2 &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结：在除法运算中，除数不能为0</p>
 </blockquote>
 <p><strong>示例2：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//取模
-int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>取模</span>
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a1 = 10;
-	int b1 = 3;
+	<span class="pl-k">int</span> a1 = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b1 = <span class="pl-c1">3</span>;
 
-	cout &lt;&lt; 10 % 3 &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-c1">10</span> % <span class="pl-c1">3</span> &lt;&lt; endl;
 
-	int a2 = 10;
-	int b2 = 20;
+	<span class="pl-k">int</span> a2 = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b2 = <span class="pl-c1">20</span>;
 
 	cout &lt;&lt; a2 % b2 &lt;&lt; endl;
 
-	int a3 = 10;
-	int b3 = 0;
+	<span class="pl-k">int</span> a3 = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b3 = <span class="pl-c1">0</span>;
 
-	//cout &lt;&lt; a3 % b3 &lt;&lt; endl; //取模运算时，除数也不能为0
+	<span class="pl-c"><span class="pl-c">//</span>cout &lt;&lt; a3 % b3 &lt;&lt; endl; //取模运算时，除数也不能为0</span>
 
-	//两个小数不可以取模
-	double d1 = 3.14;
-	double d2 = 1.1;
+	<span class="pl-c"><span class="pl-c">//</span>两个小数不可以取模</span>
+	<span class="pl-k">double</span> d1 = <span class="pl-c1">3.14</span>;
+	<span class="pl-k">double</span> d2 = <span class="pl-c1">1.1</span>;
 
-	//cout &lt;&lt; d1 % d2 &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>cout &lt;&lt; d1 % d2 &lt;&lt; endl;</span>
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
 }
-
-</code></pre>
+</pre></div>
 <blockquote>
 <p>总结：只有整型变量可以进行取模运算</p>
 </blockquote>
 <p><strong>示例3：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//递增
-int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>递增</span>
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//后置递增
-	int a = 10;
-	a++; //等价于a = a + 1
-	cout &lt;&lt; a &lt;&lt; endl; // 11
+	<span class="pl-c"><span class="pl-c">//</span>后置递增</span>
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
+	a++; <span class="pl-c"><span class="pl-c">//</span>等价于a = a + 1</span>
+	cout &lt;&lt; a &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span> 11</span>
 
-	//前置递增
-	int b = 10;
+	<span class="pl-c"><span class="pl-c">//</span>前置递增</span>
+	<span class="pl-k">int</span> b = <span class="pl-c1">10</span>;
 	++b;
-	cout &lt;&lt; b &lt;&lt; endl; // 11
+	cout &lt;&lt; b &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span> 11</span>
 
-	//区别
-	//前置递增先对变量进行++，再计算表达式
-	int a2 = 10;
-	int b2 = ++a2 * 10;
+	<span class="pl-c"><span class="pl-c">//</span>区别</span>
+	<span class="pl-c"><span class="pl-c">//</span>前置递增先对变量进行++，再计算表达式</span>
+	<span class="pl-k">int</span> a2 = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b2 = ++a2 * <span class="pl-c1">10</span>;
 	cout &lt;&lt; b2 &lt;&lt; endl;
 
-	//后置递增先计算表达式，后对变量进行++
-	int a3 = 10;
-	int b3 = a3++ * 10;
+	<span class="pl-c"><span class="pl-c">//</span>后置递增先计算表达式，后对变量进行++</span>
+	<span class="pl-k">int</span> a3 = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b3 = a3++ * <span class="pl-c1">10</span>;
 	cout &lt;&lt; b3 &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
 }
-
-</code></pre>
+</pre></div>
 <blockquote>
 <p>总结：前置递增先对变量进行++，再计算表达式，后置递增相反</p>
 </blockquote>
@@ -1311,45 +1307,44 @@ int main() {
 </tbody>
 </table></markdown-accessiblity-table>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//赋值运算符
+	<span class="pl-c"><span class="pl-c">//</span>赋值运算符</span>
 
-	// =
-	int a = 10;
-	a = 100;
-	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span> =</span>
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
+	a = <span class="pl-c1">100</span>;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>a = <span class="pl-pds">"</span></span> &lt;&lt; a &lt;&lt; endl;
 
-	// +=
-	a = 10;
-	a += 2; // a = a + 2;
-	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span> +=</span>
+	a = <span class="pl-c1">10</span>;
+	a += <span class="pl-c1">2</span>; <span class="pl-c"><span class="pl-c">//</span> a = a + 2;</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>a = <span class="pl-pds">"</span></span> &lt;&lt; a &lt;&lt; endl;
 
-	// -=
-	a = 10;
-	a -= 2; // a = a - 2
-	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span> -=</span>
+	a = <span class="pl-c1">10</span>;
+	a -= <span class="pl-c1">2</span>; <span class="pl-c"><span class="pl-c">//</span> a = a - 2</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>a = <span class="pl-pds">"</span></span> &lt;&lt; a &lt;&lt; endl;
 
-	// *=
-	a = 10;
-	a *= 2; // a = a * 2
-	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span> *=</span>
+	a = <span class="pl-c1">10</span>;
+	a *= <span class="pl-c1">2</span>; <span class="pl-c"><span class="pl-c">//</span> a = a * 2</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>a = <span class="pl-pds">"</span></span> &lt;&lt; a &lt;&lt; endl;
 
-	// /=
-	a = 10;
-	a /= 2;  // a = a / 2;
-	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span> /=</span>
+	a = <span class="pl-c1">10</span>;
+	a /= <span class="pl-c1">2</span>;  <span class="pl-c"><span class="pl-c">//</span> a = a / 2;</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>a = <span class="pl-pds">"</span></span> &lt;&lt; a &lt;&lt; endl;
 
-	// %=
-	a = 10;
-	a %= 2;  // a = a % 2;
-	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span> %=</span>
+	a = <span class="pl-c1">10</span>;
+	a %= <span class="pl-c1">2</span>;  <span class="pl-c"><span class="pl-c">//</span> a = a % 2;</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>a = <span class="pl-pds">"</span></span> &lt;&lt; a &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h3>3.3 比较运算符</h3>
 <p>**作用：**用于表达式的比较，并返回一个真值或假值</p>
 <p>比较运算符有以下符号：</p>
@@ -1402,28 +1397,27 @@ int main() {
 </tbody>
 </table></markdown-accessiblity-table>
 <p>示例：</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a = 10;
-	int b = 20;
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b = <span class="pl-c1">20</span>;
 
-	cout &lt;&lt; (a == b) &lt;&lt; endl; // 0 
+	cout &lt;&lt; (a == b) &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span> 0 </span>
 
-	cout &lt;&lt; (a != b) &lt;&lt; endl; // 1
+	cout &lt;&lt; (a != b) &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span> 1</span>
 
-	cout &lt;&lt; (a &gt; b) &lt;&lt; endl; // 0
+	cout &lt;&lt; (a &gt; b) &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span> 0</span>
 
-	cout &lt;&lt; (a &lt; b) &lt;&lt; endl; // 1
+	cout &lt;&lt; (a &lt; b) &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span> 1</span>
 
-	cout &lt;&lt; (a &gt;= b) &lt;&lt; endl; // 0
+	cout &lt;&lt; (a &gt;= b) &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span> 0</span>
 
-	cout &lt;&lt; (a &lt;= b) &lt;&lt; endl; // 1
+	cout &lt;&lt; (a &lt;= b) &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span> 1</span>
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>注意：C和C++ 语言的比较运算中， ==“真”用数字“1”来表示， “假”用数字“0”来表示。==</p>
 </blockquote>
@@ -1461,75 +1455,72 @@ int main() {
 </tbody>
 </table></markdown-accessiblity-table>
 <p>**示例1：**逻辑非</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//逻辑运算符  --- 非
-int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>逻辑运算符  --- 非</span>
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a = 10;
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
 
-	cout &lt;&lt; !a &lt;&lt; endl; // 0
+	cout &lt;&lt; !a &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span> 0</span>
 
-	cout &lt;&lt; !!a &lt;&lt; endl; // 1
+	cout &lt;&lt; !!a &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span> 1</span>
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结： 真变假，假变真</p>
 </blockquote>
 <p>**示例2：**逻辑与</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//逻辑运算符  --- 与
-int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>逻辑运算符  --- 与</span>
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a = 10;
-	int b = 10;
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b = <span class="pl-c1">10</span>;
 
-	cout &lt;&lt; (a &amp;&amp; b) &lt;&lt; endl;// 1
+	cout &lt;&lt; (a &amp;&amp; b) &lt;&lt; endl;<span class="pl-c"><span class="pl-c">//</span> 1</span>
 
-	a = 10;
-	b = 0;
+	a = <span class="pl-c1">10</span>;
+	b = <span class="pl-c1">0</span>;
 
-	cout &lt;&lt; (a &amp;&amp; b) &lt;&lt; endl;// 0 
+	cout &lt;&lt; (a &amp;&amp; b) &lt;&lt; endl;<span class="pl-c"><span class="pl-c">//</span> 0 </span>
 
-	a = 0;
-	b = 0;
+	a = <span class="pl-c1">0</span>;
+	b = <span class="pl-c1">0</span>;
 
-	cout &lt;&lt; (a &amp;&amp; b) &lt;&lt; endl;// 0
+	cout &lt;&lt; (a &amp;&amp; b) &lt;&lt; endl;<span class="pl-c"><span class="pl-c">//</span> 0</span>
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
 }
-
-</code></pre>
+</pre></div>
 <blockquote>
 <p>总结：逻辑==与==运算符总结： ==同真为真，其余为假==</p>
 </blockquote>
 <p>**示例3：**逻辑或</p>
-<pre lang="c++" class="notranslate"><code class="notranslate">//逻辑运算符  --- 或
-int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>逻辑运算符  --- 或</span>
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a = 10;
-	int b = 10;
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b = <span class="pl-c1">10</span>;
 
-	cout &lt;&lt; (a || b) &lt;&lt; endl;// 1
+	cout &lt;&lt; (a || b) &lt;&lt; endl;<span class="pl-c"><span class="pl-c">//</span> 1</span>
 
-	a = 10;
-	b = 0;
+	a = <span class="pl-c1">10</span>;
+	b = <span class="pl-c1">0</span>;
 
-	cout &lt;&lt; (a || b) &lt;&lt; endl;// 1 
+	cout &lt;&lt; (a || b) &lt;&lt; endl;<span class="pl-c"><span class="pl-c">//</span> 1 </span>
 
-	a = 0;
-	b = 0;
+	a = <span class="pl-c1">0</span>;
+	b = <span class="pl-c1">0</span>;
 
-	cout &lt;&lt; (a || b) &lt;&lt; endl;// 0
+	cout &lt;&lt; (a || b) &lt;&lt; endl;<span class="pl-c"><span class="pl-c">//</span> 0</span>
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>逻辑==或==运算符总结： ==同假为假，其余为真==</p>
 </blockquote>
@@ -1561,29 +1552,28 @@ int main() {
 <p>单行格式if语句：<code class="notranslate">if(条件){ 条件满足执行的语句 }</code></p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/fe3f3a5fd4126720aa0cd9014dd2483891873b3e45a6da01c44bfc6076760bb7/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f636c69705f696d6167653030322e706e67"><img src="https://camo.githubusercontent.com/fe3f3a5fd4126720aa0cd9014dd2483891873b3e45a6da01c44bfc6076760bb7/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f636c69705f696d6167653030322e706e67" alt="img" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2025/05/clip_image002.png" style="max-width: 100%;"></a></p>
 <p>示例：</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//选择结构-单行if语句
-	//输入一个分数，如果分数大于600分，视为考上一本大学，并在屏幕上打印
+	<span class="pl-c"><span class="pl-c">//</span>选择结构-单行if语句</span>
+	<span class="pl-c"><span class="pl-c">//</span>输入一个分数，如果分数大于600分，视为考上一本大学，并在屏幕上打印</span>
 
-	int score = 0;
-	cout &lt;&lt; "请输入一个分数：" &lt;&lt; endl;
+	<span class="pl-k">int</span> score = <span class="pl-c1">0</span>;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>请输入一个分数：<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	cin &gt;&gt; score;
 
-	cout &lt;&lt; "您输入的分数为： " &lt;&lt; score &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>您输入的分数为： <span class="pl-pds">"</span></span> &lt;&lt; score &lt;&lt; endl;
 
-	//if语句
-	//注意事项，在if判断语句后面，不要加分号
-	if (score &gt; 600)
+	<span class="pl-c"><span class="pl-c">//</span>if语句</span>
+	<span class="pl-c"><span class="pl-c">//</span>注意事项，在if判断语句后面，不要加分号</span>
+	<span class="pl-k">if</span> (score &gt; <span class="pl-c1">600</span>)
 	{
-		cout &lt;&lt; "我考上了一本大学！！！" &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我考上了一本大学！！！<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	}
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <p>​</p>
 </li>
 </ol>
@@ -1596,28 +1586,27 @@ int main() {
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/3a6bfec6c272f229f6e623623df4bbbd1b24af98ea8132fd49ff67ca8f616acd/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f636c69705f696d6167653030322d313534313636323531393137302e706e67"><img src="https://camo.githubusercontent.com/3a6bfec6c272f229f6e623623df4bbbd1b24af98ea8132fd49ff67ca8f616acd/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f636c69705f696d6167653030322d313534313636323531393137302e706e67" alt="img" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2025/05/clip_image002-1541662519170.png" style="max-width: 100%;"></a></p>
 <p>​</p>
 <p>示例：</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int score = 0;
+	<span class="pl-k">int</span> score = <span class="pl-c1">0</span>;
 
-	cout &lt;&lt; "请输入考试分数：" &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>请输入考试分数：<span class="pl-pds">"</span></span> &lt;&lt; endl;
 
 	cin &gt;&gt; score;
 
-	if (score &gt; 600)
+	<span class="pl-k">if</span> (score &gt; <span class="pl-c1">600</span>)
 	{
-		cout &lt;&lt; "我考上了一本大学" &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我考上了一本大学<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	}
-	else
+	<span class="pl-k">else</span>
 	{
-		cout &lt;&lt; "我未考上一本大学" &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我未考上一本大学<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	}
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <ol start="3">
 <li>多条件的if语句：<code class="notranslate">if(条件1){ 条件1满足执行的语句 }else if(条件2){条件2满足执行的语句}... else{ 都不满足执行的语句}</code></li>
 </ol>
@@ -1626,36 +1615,35 @@ int main() {
 <p>​</p>
 <p>​</p>
 <p>示例：</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">	int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate">	<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int score = 0;
+	<span class="pl-k">int</span> score = <span class="pl-c1">0</span>;
 
-	cout &lt;&lt; "请输入考试分数：" &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>请输入考试分数：<span class="pl-pds">"</span></span> &lt;&lt; endl;
 
 	cin &gt;&gt; score;
 
-	if (score &gt; 600)
+	<span class="pl-k">if</span> (score &gt; <span class="pl-c1">600</span>)
 	{
-		cout &lt;&lt; "我考上了一本大学" &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我考上了一本大学<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	}
-	else if (score &gt; 500)
+	<span class="pl-k">else</span> <span class="pl-k">if</span> (score &gt; <span class="pl-c1">500</span>)
 	{
-		cout &lt;&lt; "我考上了二本大学" &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我考上了二本大学<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	}
-	else if (score &gt; 400)
+	<span class="pl-k">else</span> <span class="pl-k">if</span> (score &gt; <span class="pl-c1">400</span>)
 	{
-		cout &lt;&lt; "我考上了三本大学" &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我考上了三本大学<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	}
-	else
+	<span class="pl-k">else</span>
 	{
-		cout &lt;&lt; "我未考上本科" &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我未考上本科<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	}
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <p>​</p>
 <p><strong>嵌套if语句</strong>：在if语句中，可以嵌套使用if语句，达到更精确的条件判断</p>
 <p>案例需求：</p>
@@ -1665,49 +1653,48 @@ int main() {
 <li>在一本分数中，如果大于700分，考入北大，大于650分，考入清华，大于600考入人大。</li>
 </ul>
 <p><strong>示例：</strong></p>
-<pre lang="c++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int score = 0;
+	<span class="pl-k">int</span> score = <span class="pl-c1">0</span>;
 
-	cout &lt;&lt; "请输入考试分数：" &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>请输入考试分数：<span class="pl-pds">"</span></span> &lt;&lt; endl;
 
 	cin &gt;&gt; score;
 
-	if (score &gt; 600)
+	<span class="pl-k">if</span> (score &gt; <span class="pl-c1">600</span>)
 	{
-		cout &lt;&lt; "我考上了一本大学" &lt;&lt; endl;
-		if (score &gt; 700)
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我考上了一本大学<span class="pl-pds">"</span></span> &lt;&lt; endl;
+		<span class="pl-k">if</span> (score &gt; <span class="pl-c1">700</span>)
 		{
-			cout &lt;&lt; "我考上了北大" &lt;&lt; endl;
+			cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我考上了北大<span class="pl-pds">"</span></span> &lt;&lt; endl;
 		}
-		else if (score &gt; 650)
+		<span class="pl-k">else</span> <span class="pl-k">if</span> (score &gt; <span class="pl-c1">650</span>)
 		{
-			cout &lt;&lt; "我考上了清华" &lt;&lt; endl;
+			cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我考上了清华<span class="pl-pds">"</span></span> &lt;&lt; endl;
 		}
-		else
+		<span class="pl-k">else</span>
 		{
-			cout &lt;&lt; "我考上了人大" &lt;&lt; endl;
+			cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我考上了人大<span class="pl-pds">"</span></span> &lt;&lt; endl;
 		}
 		
 	}
-	else if (score &gt; 500)
+	<span class="pl-k">else</span> <span class="pl-k">if</span> (score &gt; <span class="pl-c1">500</span>)
 	{
-		cout &lt;&lt; "我考上了二本大学" &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我考上了二本大学<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	}
-	else if (score &gt; 400)
+	<span class="pl-k">else</span> <span class="pl-k">if</span> (score &gt; <span class="pl-c1">400</span>)
 	{
-		cout &lt;&lt; "我考上了三本大学" &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我考上了三本大学<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	}
-	else
+	<span class="pl-k">else</span>
 	{
-		cout &lt;&lt; "我未考上本科" &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>我未考上本科<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	}
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <p><strong>练习案例：</strong> 三只小猪称体重</p>
 <p>有三只小猪ABC，请分别输入三只小猪的体重，并且判断哪只小猪最重？<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/bf7611c772cb99f8b5f39e5b81419ef0421918e5a2f575f9dc4ace3e6276ba6d/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f2545342542382538392545352538462541412545352542302538462545372538432541412e6a7067"><img src="https://camo.githubusercontent.com/bf7611c772cb99f8b5f39e5b81419ef0421918e5a2f575f9dc4ace3e6276ba6d/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f2545342542382538392545352538462541412545352542302538462545372538432541412e6a7067" alt="三只小猪" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2025/05/%E4%B8%89%E5%8F%AA%E5%B0%8F%E7%8C%AA.jpg" style="max-width: 100%;"></a></p>
 <h4>4.1.2 三目运算符</h4>
@@ -1717,85 +1704,82 @@ int main() {
 <p>如果表达式1的值为真，执行表达式2，并返回表达式2的结果；</p>
 <p>如果表达式1的值为假，执行表达式3，并返回表达式3的结果。</p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a = 10;
-	int b = 20;
-	int c = 0;
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b = <span class="pl-c1">20</span>;
+	<span class="pl-k">int</span> c = <span class="pl-c1">0</span>;
 
 	c = a &gt; b ? a : b;
-	cout &lt;&lt; "c = " &lt;&lt; c &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>c = <span class="pl-pds">"</span></span> &lt;&lt; c &lt;&lt; endl;
 
-	//C++中三目运算符返回的是变量,可以继续赋值
+	<span class="pl-c"><span class="pl-c">//</span>C++中三目运算符返回的是变量,可以继续赋值</span>
 
-	(a &gt; b ? a : b) = 100;
+	(a &gt; b ? a : b) = <span class="pl-c1">100</span>;
 
-	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
-	cout &lt;&lt; "b = " &lt;&lt; b &lt;&lt; endl;
-	cout &lt;&lt; "c = " &lt;&lt; c &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>a = <span class="pl-pds">"</span></span> &lt;&lt; a &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>b = <span class="pl-pds">"</span></span> &lt;&lt; b &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>c = <span class="pl-pds">"</span></span> &lt;&lt; c &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结：和if语句比较，三目运算符优点是短小整洁，缺点是如果用嵌套，结构不清晰</p>
 </blockquote>
 <h4>4.1.3 switch语句</h4>
 <p>**作用：**执行多条件分支语句</p>
 <p><strong>语法：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">switch(表达式)
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">switch</span>(表达式)
 
 {
 
-	case 结果1：执行语句;break;
+	<span class="pl-k">case</span> 结果<span class="pl-c1">1</span>：执行语句;<span class="pl-k">break</span>;
 
-	case 结果2：执行语句;break;
+	<span class="pl-k">case</span> 结果<span class="pl-c1">2</span>：执行语句;<span class="pl-k">break</span>;
 
 	...
 
-	default:执行语句;break;
+	<span class="pl-k">default</span>:执行语句;<span class="pl-k">break</span>;
 
 }
-
-</code></pre>
+</pre></div>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//请给电影评分 
-	//10 ~ 9   经典   
-	// 8 ~ 7   非常好
-	// 6 ~ 5   一般
-	// 5分以下 烂片
+	<span class="pl-c"><span class="pl-c">//</span>请给电影评分 </span>
+	<span class="pl-c"><span class="pl-c">//</span>10 ~ 9   经典   </span>
+	<span class="pl-c"><span class="pl-c">//</span> 8 ~ 7   非常好</span>
+	<span class="pl-c"><span class="pl-c">//</span> 6 ~ 5   一般</span>
+	<span class="pl-c"><span class="pl-c">//</span> 5分以下 烂片</span>
 
-	int score = 0;
-	cout &lt;&lt; "请给电影打分" &lt;&lt; endl;
+	<span class="pl-k">int</span> score = <span class="pl-c1">0</span>;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>请给电影打分<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	cin &gt;&gt; score;
 
-	switch (score)
+	<span class="pl-k">switch</span> (score)
 	{
-	case 10:
-	case 9:
-		cout &lt;&lt; "经典" &lt;&lt; endl;
-		break;
-	case 8:
-		cout &lt;&lt; "非常好" &lt;&lt; endl;
-		break;
-	case 7:
-	case 6:
-		cout &lt;&lt; "一般" &lt;&lt; endl;
-		break;
-	default:
-		cout &lt;&lt; "烂片" &lt;&lt; endl;
-		break;
+	<span class="pl-k">case</span> <span class="pl-c1">10</span>:
+	<span class="pl-k">case</span> <span class="pl-c1">9</span>:
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>经典<span class="pl-pds">"</span></span> &lt;&lt; endl;
+		<span class="pl-k">break</span>;
+	<span class="pl-k">case</span> <span class="pl-c1">8</span>:
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>非常好<span class="pl-pds">"</span></span> &lt;&lt; endl;
+		<span class="pl-k">break</span>;
+	<span class="pl-k">case</span> <span class="pl-c1">7</span>:
+	<span class="pl-k">case</span> <span class="pl-c1">6</span>:
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>一般<span class="pl-pds">"</span></span> &lt;&lt; endl;
+		<span class="pl-k">break</span>;
+	<span class="pl-k">default</span>:
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>烂片<span class="pl-pds">"</span></span> &lt;&lt; endl;
+		<span class="pl-k">break</span>;
 	}
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>注意1：switch语句中表达式类型只能是整型或者字符型</p>
 </blockquote>
@@ -1812,20 +1796,19 @@ int main() {
 <p><strong>解释：</strong>==只要循环条件的结果为真，就执行循环语句==</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ff7f9fa1b2741f4d06676ed036a6aa9102846be135c09f8597969f6abd2ca435/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f636c69705f696d6167653030322d313534313636383634303338322e706e67"><img src="https://camo.githubusercontent.com/ff7f9fa1b2741f4d06676ed036a6aa9102846be135c09f8597969f6abd2ca435/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f636c69705f696d6167653030322d313534313636383634303338322e706e67" alt="img" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2025/05/clip_image002-1541668640382.png" style="max-width: 100%;"></a></p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int num = 0;
-	while (num &lt; 10)
+	<span class="pl-k">int</span> num = <span class="pl-c1">0</span>;
+	<span class="pl-k">while</span> (num &lt; <span class="pl-c1">10</span>)
 	{
-		cout &lt;&lt; "num = " &lt;&lt; num &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>num = <span class="pl-pds">"</span></span> &lt;&lt; num &lt;&lt; endl;
 		num++;
 	}
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>注意：在执行循环语句时候，程序必须提供跳出循环的出口，否则出现死循环</p>
 </blockquote>
@@ -1838,23 +1821,22 @@ int main() {
 <p>**注意：**与while的区别在于==do...while会先执行一次循环语句==，再判断循环条件</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c5940a9cdbb5631abdb118e6f38583cff0044ee2e3b0feb4c69d3fbce4959db0/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f636c69705f696d6167653030322d313534313637313136333437382e706e67"><img src="https://camo.githubusercontent.com/c5940a9cdbb5631abdb118e6f38583cff0044ee2e3b0feb4c69d3fbce4959db0/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f636c69705f696d6167653030322d313534313637313136333437382e706e67" alt="img" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2025/05/clip_image002-1541671163478.png" style="max-width: 100%;"></a></p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int num = 0;
+	<span class="pl-k">int</span> num = <span class="pl-c1">0</span>;
 
-	do
+	<span class="pl-k">do</span>
 	{
 		cout &lt;&lt; num &lt;&lt; endl;
 		num++;
 
-	} while (num &lt; 10);
+	} <span class="pl-k">while</span> (num &lt; <span class="pl-c1">10</span>);
 	
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结：与while循环区别在于，do...while先执行一次循环语句，再判断循环条件</p>
 </blockquote>
@@ -1866,18 +1848,17 @@ int main() {
 <p><strong>作用：</strong> 满足循环条件，执行循环语句</p>
 <p><strong>语法：</strong><code class="notranslate"> for(起始表达式;条件表达式;末尾循环体) { 循环语句; }</code></p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	for (int i = 0; i &lt; 10; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">10</span>; i++)
 	{
 		cout &lt;&lt; i &lt;&lt; endl;
 	}
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <p><strong>详解：</strong></p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/4d2f3c9b5e0cea8af6d5ef9afddec816735505b1110a6b7a87a32d98416f8f7e/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f313534313637333730343130312e706e67"><img src="https://camo.githubusercontent.com/4d2f3c9b5e0cea8af6d5ef9afddec816735505b1110a6b7a87a32d98416f8f7e/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f313534313637333730343130312e706e67" alt="1541673704101" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2025/05/1541673704101.png" style="max-width: 100%;"></a></p>
 <blockquote>
@@ -1894,23 +1875,22 @@ int main() {
 <p>例如我们想在屏幕中打印如下图片，就需要利用嵌套循环</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/28eb6b5a9adaf3dacef4785b0efcd57cb2ea821da99df4ce30a5033cd6b40db8/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f313534313637363030333438362e706e67"><img src="https://camo.githubusercontent.com/28eb6b5a9adaf3dacef4785b0efcd57cb2ea821da99df4ce30a5033cd6b40db8/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f313534313637363030333438362e706e67" alt="1541676003486" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2025/05/1541676003486.png" style="max-width: 100%;"></a></p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//外层循环执行1次，内层循环执行1轮
-	for (int i = 0; i &lt; 10; i++)
+	<span class="pl-c"><span class="pl-c">//</span>外层循环执行1次，内层循环执行1轮</span>
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">10</span>; i++)
 	{
-		for (int j = 0; j &lt; 10; j++)
+		<span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; <span class="pl-c1">10</span>; j++)
 		{
-			cout &lt;&lt; "*" &lt;&lt; " ";
+			cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>*<span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
 		}
 		cout &lt;&lt; endl;
 	}
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <p>**练习案例：**乘法口诀表</p>
 <p>案例描述：利用嵌套循环，实现九九乘法表</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/523eefa6f71513758c22af53ad047890b647af009cefe8bd97d7fef6c4e1799c/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f303030363031383835373235363132305f622e6a7067"><img src="https://camo.githubusercontent.com/523eefa6f71513758c22af53ad047890b647af009cefe8bd97d7fef6c4e1799c/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f303030363031383835373235363132305f622e6a7067" alt="0006018857256120_b" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2025/05/0006018857256120_b.jpg" style="max-width: 100%;"></a></p>
@@ -1924,92 +1904,88 @@ int main() {
 <li>出现在嵌套循环中，跳出最近的内层循环语句</li>
 </ul>
 <p><strong>示例1：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
-	//1、在switch 语句中使用break
-	cout &lt;&lt; "请选择您挑战副本的难度：" &lt;&lt; endl;
-	cout &lt;&lt; "1、普通" &lt;&lt; endl;
-	cout &lt;&lt; "2、中等" &lt;&lt; endl;
-	cout &lt;&lt; "3、困难" &lt;&lt; endl;
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
+	<span class="pl-c"><span class="pl-c">//</span>1、在switch 语句中使用break</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>请选择您挑战副本的难度：<span class="pl-pds">"</span></span> &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>1、普通<span class="pl-pds">"</span></span> &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>2、中等<span class="pl-pds">"</span></span> &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>3、困难<span class="pl-pds">"</span></span> &lt;&lt; endl;
 
-	int num = 0;
+	<span class="pl-k">int</span> num = <span class="pl-c1">0</span>;
 
 	cin &gt;&gt; num;
 
-	switch (num)
+	<span class="pl-k">switch</span> (num)
 	{
-	case 1:
-		cout &lt;&lt; "您选择的是普通难度" &lt;&lt; endl;
-		break;
-	case 2:
-		cout &lt;&lt; "您选择的是中等难度" &lt;&lt; endl;
-		break;
-	case 3:
-		cout &lt;&lt; "您选择的是困难难度" &lt;&lt; endl;
-		break;
+	<span class="pl-k">case</span> <span class="pl-c1">1</span>:
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>您选择的是普通难度<span class="pl-pds">"</span></span> &lt;&lt; endl;
+		<span class="pl-k">break</span>;
+	<span class="pl-k">case</span> <span class="pl-c1">2</span>:
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>您选择的是中等难度<span class="pl-pds">"</span></span> &lt;&lt; endl;
+		<span class="pl-k">break</span>;
+	<span class="pl-k">case</span> <span class="pl-c1">3</span>:
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>您选择的是困难难度<span class="pl-pds">"</span></span> &lt;&lt; endl;
+		<span class="pl-k">break</span>;
 	}
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <p><strong>示例2：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
-	//2、在循环语句中用break
-	for (int i = 0; i &lt; 10; i++)
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
+	<span class="pl-c"><span class="pl-c">//</span>2、在循环语句中用break</span>
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">10</span>; i++)
 	{
-		if (i == 5)
+		<span class="pl-k">if</span> (i == <span class="pl-c1">5</span>)
 		{
-			break; //跳出循环语句
+			<span class="pl-k">break</span>; <span class="pl-c"><span class="pl-c">//</span>跳出循环语句</span>
 		}
 		cout &lt;&lt; i &lt;&lt; endl;
 	}
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <p><strong>示例3：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
-	//在嵌套循环语句中使用break，退出内层循环
-	for (int i = 0; i &lt; 10; i++)
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
+	<span class="pl-c"><span class="pl-c">//</span>在嵌套循环语句中使用break，退出内层循环</span>
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">10</span>; i++)
 	{
-		for (int j = 0; j &lt; 10; j++)
+		<span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; <span class="pl-c1">10</span>; j++)
 		{
-			if (j == 5)
+			<span class="pl-k">if</span> (j == <span class="pl-c1">5</span>)
 			{
-				break;
+				<span class="pl-k">break</span>;
 			}
-			cout &lt;&lt; "*" &lt;&lt; " ";
+			cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>*<span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
 		}
 		cout &lt;&lt; endl;
 	}
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h4>4.3.2 continue语句</h4>
 <p>**作用：**在==循环语句==中，跳过本次循环中余下尚未执行的语句，继续执行下一次循环</p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	for (int i = 0; i &lt; 100; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">100</span>; i++)
 	{
-		if (i % 2 == 0)
+		<span class="pl-k">if</span> (i % <span class="pl-c1">2</span> == <span class="pl-c1">0</span>)
 		{
-			continue;
+			<span class="pl-k">continue</span>;
 		}
 		cout &lt;&lt; i &lt;&lt; endl;
 	}
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>注意：continue并没有使整个循环终止，而break会跳出循环</p>
 </blockquote>
@@ -2018,25 +1994,24 @@ int main() {
 <p><strong>语法：</strong> <code class="notranslate">goto 标记;</code></p>
 <p>**解释：**如果标记的名称存在，执行到goto语句时，会跳转到标记的位置</p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	cout &lt;&lt; "1" &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span> &lt;&lt; endl;
 
-	goto FLAG;
+	<span class="pl-k">goto</span> FLAG;
 
-	cout &lt;&lt; "2" &lt;&lt; endl;
-	cout &lt;&lt; "3" &lt;&lt; endl;
-	cout &lt;&lt; "4" &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>2<span class="pl-pds">"</span></span> &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>3<span class="pl-pds">"</span></span> &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>4<span class="pl-pds">"</span></span> &lt;&lt; endl;
 
 	FLAG:
 
-	cout &lt;&lt; "5" &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>5<span class="pl-pds">"</span></span> &lt;&lt; endl;
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>注意：在程序中不建议使用goto语句，以免造成程序流程混乱</p>
 </blockquote>
@@ -2055,52 +2030,51 @@ int main() {
 <li><code class="notranslate">数据类型  数组名[ ] = { 值1，值2 ...};</code></li>
 </ol>
 <p>示例</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//定义方式1
-	//数据类型 数组名[元素个数];
-	int score[10];
+	<span class="pl-c"><span class="pl-c">//</span>定义方式1</span>
+	<span class="pl-c"><span class="pl-c">//</span>数据类型 数组名[元素个数];</span>
+	<span class="pl-k">int</span> score[<span class="pl-c1">10</span>];
 
-	//利用下标赋值
-	score[0] = 100;
-	score[1] = 99;
-	score[2] = 85;
+	<span class="pl-c"><span class="pl-c">//</span>利用下标赋值</span>
+	score[<span class="pl-c1">0</span>] = <span class="pl-c1">100</span>;
+	score[<span class="pl-c1">1</span>] = <span class="pl-c1">99</span>;
+	score[<span class="pl-c1">2</span>] = <span class="pl-c1">85</span>;
 
-	//利用下标输出
-	cout &lt;&lt; score[0] &lt;&lt; endl;
-	cout &lt;&lt; score[1] &lt;&lt; endl;
-	cout &lt;&lt; score[2] &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>利用下标输出</span>
+	cout &lt;&lt; score[<span class="pl-c1">0</span>] &lt;&lt; endl;
+	cout &lt;&lt; score[<span class="pl-c1">1</span>] &lt;&lt; endl;
+	cout &lt;&lt; score[<span class="pl-c1">2</span>] &lt;&lt; endl;
 
 
-	//第二种定义方式
-	//数据类型 数组名[元素个数] =  {值1，值2 ，值3 ...};
-	//如果{}内不足10个数据，剩余数据用0补全
-	int score2[10] = { 100, 90,80,70,60,50,40,30,20,10 };
+	<span class="pl-c"><span class="pl-c">//</span>第二种定义方式</span>
+	<span class="pl-c"><span class="pl-c">//</span>数据类型 数组名[元素个数] =  {值1，值2 ，值3 ...};</span>
+	<span class="pl-c"><span class="pl-c">//</span>如果{}内不足10个数据，剩余数据用0补全</span>
+	<span class="pl-k">int</span> score2[<span class="pl-c1">10</span>] = { <span class="pl-c1">100</span>, <span class="pl-c1">90</span>,<span class="pl-c1">80</span>,<span class="pl-c1">70</span>,<span class="pl-c1">60</span>,<span class="pl-c1">50</span>,<span class="pl-c1">40</span>,<span class="pl-c1">30</span>,<span class="pl-c1">20</span>,<span class="pl-c1">10</span> };
 	
-	//逐个输出
-	//cout &lt;&lt; score2[0] &lt;&lt; endl;
-	//cout &lt;&lt; score2[1] &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>逐个输出</span>
+	<span class="pl-c"><span class="pl-c">//</span>cout &lt;&lt; score2[0] &lt;&lt; endl;</span>
+	<span class="pl-c"><span class="pl-c">//</span>cout &lt;&lt; score2[1] &lt;&lt; endl;</span>
 
-	//一个一个输出太麻烦，因此可以利用循环进行输出
-	for (int i = 0; i &lt; 10; i++)
+	<span class="pl-c"><span class="pl-c">//</span>一个一个输出太麻烦，因此可以利用循环进行输出</span>
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">10</span>; i++)
 	{
 		cout &lt;&lt; score2[i] &lt;&lt; endl;
 	}
 
-	//定义方式3
-	//数据类型 数组名[] =  {值1，值2 ，值3 ...};
-	int score3[] = { 100,90,80,70,60,50,40,30,20,10 };
+	<span class="pl-c"><span class="pl-c">//</span>定义方式3</span>
+	<span class="pl-c"><span class="pl-c">//</span>数据类型 数组名[] =  {值1，值2 ，值3 ...};</span>
+	<span class="pl-k">int</span> score3[] = { <span class="pl-c1">100</span>,<span class="pl-c1">90</span>,<span class="pl-c1">80</span>,<span class="pl-c1">70</span>,<span class="pl-c1">60</span>,<span class="pl-c1">50</span>,<span class="pl-c1">40</span>,<span class="pl-c1">30</span>,<span class="pl-c1">20</span>,<span class="pl-c1">10</span> };
 
-	for (int i = 0; i &lt; 10; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">10</span>; i++)
 	{
 		cout &lt;&lt; score3[i] &lt;&lt; endl;
 	}
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结1：数组名的命名规范与变量名命名规范一致，不要和变量重名</p>
 </blockquote>
@@ -2114,29 +2088,28 @@ int main() {
 <li>可以获取数组在内存中的首地址</li>
 </ol>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//数组名用途
-	//1、可以获取整个数组占用内存空间大小
-	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	<span class="pl-c"><span class="pl-c">//</span>数组名用途</span>
+	<span class="pl-c"><span class="pl-c">//</span>1、可以获取整个数组占用内存空间大小</span>
+	<span class="pl-k">int</span> arr[<span class="pl-c1">10</span>] = { <span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>,<span class="pl-c1">4</span>,<span class="pl-c1">5</span>,<span class="pl-c1">6</span>,<span class="pl-c1">7</span>,<span class="pl-c1">8</span>,<span class="pl-c1">9</span>,<span class="pl-c1">10</span> };
 
-	cout &lt;&lt; "整个数组所占内存空间为： " &lt;&lt; sizeof(arr) &lt;&lt; endl;
-	cout &lt;&lt; "每个元素所占内存空间为： " &lt;&lt; sizeof(arr[0]) &lt;&lt; endl;
-	cout &lt;&lt; "数组的元素个数为： " &lt;&lt; sizeof(arr) / sizeof(arr[0]) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>整个数组所占内存空间为： <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(arr) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>每个元素所占内存空间为： <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(arr[<span class="pl-c1">0</span>]) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>数组的元素个数为： <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(arr) / <span class="pl-k">sizeof</span>(arr[<span class="pl-c1">0</span>]) &lt;&lt; endl;
 
-	//2、可以通过数组名获取到数组首地址
-	cout &lt;&lt; "数组首地址为： " &lt;&lt; (int)arr &lt;&lt; endl;
-	cout &lt;&lt; "数组中第一个元素地址为： " &lt;&lt; (int)&amp;arr[0] &lt;&lt; endl;
-	cout &lt;&lt; "数组中第二个元素地址为： " &lt;&lt; (int)&amp;arr[1] &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>2、可以通过数组名获取到数组首地址</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>数组首地址为： <span class="pl-pds">"</span></span> &lt;&lt; (<span class="pl-k">int</span>)arr &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>数组中第一个元素地址为： <span class="pl-pds">"</span></span> &lt;&lt; (<span class="pl-k">int</span>)&amp;arr[<span class="pl-c1">0</span>] &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>数组中第二个元素地址为： <span class="pl-pds">"</span></span> &lt;&lt; (<span class="pl-k">int</span>)&amp;arr[<span class="pl-c1">1</span>] &lt;&lt; endl;
 
-	//arr = 100; 错误，数组名是常量，因此不可以赋值
+	<span class="pl-c"><span class="pl-c">//</span>arr = 100; 错误，数组名是常量，因此不可以赋值</span>
 
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>注意：数组名是常量，不可以赋值</p>
 </blockquote>
@@ -2162,33 +2135,32 @@ int main() {
 </ol>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/11252979e3b13325e078fa5ae6e7f76f70a95127f7607f908172e7150f6b21ab/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f313534313930353332373237332e706e67"><img src="https://camo.githubusercontent.com/11252979e3b13325e078fa5ae6e7f76f70a95127f7607f908172e7150f6b21ab/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f313534313930353332373237332e706e67" alt="1541905327273" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2025/05/1541905327273.png" style="max-width: 100%;"></a></p>
 <p><strong>示例：</strong> 将数组 { 4,2,8,0,5,7,1,3,9 } 进行升序排序</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int arr[9] = { 4,2,8,0,5,7,1,3,9 };
+	<span class="pl-k">int</span> arr[<span class="pl-c1">9</span>] = { <span class="pl-c1">4</span>,<span class="pl-c1">2</span>,<span class="pl-c1">8</span>,<span class="pl-c1">0</span>,<span class="pl-c1">5</span>,<span class="pl-c1">7</span>,<span class="pl-c1">1</span>,<span class="pl-c1">3</span>,<span class="pl-c1">9</span> };
 
-	for (int i = 0; i &lt; 9 - 1; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">9</span> - <span class="pl-c1">1</span>; i++)
 	{
-		for (int j = 0; j &lt; 9 - 1 - i; j++)
+		<span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; <span class="pl-c1">9</span> - <span class="pl-c1">1</span> - i; j++)
 		{
-			if (arr[j] &gt; arr[j + 1])
+			<span class="pl-k">if</span> (arr[j] &gt; arr[j + <span class="pl-c1">1</span>])
 			{
-				int temp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
+				<span class="pl-k">int</span> temp = arr[j];
+				arr[j] = arr[j + <span class="pl-c1">1</span>];
+				arr[j + <span class="pl-c1">1</span>] = temp;
 			}
 		}
 	}
 
-	for (int i = 0; i &lt; 9; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">9</span>; i++)
 	{
 		cout &lt;&lt; arr[i] &lt;&lt; endl;
 	}
     
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h3>5.3 二维数组</h3>
 <p>二维数组就是在一维数组上，多加一个维度。</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/664a750653eecfd4ed614198b002a88464fdef98055e58f6b3a1734fa3c7a1f9/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f313534313930353535393133382e706e67"><img src="https://camo.githubusercontent.com/664a750653eecfd4ed614198b002a88464fdef98055e58f6b3a1734fa3c7a1f9/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032352f30352f313534313930353535393133382e706e67" alt="1541905559138" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2025/05/1541905559138.png" style="max-width: 100%;"></a></p>
@@ -2204,48 +2176,47 @@ int main() {
 <p>建议：以上4种定义方式，利用==第二种更加直观，提高代码的可读性==</p>
 </blockquote>
 <p>示例：</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//方式1  
-	//数组类型 数组名 [行数][列数]
-	int arr[2][3];
-	arr[0][0] = 1;
-	arr[0][1] = 2;
-	arr[0][2] = 3;
-	arr[1][0] = 4;
-	arr[1][1] = 5;
-	arr[1][2] = 6;
+	<span class="pl-c"><span class="pl-c">//</span>方式1  </span>
+	<span class="pl-c"><span class="pl-c">//</span>数组类型 数组名 [行数][列数]</span>
+	<span class="pl-k">int</span> arr[<span class="pl-c1">2</span>][<span class="pl-c1">3</span>];
+	arr[<span class="pl-c1">0</span>][<span class="pl-c1">0</span>] = <span class="pl-c1">1</span>;
+	arr[<span class="pl-c1">0</span>][<span class="pl-c1">1</span>] = <span class="pl-c1">2</span>;
+	arr[<span class="pl-c1">0</span>][<span class="pl-c1">2</span>] = <span class="pl-c1">3</span>;
+	arr[<span class="pl-c1">1</span>][<span class="pl-c1">0</span>] = <span class="pl-c1">4</span>;
+	arr[<span class="pl-c1">1</span>][<span class="pl-c1">1</span>] = <span class="pl-c1">5</span>;
+	arr[<span class="pl-c1">1</span>][<span class="pl-c1">2</span>] = <span class="pl-c1">6</span>;
 
-	for (int i = 0; i &lt; 2; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">2</span>; i++)
 	{
-		for (int j = 0; j &lt; 3; j++)
+		<span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; <span class="pl-c1">3</span>; j++)
 		{
-			cout &lt;&lt; arr[i][j] &lt;&lt; " ";
+			cout &lt;&lt; arr[i][j] &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;
 		}
 		cout &lt;&lt; endl;
 	}
 
-	//方式2 
-	//数据类型 数组名[行数][列数] = { {数据1，数据2 } ，{数据3，数据4 } };
-	int arr2[2][3] =
+	<span class="pl-c"><span class="pl-c">//</span>方式2 </span>
+	<span class="pl-c"><span class="pl-c">//</span>数据类型 数组名[行数][列数] = { {数据1，数据2 } ，{数据3，数据4 } };</span>
+	<span class="pl-k">int</span> arr2[<span class="pl-c1">2</span>][<span class="pl-c1">3</span>] =
 	{
-		{1,2,3},
-		{4,5,6}
+		{<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>},
+		{<span class="pl-c1">4</span>,<span class="pl-c1">5</span>,<span class="pl-c1">6</span>}
 	};
 
-	//方式3
-	//数据类型 数组名[行数][列数] = { 数据1，数据2 ,数据3，数据4  };
-	int arr3[2][3] = { 1,2,3,4,5,6 }; 
+	<span class="pl-c"><span class="pl-c">//</span>方式3</span>
+	<span class="pl-c"><span class="pl-c">//</span>数据类型 数组名[行数][列数] = { 数据1，数据2 ,数据3，数据4  };</span>
+	<span class="pl-k">int</span> arr3[<span class="pl-c1">2</span>][<span class="pl-c1">3</span>] = { <span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>,<span class="pl-c1">4</span>,<span class="pl-c1">5</span>,<span class="pl-c1">6</span> }; 
 
-	//方式4 
-	//数据类型 数组名[][列数] = { 数据1，数据2 ,数据3，数据4  };
-	int arr4[][3] = { 1,2,3,4,5,6 };
+	<span class="pl-c"><span class="pl-c">//</span>方式4 </span>
+	<span class="pl-c"><span class="pl-c">//</span>数据类型 数组名[][列数] = { 数据1，数据2 ,数据3，数据4  };</span>
+	<span class="pl-k">int</span> arr4[][<span class="pl-c1">3</span>] = { <span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>,<span class="pl-c1">4</span>,<span class="pl-c1">5</span>,<span class="pl-c1">6</span> };
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结：在定义二维数组时，如果初始化了数据，可以省略行数</p>
 </blockquote>
@@ -2255,35 +2226,34 @@ int main() {
 <li>获取二维数组首地址</li>
 </ul>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//二维数组数组名
-	int arr[2][3] =
+	<span class="pl-c"><span class="pl-c">//</span>二维数组数组名</span>
+	<span class="pl-k">int</span> arr[<span class="pl-c1">2</span>][<span class="pl-c1">3</span>] =
 	{
-		{1,2,3},
-		{4,5,6}
+		{<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>},
+		{<span class="pl-c1">4</span>,<span class="pl-c1">5</span>,<span class="pl-c1">6</span>}
 	};
 
-	cout &lt;&lt; "二维数组大小： " &lt;&lt; sizeof(arr) &lt;&lt; endl;
-	cout &lt;&lt; "二维数组一行大小： " &lt;&lt; sizeof(arr[0]) &lt;&lt; endl;
-	cout &lt;&lt; "二维数组元素大小： " &lt;&lt; sizeof(arr[0][0]) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>二维数组大小： <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(arr) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>二维数组一行大小： <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(arr[<span class="pl-c1">0</span>]) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>二维数组元素大小： <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(arr[<span class="pl-c1">0</span>][<span class="pl-c1">0</span>]) &lt;&lt; endl;
 
-	cout &lt;&lt; "二维数组行数： " &lt;&lt; sizeof(arr) / sizeof(arr[0]) &lt;&lt; endl;
-	cout &lt;&lt; "二维数组列数： " &lt;&lt; sizeof(arr[0]) / sizeof(arr[0][0]) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>二维数组行数： <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(arr) / <span class="pl-k">sizeof</span>(arr[<span class="pl-c1">0</span>]) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>二维数组列数： <span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-k">sizeof</span>(arr[<span class="pl-c1">0</span>]) / <span class="pl-k">sizeof</span>(arr[<span class="pl-c1">0</span>][<span class="pl-c1">0</span>]) &lt;&lt; endl;
 
-	//地址
-	cout &lt;&lt; "二维数组首地址：" &lt;&lt; arr &lt;&lt; endl;
-	cout &lt;&lt; "二维数组第一行地址：" &lt;&lt; arr[0] &lt;&lt; endl;
-	cout &lt;&lt; "二维数组第二行地址：" &lt;&lt; arr[1] &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>地址</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>二维数组首地址：<span class="pl-pds">"</span></span> &lt;&lt; arr &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>二维数组第一行地址：<span class="pl-pds">"</span></span> &lt;&lt; arr[<span class="pl-c1">0</span>] &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>二维数组第二行地址：<span class="pl-pds">"</span></span> &lt;&lt; arr[<span class="pl-c1">1</span>] &lt;&lt; endl;
 
-	cout &lt;&lt; "二维数组第一个元素地址：" &lt;&lt; &amp;arr[0][0] &lt;&lt; endl;
-	cout &lt;&lt; "二维数组第二个元素地址：" &lt;&lt; &amp;arr[0][1] &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>二维数组第一个元素地址：<span class="pl-pds">"</span></span> &lt;&lt; &amp;arr[<span class="pl-c1">0</span>][<span class="pl-c1">0</span>] &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>二维数组第二个元素地址：<span class="pl-pds">"</span></span> &lt;&lt; &amp;arr[<span class="pl-c1">0</span>][<span class="pl-c1">1</span>] &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结1：二维数组名就是这个数组的首地址</p>
 </blockquote>
@@ -2324,32 +2294,31 @@ int main() {
 </tbody>
 </table></markdown-accessiblity-table>
 <p><strong>参考答案：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int scores[3][3] =
+	<span class="pl-k">int</span> scores[<span class="pl-c1">3</span>][<span class="pl-c1">3</span>] =
 	{
-		{100,100,100},
-		{90,50,100},
-		{60,70,80},
+		{<span class="pl-c1">100</span>,<span class="pl-c1">100</span>,<span class="pl-c1">100</span>},
+		{<span class="pl-c1">90</span>,<span class="pl-c1">50</span>,<span class="pl-c1">100</span>},
+		{<span class="pl-c1">60</span>,<span class="pl-c1">70</span>,<span class="pl-c1">80</span>},
 	};
 
-	string names[3] = { "张三","李四","王五" };
+	string names[<span class="pl-c1">3</span>] = { <span class="pl-s"><span class="pl-pds">"</span>张三<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>李四<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>王五<span class="pl-pds">"</span></span> };
 
-	for (int i = 0; i &lt; 3; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">3</span>; i++)
 	{
-		int sum = 0;
-		for (int j = 0; j &lt; 3; j++)
+		<span class="pl-k">int</span> sum = <span class="pl-c1">0</span>;
+		<span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; <span class="pl-c1">3</span>; j++)
 		{
 			sum += scores[i][j];
 		}
-		cout &lt;&lt; names[i] &lt;&lt; "同学总成绩为： " &lt;&lt; sum &lt;&lt; endl;
+		cout &lt;&lt; names[i] &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>同学总成绩为： <span class="pl-pds">"</span></span> &lt;&lt; sum &lt;&lt; endl;
 	}
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h2>6 函数</h2>
 <h3>6.1 概述</h3>
 <p>**作用：**将一段经常使用的代码封装起来，减少重复代码</p>
@@ -2362,15 +2331,14 @@ int main() {
 <p>4、函数体语句</p>
 <p>5、return 表达式</p>
 <p><strong>语法：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">返回值类型 函数名 （参数列表）
+<div class="highlight highlight-source-c++"><pre class="notranslate">返回值类型 函数名 （参数列表）
 {
 
        函数体语句
 
-       return表达式
+       <span class="pl-k">return</span>表达式
 
-}
-</code></pre>
+}</pre></div>
 <ul>
 <li>返回值类型 ：一个函数可以返回一个值。在函数定义中</li>
 <li>函数名：给函数起个名称</li>
@@ -2379,43 +2347,41 @@ int main() {
 <li>return表达式： 和返回值类型挂钩，函数执行完后，返回相应的数据</li>
 </ul>
 <p>**示例：**定义一个加法函数，实现两个数相加</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//函数定义
-int add(int num1, int num2)
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>函数定义</span>
+<span class="pl-k">int</span> <span class="pl-en">add</span>(<span class="pl-k">int</span> num1, <span class="pl-k">int</span> num2)
 {
-	int sum = num1 + num2;
-	return sum;
-}
-</code></pre>
+	<span class="pl-k">int</span> sum = num1 + num2;
+	<span class="pl-k">return</span> sum;
+}</pre></div>
 <h3>6.3 函数的调用</h3>
 <p>**功能：**使用定义好的函数</p>
 <p><strong>语法：</strong><code class="notranslate"> 函数名（参数）</code></p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//函数定义
-int add(int num1, int num2) //定义中的num1,num2称为形式参数，简称形参
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>函数定义</span>
+<span class="pl-k">int</span> <span class="pl-en">add</span>(<span class="pl-k">int</span> num1, <span class="pl-k">int</span> num2) <span class="pl-c"><span class="pl-c">//</span>定义中的num1,num2称为形式参数，简称形参</span>
 {
-	int sum = num1 + num2;
-	return sum;
+	<span class="pl-k">int</span> sum = num1 + num2;
+	<span class="pl-k">return</span> sum;
 }
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a = 10;
-	int b = 10;
-	//调用add函数
-	int sum = add(a, b);//调用时的a，b称为实际参数，简称实参
-	cout &lt;&lt; "sum = " &lt;&lt; sum &lt;&lt; endl;
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b = <span class="pl-c1">10</span>;
+	<span class="pl-c"><span class="pl-c">//</span>调用add函数</span>
+	<span class="pl-k">int</span> sum = <span class="pl-c1">add</span>(a, b);<span class="pl-c"><span class="pl-c">//</span>调用时的a，b称为实际参数，简称实参</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>sum = <span class="pl-pds">"</span></span> &lt;&lt; sum &lt;&lt; endl;
 
-	a = 100;
-	b = 100;
+	a = <span class="pl-c1">100</span>;
+	b = <span class="pl-c1">100</span>;
 
-	sum = add(a, b);
-	cout &lt;&lt; "sum = " &lt;&lt; sum &lt;&lt; endl;
+	sum = <span class="pl-c1">add</span>(a, b);
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>sum = <span class="pl-pds">"</span></span> &lt;&lt; sum &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结：函数定义里小括号内称为形参，函数调用时传入的参数称为实参</p>
 </blockquote>
@@ -2425,38 +2391,37 @@ int main() {
 <li>值传递时，==如果形参发生，并不会影响实参==</li>
 </ul>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">void swap(int num1, int num2)
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">void</span> <span class="pl-en">swap</span>(<span class="pl-k">int</span> num1, <span class="pl-k">int</span> num2)
 {
-	cout &lt;&lt; "交换前：" &lt;&lt; endl;
-	cout &lt;&lt; "num1 = " &lt;&lt; num1 &lt;&lt; endl;
-	cout &lt;&lt; "num2 = " &lt;&lt; num2 &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>交换前：<span class="pl-pds">"</span></span> &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>num1 = <span class="pl-pds">"</span></span> &lt;&lt; num1 &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>num2 = <span class="pl-pds">"</span></span> &lt;&lt; num2 &lt;&lt; endl;
 
-	int temp = num1;
+	<span class="pl-k">int</span> temp = num1;
 	num1 = num2;
 	num2 = temp;
 
-	cout &lt;&lt; "交换后：" &lt;&lt; endl;
-	cout &lt;&lt; "num1 = " &lt;&lt; num1 &lt;&lt; endl;
-	cout &lt;&lt; "num2 = " &lt;&lt; num2 &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>交换后：<span class="pl-pds">"</span></span> &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>num1 = <span class="pl-pds">"</span></span> &lt;&lt; num1 &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>num2 = <span class="pl-pds">"</span></span> &lt;&lt; num2 &lt;&lt; endl;
 
-	//return ; 当函数声明时候，不需要返回值，可以不写return
+	<span class="pl-c"><span class="pl-c">//</span>return ; 当函数声明时候，不需要返回值，可以不写return</span>
 }
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a = 10;
-	int b = 20;
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b = <span class="pl-c1">20</span>;
 
-	swap(a, b);
+	<span class="pl-c1">swap</span>(a, b);
 
-	cout &lt;&lt; "mian中的 a = " &lt;&lt; a &lt;&lt; endl;
-	cout &lt;&lt; "mian中的 b = " &lt;&lt; b &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>mian中的 a = <span class="pl-pds">"</span></span> &lt;&lt; a &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>mian中的 b = <span class="pl-pds">"</span></span> &lt;&lt; b &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结： 值传递时，形参是修饰不了实参的</p>
 </blockquote>
@@ -2469,65 +2434,63 @@ int main() {
 <li>有参有返</li>
 </ol>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//函数常见样式
-//1、 无参无返
-void test01()
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>函数常见样式</span>
+<span class="pl-c"><span class="pl-c">//</span>1、 无参无返</span>
+<span class="pl-k">void</span> <span class="pl-en">test01</span>()
 {
-	//void a = 10; //无类型不可以创建变量,原因无法分配内存
-	cout &lt;&lt; "this is test01" &lt;&lt; endl;
-	//test01(); 函数调用
+	<span class="pl-c"><span class="pl-c">//</span>void a = 10; //无类型不可以创建变量,原因无法分配内存</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>this is test01<span class="pl-pds">"</span></span> &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>test01(); 函数调用</span>
 }
 
-//2、 有参无返
-void test02(int a)
+<span class="pl-c"><span class="pl-c">//</span>2、 有参无返</span>
+<span class="pl-k">void</span> <span class="pl-en">test02</span>(<span class="pl-k">int</span> a)
 {
-	cout &lt;&lt; "this is test02" &lt;&lt; endl;
-	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>this is test02<span class="pl-pds">"</span></span> &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>a = <span class="pl-pds">"</span></span> &lt;&lt; a &lt;&lt; endl;
 }
 
-//3、无参有返
-int test03()
+<span class="pl-c"><span class="pl-c">//</span>3、无参有返</span>
+<span class="pl-k">int</span> <span class="pl-en">test03</span>()
 {
-	cout &lt;&lt; "this is test03 " &lt;&lt; endl;
-	return 10;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>this is test03 <span class="pl-pds">"</span></span> &lt;&lt; endl;
+	<span class="pl-k">return</span> <span class="pl-c1">10</span>;
 }
 
-//4、有参有返
-int test04(int a, int b)
+<span class="pl-c"><span class="pl-c">//</span>4、有参有返</span>
+<span class="pl-k">int</span> <span class="pl-en">test04</span>(<span class="pl-k">int</span> a, <span class="pl-k">int</span> b)
 {
-	cout &lt;&lt; "this is test04 " &lt;&lt; endl;
-	int sum = a + b;
-	return sum;
-}
-</code></pre>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>this is test04 <span class="pl-pds">"</span></span> &lt;&lt; endl;
+	<span class="pl-k">int</span> sum = a + b;
+	<span class="pl-k">return</span> sum;
+}</pre></div>
 <h3>6.6 函数的声明</h3>
 <p><strong>作用：</strong> 告诉编译器函数名称及如何调用函数。函数的实际主体可以单独定义。</p>
 <ul>
 <li>函数的<strong>声明可以多次</strong>，但是函数的<strong>定义只能有一次</strong></li>
 </ul>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//声明可以多次，定义只能一次
-//声明
-int max(int a, int b);
-int max(int a, int b);
-//定义
-int max(int a, int b)
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>声明可以多次，定义只能一次</span>
+<span class="pl-c"><span class="pl-c">//</span>声明</span>
+<span class="pl-k">int</span> <span class="pl-en">max</span>(<span class="pl-k">int</span> a, <span class="pl-k">int</span> b);
+<span class="pl-k">int</span> <span class="pl-en">max</span>(<span class="pl-k">int</span> a, <span class="pl-k">int</span> b);
+<span class="pl-c"><span class="pl-c">//</span>定义</span>
+<span class="pl-k">int</span> <span class="pl-en">max</span>(<span class="pl-k">int</span> a, <span class="pl-k">int</span> b)
 {
-	return a &gt; b ? a : b;
+	<span class="pl-k">return</span> a &gt; b ? a : b;
 }
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a = 100;
-	int b = 200;
+	<span class="pl-k">int</span> a = <span class="pl-c1">100</span>;
+	<span class="pl-k">int</span> b = <span class="pl-c1">200</span>;
 
-	cout &lt;&lt; max(a, b) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-c1">max</span>(a, b) &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h3>6.7 函数的分文件编写</h3>
 <p>**作用：**让代码结构更加清晰</p>
 <p>函数分文件编写一般有4个步骤</p>
@@ -2538,41 +2501,38 @@ int main() {
 <li>在源文件中写函数的定义</li>
 </ol>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//swap.h文件
-#include&lt;iostream&gt;
-using namespace std;
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>swap.h文件</span>
+#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span>
+<span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
 
-//实现两个数字交换的函数声明
-void swap(int a, int b);
+<span class="pl-c"><span class="pl-c">//</span>实现两个数字交换的函数声明</span>
+<span class="pl-k">void</span> <span class="pl-en">swap</span>(<span class="pl-k">int</span> a, <span class="pl-k">int</span> b);
+</pre></div>
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>swap.cpp文件</span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">"</span>swap.h<span class="pl-pds">"</span></span>
 
-</code></pre>
-<pre lang="C++" class="notranslate"><code class="notranslate">//swap.cpp文件
-#include "swap.h"
-
-void swap(int a, int b)
+<span class="pl-k">void</span> <span class="pl-en">swap</span>(<span class="pl-k">int</span> a, <span class="pl-k">int</span> b)
 {
-	int temp = a;
+	<span class="pl-k">int</span> temp = a;
 	a = b;
 	b = temp;
 
-	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
-	cout &lt;&lt; "b = " &lt;&lt; b &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>a = <span class="pl-pds">"</span></span> &lt;&lt; a &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>b = <span class="pl-pds">"</span></span> &lt;&lt; b &lt;&lt; endl;
+}</pre></div>
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>main函数文件</span>
+#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">"</span>swap.h<span class="pl-pds">"</span></span>
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
+
+	<span class="pl-k">int</span> a = <span class="pl-c1">100</span>;
+	<span class="pl-k">int</span> b = <span class="pl-c1">200</span>;
+	<span class="pl-c1">swap</span>(a, b);
+
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
+
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
 }
-</code></pre>
-<pre lang="C++" class="notranslate"><code class="notranslate">//main函数文件
-#include "swap.h"
-int main() {
-
-	int a = 100;
-	int b = 200;
-	swap(a, b);
-
-	system("pause");
-
-	return 0;
-}
-
-</code></pre>
+</pre></div>
 <h2>7 指针</h2>
 <h3>7.1 指针的基本概念</h3>
 <p><strong>指针的作用：</strong> 可以通过指针间接访问内存</p>
@@ -2588,28 +2548,27 @@ int main() {
 <h3>7.2 指针变量的定义和使用</h3>
 <p>指针变量定义语法： <code class="notranslate">数据类型 * 变量名；</code></p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//1、指针的定义
-	int a = 10; //定义整型变量a
+	<span class="pl-c"><span class="pl-c">//</span>1、指针的定义</span>
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>; <span class="pl-c"><span class="pl-c">//</span>定义整型变量a</span>
 	
-	//指针定义语法： 数据类型 * 变量名 ;
-	int * p;
+	<span class="pl-c"><span class="pl-c">//</span>指针定义语法： 数据类型 * 变量名 ;</span>
+	<span class="pl-k">int</span> * p;
 
-	//指针变量赋值
-	p = &amp;a; //指针指向变量a的地址
-	cout &lt;&lt; &amp;a &lt;&lt; endl; //打印数据a的地址
-	cout &lt;&lt; p &lt;&lt; endl;  //打印指针变量p
+	<span class="pl-c"><span class="pl-c">//</span>指针变量赋值</span>
+	p = &amp;a; <span class="pl-c"><span class="pl-c">//</span>指针指向变量a的地址</span>
+	cout &lt;&lt; &amp;a &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span>打印数据a的地址</span>
+	cout &lt;&lt; p &lt;&lt; endl;  <span class="pl-c"><span class="pl-c">//</span>打印指针变量p</span>
 
-	//2、指针的使用
-	//通过*操作指针变量指向的内存
-	cout &lt;&lt; "*p = " &lt;&lt; *p &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>2、指针的使用</span>
+	<span class="pl-c"><span class="pl-c">//</span>通过*操作指针变量指向的内存</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>*p = <span class="pl-pds">"</span></span> &lt;&lt; *p &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <p>指针变量和普通变量的区别</p>
 <ul>
 <li>普通变量存放的是数据,指针变量存放的是地址</li>
@@ -2627,24 +2586,23 @@ int main() {
 <h3>7.3 指针所占内存空间</h3>
 <p>提问：指针也是种数据类型，那么这种数据类型占用多少内存空间？</p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a = 10;
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
 
-	int * p;
-	p = &amp;a; //指针指向数据a的地址
+	<span class="pl-k">int</span> * p;
+	p = &amp;a; <span class="pl-c"><span class="pl-c">//</span>指针指向数据a的地址</span>
 
-	cout &lt;&lt; *p &lt;&lt; endl; //* 解引用
-	cout &lt;&lt; sizeof(p) &lt;&lt; endl;
-	cout &lt;&lt; sizeof(char *) &lt;&lt; endl;
-	cout &lt;&lt; sizeof(float *) &lt;&lt; endl;
-	cout &lt;&lt; sizeof(double *) &lt;&lt; endl;
+	cout &lt;&lt; *p &lt;&lt; endl; <span class="pl-c"><span class="pl-c">//</span>* 解引用</span>
+	cout &lt;&lt; <span class="pl-k">sizeof</span>(p) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-k">sizeof</span>(<span class="pl-k">char</span> *) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-k">sizeof</span>(<span class="pl-k">float</span> *) &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-k">sizeof</span>(<span class="pl-k">double</span> *) &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结：所有指针类型在32位操作系统下是4个字节</p>
 </blockquote>
@@ -2653,35 +2611,33 @@ int main() {
 <p>**用途：**初始化指针变量</p>
 <p>**注意：**空指针指向的内存是不可以访问的</p>
 <p><strong>示例1：空指针</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//指针变量p指向内存地址编号为0的空间
-	int * p = NULL;
+	<span class="pl-c"><span class="pl-c">//</span>指针变量p指向内存地址编号为0的空间</span>
+	<span class="pl-k">int</span> * p = <span class="pl-c1">NULL</span>;
 
-	//访问空指针报错 
-	//内存编号0 ~255为系统占用内存，不允许用户访问
+	<span class="pl-c"><span class="pl-c">//</span>访问空指针报错 </span>
+	<span class="pl-c"><span class="pl-c">//</span>内存编号0 ~255为系统占用内存，不允许用户访问</span>
 	cout &lt;&lt; *p &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <p><strong>野指针</strong>：指针变量指向非法的内存空间</p>
 <p><strong>示例2：野指针</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//指针变量p指向内存地址编号为0x1100的空间
-	int * p = (int *)0x1100;
+	<span class="pl-c"><span class="pl-c">//</span>指针变量p指向内存地址编号为0x1100的空间</span>
+	<span class="pl-k">int</span> * p = (<span class="pl-k">int</span> *)<span class="pl-c1">0x1100</span>;
 
-	//访问野指针报错 
+	<span class="pl-c"><span class="pl-c">//</span>访问野指针报错 </span>
 	cout &lt;&lt; *p &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结：空指针和野指针都不是我们申请的空间，因此不要访问。</p>
 </blockquote>
@@ -2693,94 +2649,91 @@ int main() {
 <li>const即修饰指针，又修饰常量</li>
 </ol>
 <p><strong>示例：</strong></p>
-<pre lang="c++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a = 10;
-	int b = 10;
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b = <span class="pl-c1">10</span>;
 
-	//const修饰的是指针，指针指向可以改，指针指向的值不可以更改
-	const int * p1 = &amp;a; 
-	p1 = &amp;b; //正确
-	//*p1 = 100;  报错
+	<span class="pl-c"><span class="pl-c">//</span>const修饰的是指针，指针指向可以改，指针指向的值不可以更改</span>
+	<span class="pl-k">const</span> <span class="pl-k">int</span> * p1 = &amp;a; 
+	p1 = &amp;b; <span class="pl-c"><span class="pl-c">//</span>正确</span>
+	<span class="pl-c"><span class="pl-c">//</span>*p1 = 100;  报错</span>
 	
 
-	//const修饰的是常量，指针指向不可以改，指针指向的值可以更改
-	int * const p2 = &amp;a;
-	//p2 = &amp;b; //错误
-	*p2 = 100; //正确
+	<span class="pl-c"><span class="pl-c">//</span>const修饰的是常量，指针指向不可以改，指针指向的值可以更改</span>
+	<span class="pl-k">int</span> * <span class="pl-k">const</span> p2 = &amp;a;
+	<span class="pl-c"><span class="pl-c">//</span>p2 = &amp;b; //错误</span>
+	*p2 = <span class="pl-c1">100</span>; <span class="pl-c"><span class="pl-c">//</span>正确</span>
 
-    //const既修饰指针又修饰常量
-	const int * const p3 = &amp;a;
-	//p3 = &amp;b; //错误
-	//*p3 = 100; //错误
+    <span class="pl-c"><span class="pl-c">//</span>const既修饰指针又修饰常量</span>
+	<span class="pl-k">const</span> <span class="pl-k">int</span> * <span class="pl-k">const</span> p3 = &amp;a;
+	<span class="pl-c"><span class="pl-c">//</span>p3 = &amp;b; //错误</span>
+	<span class="pl-c"><span class="pl-c">//</span>*p3 = 100; //错误</span>
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>技巧：看const右侧紧跟着的是指针还是常量, 是指针就是常量指针，是常量就是指针常量</p>
 </blockquote>
 <h3>7.6 指针和数组</h3>
 <p>**作用：**利用指针访问数组中元素</p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">int main() {
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	<span class="pl-k">int</span> arr[] = { <span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>,<span class="pl-c1">4</span>,<span class="pl-c1">5</span>,<span class="pl-c1">6</span>,<span class="pl-c1">7</span>,<span class="pl-c1">8</span>,<span class="pl-c1">9</span>,<span class="pl-c1">10</span> };
 
-	int * p = arr;  //指向数组的指针
+	<span class="pl-k">int</span> * p = arr;  <span class="pl-c"><span class="pl-c">//</span>指向数组的指针</span>
 
-	cout &lt;&lt; "第一个元素： " &lt;&lt; arr[0] &lt;&lt; endl;
-	cout &lt;&lt; "指针访问第一个元素： " &lt;&lt; *p &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>第一个元素： <span class="pl-pds">"</span></span> &lt;&lt; arr[<span class="pl-c1">0</span>] &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>指针访问第一个元素： <span class="pl-pds">"</span></span> &lt;&lt; *p &lt;&lt; endl;
 
-	for (int i = 0; i &lt; 10; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">10</span>; i++)
 	{
-		//利用指针遍历数组
+		<span class="pl-c"><span class="pl-c">//</span>利用指针遍历数组</span>
 		cout &lt;&lt; *p &lt;&lt; endl;
 		p++;
 	}
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h3>7.7 指针和函数</h3>
 <p>**作用：**利用指针作函数参数，可以修改实参的值</p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//值传递
-void swap1(int a ,int b)
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>值传递</span>
+<span class="pl-k">void</span> <span class="pl-en">swap1</span>(<span class="pl-k">int</span> a ,<span class="pl-k">int</span> b)
 {
-	int temp = a;
+	<span class="pl-k">int</span> temp = a;
 	a = b; 
 	b = temp;
 }
-//地址传递
-void swap2(int * p1, int *p2)
+<span class="pl-c"><span class="pl-c">//</span>地址传递</span>
+<span class="pl-k">void</span> <span class="pl-en">swap2</span>(<span class="pl-k">int</span> * p1, <span class="pl-k">int</span> *p2)
 {
-	int temp = *p1;
+	<span class="pl-k">int</span> temp = *p1;
 	*p1 = *p2;
 	*p2 = temp;
 }
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int a = 10;
-	int b = 20;
-	swap1(a, b); // 值传递不会改变实参
+	<span class="pl-k">int</span> a = <span class="pl-c1">10</span>;
+	<span class="pl-k">int</span> b = <span class="pl-c1">20</span>;
+	<span class="pl-c1">swap1</span>(a, b); <span class="pl-c"><span class="pl-c">//</span> 值传递不会改变实参</span>
 
-	swap2(&amp;a, &amp;b); //地址传递会改变实参
+	<span class="pl-c1">swap2</span>(&amp;a, &amp;b); <span class="pl-c"><span class="pl-c">//</span>地址传递会改变实参</span>
 
-	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>a = <span class="pl-pds">"</span></span> &lt;&lt; a &lt;&lt; endl;
 
-	cout &lt;&lt; "b = " &lt;&lt; b &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>b = <span class="pl-pds">"</span></span> &lt;&lt; b &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结：如果不想修改实参，就用值传递，如果想修改实参，就用地址传递</p>
 </blockquote>
@@ -2788,46 +2741,45 @@ int main() {
 <p>**案例描述：**封装一个函数，利用冒泡排序，实现对整型数组的升序排序</p>
 <p>例如数组：int arr[10] = { 4,3,6,9,1,2,10,8,7,5 };</p>
 <p><strong>示例：</strong></p>
-<pre lang="c++" class="notranslate"><code class="notranslate">//冒泡排序函数
-void bubbleSort(int * arr, int len)  //int * arr 也可以写为int arr[]
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>冒泡排序函数</span>
+<span class="pl-k">void</span> <span class="pl-en">bubbleSort</span>(<span class="pl-k">int</span> * arr, <span class="pl-k">int</span> len)  <span class="pl-c"><span class="pl-c">//</span>int * arr 也可以写为int arr[]</span>
 {
-	for (int i = 0; i &lt; len - 1; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; len - <span class="pl-c1">1</span>; i++)
 	{
-		for (int j = 0; j &lt; len - 1 - i; j++)
+		<span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; len - <span class="pl-c1">1</span> - i; j++)
 		{
-			if (arr[j] &gt; arr[j + 1])
+			<span class="pl-k">if</span> (arr[j] &gt; arr[j + <span class="pl-c1">1</span>])
 			{
-				int temp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
+				<span class="pl-k">int</span> temp = arr[j];
+				arr[j] = arr[j + <span class="pl-c1">1</span>];
+				arr[j + <span class="pl-c1">1</span>] = temp;
 			}
 		}
 	}
 }
 
-//打印数组函数
-void printArray(int arr[], int len)
+<span class="pl-c"><span class="pl-c">//</span>打印数组函数</span>
+<span class="pl-k">void</span> <span class="pl-en">printArray</span>(<span class="pl-k">int</span> arr[], <span class="pl-k">int</span> len)
 {
-	for (int i = 0; i &lt; len; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; len; i++)
 	{
 		cout &lt;&lt; arr[i] &lt;&lt; endl;
 	}
 }
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	int arr[10] = { 4,3,6,9,1,2,10,8,7,5 };
-	int len = sizeof(arr) / sizeof(int);
+	<span class="pl-k">int</span> arr[<span class="pl-c1">10</span>] = { <span class="pl-c1">4</span>,<span class="pl-c1">3</span>,<span class="pl-c1">6</span>,<span class="pl-c1">9</span>,<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">10</span>,<span class="pl-c1">8</span>,<span class="pl-c1">7</span>,<span class="pl-c1">5</span> };
+	<span class="pl-k">int</span> len = <span class="pl-k">sizeof</span>(arr) / <span class="pl-k">sizeof</span>(<span class="pl-k">int</span>);
 
-	bubbleSort(arr, len);
+	<span class="pl-c1">bubbleSort</span>(arr, len);
 
-	printArray(arr, len);
+	<span class="pl-c1">printArray</span>(arr, len);
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结：当数组名传入到函数作为参数时，被退化为指向首元素的指针</p>
 </blockquote>
@@ -2843,45 +2795,44 @@ int main() {
 <li>定义结构体时顺便创建变量</li>
 </ul>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//结构体定义
-struct student
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>结构体定义</span>
+<span class="pl-k">struct</span> <span class="pl-en">student</span>
 {
-	//成员列表
-	string name;  //姓名
-	int age;      //年龄
-	int score;    //分数
-}stu3; //结构体变量创建方式3 
+	<span class="pl-c"><span class="pl-c">//</span>成员列表</span>
+	string name;  <span class="pl-c"><span class="pl-c">//</span>姓名</span>
+	<span class="pl-k">int</span> age;      <span class="pl-c"><span class="pl-c">//</span>年龄</span>
+	<span class="pl-k">int</span> score;    <span class="pl-c"><span class="pl-c">//</span>分数</span>
+}stu3; <span class="pl-c"><span class="pl-c">//</span>结构体变量创建方式3 </span>
 
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	//结构体变量创建方式1
-	struct student stu1; //struct 关键字可以省略
+	<span class="pl-c"><span class="pl-c">//</span>结构体变量创建方式1</span>
+	<span class="pl-k">struct</span> <span class="pl-en">student</span> stu1; <span class="pl-c"><span class="pl-c">//</span>struct 关键字可以省略</span>
 
-	stu1.name = "张三";
-	stu1.age = 18;
-	stu1.score = 100;
+	stu1.<span class="pl-smi">name</span> = <span class="pl-s"><span class="pl-pds">"</span>张三<span class="pl-pds">"</span></span>;
+	stu1.<span class="pl-smi">age</span> = <span class="pl-c1">18</span>;
+	stu1.<span class="pl-smi">score</span> = <span class="pl-c1">100</span>;
 	
-	cout &lt;&lt; "姓名：" &lt;&lt; stu1.name &lt;&lt; " 年龄：" &lt;&lt; stu1.age  &lt;&lt; " 分数：" &lt;&lt; stu1.score &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>姓名：<span class="pl-pds">"</span></span> &lt;&lt; stu1.<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄：<span class="pl-pds">"</span></span> &lt;&lt; stu1.<span class="pl-smi">age</span>  &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 分数：<span class="pl-pds">"</span></span> &lt;&lt; stu1.<span class="pl-smi">score</span> &lt;&lt; endl;
 
-	//结构体变量创建方式2
-	struct student stu2 = { "李四",19,60 };
+	<span class="pl-c"><span class="pl-c">//</span>结构体变量创建方式2</span>
+	<span class="pl-k">struct</span> <span class="pl-en">student</span> stu2 = { <span class="pl-s"><span class="pl-pds">"</span>李四<span class="pl-pds">"</span></span>,<span class="pl-c1">19</span>,<span class="pl-c1">60</span> };
 
-	cout &lt;&lt; "姓名：" &lt;&lt; stu2.name &lt;&lt; " 年龄：" &lt;&lt; stu2.age  &lt;&lt; " 分数：" &lt;&lt; stu2.score &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>姓名：<span class="pl-pds">"</span></span> &lt;&lt; stu2.<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄：<span class="pl-pds">"</span></span> &lt;&lt; stu2.<span class="pl-smi">age</span>  &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 分数：<span class="pl-pds">"</span></span> &lt;&lt; stu2.<span class="pl-smi">score</span> &lt;&lt; endl;
 
 
-	stu3.name = "王五";
-	stu3.age = 18;
-	stu3.score = 80;
+	stu3.<span class="pl-smi">name</span> = <span class="pl-s"><span class="pl-pds">"</span>王五<span class="pl-pds">"</span></span>;
+	stu3.<span class="pl-smi">age</span> = <span class="pl-c1">18</span>;
+	stu3.<span class="pl-smi">score</span> = <span class="pl-c1">80</span>;
 	
 
-	cout &lt;&lt; "姓名：" &lt;&lt; stu3.name &lt;&lt; " 年龄：" &lt;&lt; stu3.age  &lt;&lt; " 分数：" &lt;&lt; stu3.score &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>姓名：<span class="pl-pds">"</span></span> &lt;&lt; stu3.<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄：<span class="pl-pds">"</span></span> &lt;&lt; stu3.<span class="pl-smi">age</span>  &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 分数：<span class="pl-pds">"</span></span> &lt;&lt; stu3.<span class="pl-smi">score</span> &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结1：定义结构体时的关键字是struct，不可省略</p>
 </blockquote>
@@ -2895,66 +2846,64 @@ int main() {
 <p>**作用：**将自定义的结构体放入到数组中方便维护</p>
 <p><strong>语法：</strong><code class="notranslate"> struct  结构体名 数组名[元素个数] = {  {} , {} , ... {} }</code></p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//结构体定义
-struct student
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>结构体定义</span>
+<span class="pl-k">struct</span> <span class="pl-en">student</span>
 {
-	//成员列表
-	string name;  //姓名
-	int age;      //年龄
-	int score;    //分数
-}
+	<span class="pl-c"><span class="pl-c">//</span>成员列表</span>
+	string name;  <span class="pl-c"><span class="pl-c">//</span>姓名</span>
+	<span class="pl-k">int</span> age;      <span class="pl-c"><span class="pl-c">//</span>年龄</span>
+	<span class="pl-k">int</span> score;    <span class="pl-c"><span class="pl-c">//</span>分数</span>
+}<span class="pl-ii"></span>
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 	
-	//结构体数组
-	struct student arr[3]=
+	<span class="pl-c"><span class="pl-c">//</span>结构体数组</span>
+	<span class="pl-k">struct</span> <span class="pl-en">student</span> arr[<span class="pl-c1">3</span>]=
 	{
-		{"张三",18,80 },
-		{"李四",19,60 },
-		{"王五",20,70 }
+		{<span class="pl-s"><span class="pl-pds">"</span>张三<span class="pl-pds">"</span></span>,<span class="pl-c1">18</span>,<span class="pl-c1">80</span> },
+		{<span class="pl-s"><span class="pl-pds">"</span>李四<span class="pl-pds">"</span></span>,<span class="pl-c1">19</span>,<span class="pl-c1">60</span> },
+		{<span class="pl-s"><span class="pl-pds">"</span>王五<span class="pl-pds">"</span></span>,<span class="pl-c1">20</span>,<span class="pl-c1">70</span> }
 	};
 
-	for (int i = 0; i &lt; 3; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">3</span>; i++)
 	{
-		cout &lt;&lt; "姓名：" &lt;&lt; arr[i].name &lt;&lt; " 年龄：" &lt;&lt; arr[i].age &lt;&lt; " 分数：" &lt;&lt; arr[i].score &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>姓名：<span class="pl-pds">"</span></span> &lt;&lt; arr[i].<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄：<span class="pl-pds">"</span></span> &lt;&lt; arr[i].<span class="pl-smi">age</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 分数：<span class="pl-pds">"</span></span> &lt;&lt; arr[i].<span class="pl-smi">score</span> &lt;&lt; endl;
 	}
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h3>8.4 结构体指针</h3>
 <p>**作用：**通过指针访问结构体中的成员</p>
 <ul>
 <li>利用操作符 <code class="notranslate">-&gt; </code>可以通过结构体指针访问结构体属性</li>
 </ul>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//结构体定义
-struct student
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>结构体定义</span>
+<span class="pl-k">struct</span> <span class="pl-en">student</span>
 {
-	//成员列表
-	string name;  //姓名
-	int age;      //年龄
-	int score;    //分数
+	<span class="pl-c"><span class="pl-c">//</span>成员列表</span>
+	string name;  <span class="pl-c"><span class="pl-c">//</span>姓名</span>
+	<span class="pl-k">int</span> age;      <span class="pl-c"><span class="pl-c">//</span>年龄</span>
+	<span class="pl-k">int</span> score;    <span class="pl-c"><span class="pl-c">//</span>分数</span>
 };
 
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 	
-	struct student stu = { "张三",18,100, };
+	<span class="pl-k">struct</span> <span class="pl-en">student</span> stu = { <span class="pl-s"><span class="pl-pds">"</span>张三<span class="pl-pds">"</span></span>,<span class="pl-c1">18</span>,<span class="pl-c1">100</span>, };
 	
-	struct student * p = &amp;stu;
+	<span class="pl-k">struct</span> <span class="pl-en">student</span> * p = &amp;stu;
 	
-	p-&gt;score = 80; //指针通过 -&gt; 操作符可以访问成员
+	p-&gt;<span class="pl-smi">score</span> = <span class="pl-c1">80</span>; <span class="pl-c"><span class="pl-c">//</span>指针通过 -&gt; 操作符可以访问成员</span>
 
-	cout &lt;&lt; "姓名：" &lt;&lt; p-&gt;name &lt;&lt; " 年龄：" &lt;&lt; p-&gt;age &lt;&lt; " 分数：" &lt;&lt; p-&gt;score &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>姓名：<span class="pl-pds">"</span></span> &lt;&lt; p-&gt;<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄：<span class="pl-pds">"</span></span> &lt;&lt; p-&gt;<span class="pl-smi">age</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 分数：<span class="pl-pds">"</span></span> &lt;&lt; p-&gt;<span class="pl-smi">score</span> &lt;&lt; endl;
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结：结构体指针可以通过 -&gt; 操作符 来访问结构体中的成员</p>
 </blockquote>
@@ -2962,46 +2911,45 @@ int main() {
 <p><strong>作用：</strong> 结构体中的成员可以是另一个结构体</p>
 <p>**例如：**每个老师辅导一个学员，一个老师的结构体中，记录一个学生的结构体</p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//学生结构体定义
-struct student
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>学生结构体定义</span>
+<span class="pl-k">struct</span> <span class="pl-en">student</span>
 {
-	//成员列表
-	string name;  //姓名
-	int age;      //年龄
-	int score;    //分数
+	<span class="pl-c"><span class="pl-c">//</span>成员列表</span>
+	string name;  <span class="pl-c"><span class="pl-c">//</span>姓名</span>
+	<span class="pl-k">int</span> age;      <span class="pl-c"><span class="pl-c">//</span>年龄</span>
+	<span class="pl-k">int</span> score;    <span class="pl-c"><span class="pl-c">//</span>分数</span>
 };
 
-//教师结构体定义
-struct teacher
+<span class="pl-c"><span class="pl-c">//</span>教师结构体定义</span>
+<span class="pl-k">struct</span> <span class="pl-en">teacher</span>
 {
-    //成员列表
-	int id; //职工编号
-	string name;  //教师姓名
-	int age;   //教师年龄
-	struct student stu; //子结构体 学生
+    <span class="pl-c"><span class="pl-c">//</span>成员列表</span>
+	<span class="pl-k">int</span> id; <span class="pl-c"><span class="pl-c">//</span>职工编号</span>
+	string name;  <span class="pl-c"><span class="pl-c">//</span>教师姓名</span>
+	<span class="pl-k">int</span> age;   <span class="pl-c"><span class="pl-c">//</span>教师年龄</span>
+	<span class="pl-k">struct</span> <span class="pl-en">student</span> stu; <span class="pl-c"><span class="pl-c">//</span>子结构体 学生</span>
 };
 
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	struct teacher t1;
-	t1.id = 10000;
-	t1.name = "老王";
-	t1.age = 40;
+	<span class="pl-k">struct</span> <span class="pl-en">teacher</span> t1;
+	t1.<span class="pl-smi">id</span> = <span class="pl-c1">10000</span>;
+	t1.<span class="pl-smi">name</span> = <span class="pl-s"><span class="pl-pds">"</span>老王<span class="pl-pds">"</span></span>;
+	t1.<span class="pl-smi">age</span> = <span class="pl-c1">40</span>;
 
-	t1.stu.name = "张三";
-	t1.stu.age = 18;
-	t1.stu.score = 100;
+	t1.<span class="pl-smi">stu</span>.<span class="pl-smi">name</span> = <span class="pl-s"><span class="pl-pds">"</span>张三<span class="pl-pds">"</span></span>;
+	t1.<span class="pl-smi">stu</span>.<span class="pl-smi">age</span> = <span class="pl-c1">18</span>;
+	t1.<span class="pl-smi">stu</span>.<span class="pl-smi">score</span> = <span class="pl-c1">100</span>;
 
-	cout &lt;&lt; "教师 职工编号： " &lt;&lt; t1.id &lt;&lt; " 姓名： " &lt;&lt; t1.name &lt;&lt; " 年龄： " &lt;&lt; t1.age &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>教师 职工编号： <span class="pl-pds">"</span></span> &lt;&lt; t1.<span class="pl-smi">id</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 姓名： <span class="pl-pds">"</span></span> &lt;&lt; t1.<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄： <span class="pl-pds">"</span></span> &lt;&lt; t1.<span class="pl-smi">age</span> &lt;&lt; endl;
 	
-	cout &lt;&lt; "辅导学员 姓名： " &lt;&lt; t1.stu.name &lt;&lt; " 年龄：" &lt;&lt; t1.stu.age &lt;&lt; " 考试分数： " &lt;&lt; t1.stu.score &lt;&lt; endl;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>辅导学员 姓名： <span class="pl-pds">"</span></span> &lt;&lt; t1.<span class="pl-smi">stu</span>.<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄：<span class="pl-pds">"</span></span> &lt;&lt; t1.<span class="pl-smi">stu</span>.<span class="pl-smi">age</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 考试分数： <span class="pl-pds">"</span></span> &lt;&lt; t1.<span class="pl-smi">stu</span>.<span class="pl-smi">score</span> &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <p>**总结：**在结构体中可以定义另一个结构体作为成员，用来解决实际问题</p>
 <h3>8.6 结构体做函数参数</h3>
 <p>**作用：**将结构体作为参数向函数中传递</p>
@@ -3011,81 +2959,79 @@ int main() {
 <li>地址传递</li>
 </ul>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//学生结构体定义
-struct student
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>学生结构体定义</span>
+<span class="pl-k">struct</span> <span class="pl-en">student</span>
 {
-	//成员列表
-	string name;  //姓名
-	int age;      //年龄
-	int score;    //分数
+	<span class="pl-c"><span class="pl-c">//</span>成员列表</span>
+	string name;  <span class="pl-c"><span class="pl-c">//</span>姓名</span>
+	<span class="pl-k">int</span> age;      <span class="pl-c"><span class="pl-c">//</span>年龄</span>
+	<span class="pl-k">int</span> score;    <span class="pl-c"><span class="pl-c">//</span>分数</span>
 };
 
-//值传递
-void printStudent(student stu )
+<span class="pl-c"><span class="pl-c">//</span>值传递</span>
+<span class="pl-k">void</span> <span class="pl-en">printStudent</span>(student stu )
 {
-	stu.age = 28;
-	cout &lt;&lt; "子函数中 姓名：" &lt;&lt; stu.name &lt;&lt; " 年龄： " &lt;&lt; stu.age  &lt;&lt; " 分数：" &lt;&lt; stu.score &lt;&lt; endl;
+	stu.<span class="pl-smi">age</span> = <span class="pl-c1">28</span>;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>子函数中 姓名：<span class="pl-pds">"</span></span> &lt;&lt; stu.<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄： <span class="pl-pds">"</span></span> &lt;&lt; stu.<span class="pl-smi">age</span>  &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 分数：<span class="pl-pds">"</span></span> &lt;&lt; stu.<span class="pl-smi">score</span> &lt;&lt; endl;
 }
 
-//地址传递
-void printStudent2(student *stu)
+<span class="pl-c"><span class="pl-c">//</span>地址传递</span>
+<span class="pl-k">void</span> <span class="pl-en">printStudent2</span>(student *stu)
 {
-	stu-&gt;age = 28;
-	cout &lt;&lt; "子函数中 姓名：" &lt;&lt; stu-&gt;name &lt;&lt; " 年龄： " &lt;&lt; stu-&gt;age  &lt;&lt; " 分数：" &lt;&lt; stu-&gt;score &lt;&lt; endl;
+	stu-&gt;<span class="pl-smi">age</span> = <span class="pl-c1">28</span>;
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>子函数中 姓名：<span class="pl-pds">"</span></span> &lt;&lt; stu-&gt;<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄： <span class="pl-pds">"</span></span> &lt;&lt; stu-&gt;<span class="pl-smi">age</span>  &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 分数：<span class="pl-pds">"</span></span> &lt;&lt; stu-&gt;<span class="pl-smi">score</span> &lt;&lt; endl;
 }
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	student stu = { "张三",18,100};
-	//值传递
-	printStudent(stu);
-	cout &lt;&lt; "主函数中 姓名：" &lt;&lt; stu.name &lt;&lt; " 年龄： " &lt;&lt; stu.age &lt;&lt; " 分数：" &lt;&lt; stu.score &lt;&lt; endl;
+	student stu = { <span class="pl-s"><span class="pl-pds">"</span>张三<span class="pl-pds">"</span></span>,<span class="pl-c1">18</span>,<span class="pl-c1">100</span>};
+	<span class="pl-c"><span class="pl-c">//</span>值传递</span>
+	<span class="pl-c1">printStudent</span>(stu);
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>主函数中 姓名：<span class="pl-pds">"</span></span> &lt;&lt; stu.<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄： <span class="pl-pds">"</span></span> &lt;&lt; stu.<span class="pl-smi">age</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 分数：<span class="pl-pds">"</span></span> &lt;&lt; stu.<span class="pl-smi">score</span> &lt;&lt; endl;
 
 	cout &lt;&lt; endl;
 
-	//地址传递
-	printStudent2(&amp;stu);
-	cout &lt;&lt; "主函数中 姓名：" &lt;&lt; stu.name &lt;&lt; " 年龄： " &lt;&lt; stu.age  &lt;&lt; " 分数：" &lt;&lt; stu.score &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>地址传递</span>
+	<span class="pl-c1">printStudent2</span>(&amp;stu);
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>主函数中 姓名：<span class="pl-pds">"</span></span> &lt;&lt; stu.<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄： <span class="pl-pds">"</span></span> &lt;&lt; stu.<span class="pl-smi">age</span>  &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 分数：<span class="pl-pds">"</span></span> &lt;&lt; stu.<span class="pl-smi">score</span> &lt;&lt; endl;
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <blockquote>
 <p>总结：如果不想修改主函数中的数据，用值传递，反之用地址传递</p>
 </blockquote>
 <h3>8.7 结构体中 const使用场景</h3>
 <p>**作用：**用const来防止误操作</p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//学生结构体定义
-struct student
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>学生结构体定义</span>
+<span class="pl-k">struct</span> <span class="pl-en">student</span>
 {
-	//成员列表
-	string name;  //姓名
-	int age;      //年龄
-	int score;    //分数
+	<span class="pl-c"><span class="pl-c">//</span>成员列表</span>
+	string name;  <span class="pl-c"><span class="pl-c">//</span>姓名</span>
+	<span class="pl-k">int</span> age;      <span class="pl-c"><span class="pl-c">//</span>年龄</span>
+	<span class="pl-k">int</span> score;    <span class="pl-c"><span class="pl-c">//</span>分数</span>
 };
 
-//const使用场景
-void printStudent(const student *stu) //加const防止函数体中的误操作
+<span class="pl-c"><span class="pl-c">//</span>const使用场景</span>
+<span class="pl-k">void</span> <span class="pl-en">printStudent</span>(<span class="pl-k">const</span> student *stu) <span class="pl-c"><span class="pl-c">//</span>加const防止函数体中的误操作</span>
 {
-	//stu-&gt;age = 100; //操作失败，因为加了const修饰
-	cout &lt;&lt; "姓名：" &lt;&lt; stu-&gt;name &lt;&lt; " 年龄：" &lt;&lt; stu-&gt;age &lt;&lt; " 分数：" &lt;&lt; stu-&gt;score &lt;&lt; endl;
+	<span class="pl-c"><span class="pl-c">//</span>stu-&gt;age = 100; //操作失败，因为加了const修饰</span>
+	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>姓名：<span class="pl-pds">"</span></span> &lt;&lt; stu-&gt;<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄：<span class="pl-pds">"</span></span> &lt;&lt; stu-&gt;<span class="pl-smi">age</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 分数：<span class="pl-pds">"</span></span> &lt;&lt; stu-&gt;<span class="pl-smi">score</span> &lt;&lt; endl;
 
 }
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	student stu = { "张三",18,100 };
+	student stu = { <span class="pl-s"><span class="pl-pds">"</span>张三<span class="pl-pds">"</span></span>,<span class="pl-c1">18</span>,<span class="pl-c1">100</span> };
 
-	printStudent(&amp;stu);
+	<span class="pl-c1">printStudent</span>(&amp;stu);
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h3>8.8 结构体案例</h3>
 <h4>8.8.1 案例1</h4>
 <p><strong>案例描述：</strong></p>
@@ -3094,129 +3040,126 @@ int main() {
 <p>学生的成员有姓名、考试分数，创建数组存放3名老师，通过函数给每个老师及所带的学生赋值</p>
 <p>最终打印出老师数据以及老师所带的学生数据。</p>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">struct Student
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-k">struct</span> <span class="pl-en">Student</span>
 {
 	string name;
-	int score;
+	<span class="pl-k">int</span> score;
 };
-struct Teacher
+<span class="pl-k">struct</span> <span class="pl-en">Teacher</span>
 {
 	string name;
-	Student sArray[5];
+	Student <span class="pl-smi">sArray</span>[<span class="pl-c1">5</span>];
 };
 
-void allocateSpace(Teacher tArray[] , int len)
+<span class="pl-k">void</span> <span class="pl-en">allocateSpace</span>(Teacher tArray[] , <span class="pl-k">int</span> len)
 {
-	string tName = "教师";
-	string sName = "学生";
-	string nameSeed = "ABCDE";
-	for (int i = 0; i &lt; len; i++)
+	string tName = <span class="pl-s"><span class="pl-pds">"</span>教师<span class="pl-pds">"</span></span>;
+	string <span class="pl-smi">sName</span> = <span class="pl-s"><span class="pl-pds">"</span>学生<span class="pl-pds">"</span></span>;
+	string nameSeed = <span class="pl-s"><span class="pl-pds">"</span>ABCDE<span class="pl-pds">"</span></span>;
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; len; i++)
 	{
-		tArray[i].name = tName + nameSeed[i];
+		tArray[i].<span class="pl-smi">name</span> = tName + nameSeed[i];
 		
-		for (int j = 0; j &lt; 5; j++)
+		<span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; <span class="pl-c1">5</span>; j++)
 		{
-			tArray[i].sArray[j].name = sName + nameSeed[j];
-			tArray[i].sArray[j].score = rand() % 61 + 40;
+			tArray[i].<span class="pl-smi">sArray</span>[j].<span class="pl-smi">name</span> = <span class="pl-smi">sName</span> + nameSeed[j];
+			tArray[i].<span class="pl-smi">sArray</span>[j].<span class="pl-smi">score</span> = <span class="pl-c1">rand</span>() % <span class="pl-c1">61</span> + <span class="pl-c1">40</span>;
 		}
 	}
 }
 
-void printTeachers(Teacher tArray[], int len)
+<span class="pl-k">void</span> <span class="pl-en">printTeachers</span>(Teacher tArray[], <span class="pl-k">int</span> len)
 {
-	for (int i = 0; i &lt; len; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; len; i++)
 	{
-		cout &lt;&lt; tArray[i].name &lt;&lt; endl;
-		for (int j = 0; j &lt; 5; j++)
+		cout &lt;&lt; tArray[i].<span class="pl-smi">name</span> &lt;&lt; endl;
+		<span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; <span class="pl-c1">5</span>; j++)
 		{
-			cout &lt;&lt; "\t姓名：" &lt;&lt; tArray[i].sArray[j].name &lt;&lt; " 分数：" &lt;&lt; tArray[i].sArray[j].score &lt;&lt; endl;
+			cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\t</span>姓名：<span class="pl-pds">"</span></span> &lt;&lt; tArray[i].<span class="pl-smi">sArray</span>[j].<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 分数：<span class="pl-pds">"</span></span> &lt;&lt; tArray[i].<span class="pl-smi">sArray</span>[j].<span class="pl-smi">score</span> &lt;&lt; endl;
 		}
 	}
 }
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	srand((unsigned int)time(NULL)); //随机数种子 头文件 #include &lt;ctime&gt;
+	<span class="pl-c1">srand</span>((<span class="pl-k">unsigned</span> <span class="pl-k">int</span>)<span class="pl-c1">time</span>(<span class="pl-c1">NULL</span>)); <span class="pl-c"><span class="pl-c">//</span>随机数种子 头文件 #include &lt;ctime&gt;</span>
 
-	Teacher tArray[3]; //老师数组
+	Teacher tArray[<span class="pl-c1">3</span>]; <span class="pl-c"><span class="pl-c">//</span>老师数组</span>
 
-	int len = sizeof(tArray) / sizeof(Teacher);
+	<span class="pl-k">int</span> len = <span class="pl-k">sizeof</span>(tArray) / <span class="pl-k">sizeof</span>(Teacher);
 
-	allocateSpace(tArray, len); //创建数据
+	<span class="pl-c1">allocateSpace</span>(tArray, len); <span class="pl-c"><span class="pl-c">//</span>创建数据</span>
 
-	printTeachers(tArray, len); //打印数据
+	<span class="pl-c1">printTeachers</span>(tArray, len); <span class="pl-c"><span class="pl-c">//</span>打印数据</span>
 	
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h4>8.8.2 案例2</h4>
 <p><strong>案例描述：</strong></p>
 <p>设计一个英雄的结构体，包括成员姓名，年龄，性别;创建结构体数组，数组中存放5名英雄。</p>
 <p>通过冒泡排序的算法，将数组中的英雄按照年龄进行升序排序，最终打印排序后的结果。</p>
 <p>五名英雄信息如下：</p>
-<pre lang="C++" class="notranslate"><code class="notranslate">		{"刘备",23,"男"},
-		{"关羽",22,"男"},
-		{"张飞",20,"男"},
-		{"赵云",21,"男"},
-		{"貂蝉",19,"女"},
-</code></pre>
+<div class="highlight highlight-source-c++"><pre class="notranslate">		{<span class="pl-s"><span class="pl-pds">"</span>刘备<span class="pl-pds">"</span></span>,<span class="pl-c1">23</span>,<span class="pl-s"><span class="pl-pds">"</span>男<span class="pl-pds">"</span></span>},
+		{<span class="pl-s"><span class="pl-pds">"</span>关羽<span class="pl-pds">"</span></span>,<span class="pl-c1">22</span>,<span class="pl-s"><span class="pl-pds">"</span>男<span class="pl-pds">"</span></span>},
+		{<span class="pl-s"><span class="pl-pds">"</span>张飞<span class="pl-pds">"</span></span>,<span class="pl-c1">20</span>,<span class="pl-s"><span class="pl-pds">"</span>男<span class="pl-pds">"</span></span>},
+		{<span class="pl-s"><span class="pl-pds">"</span>赵云<span class="pl-pds">"</span></span>,<span class="pl-c1">21</span>,<span class="pl-s"><span class="pl-pds">"</span>男<span class="pl-pds">"</span></span>},
+		{<span class="pl-s"><span class="pl-pds">"</span>貂蝉<span class="pl-pds">"</span></span>,<span class="pl-c1">19</span>,<span class="pl-s"><span class="pl-pds">"</span>女<span class="pl-pds">"</span></span>},</pre></div>
 <p><strong>示例：</strong></p>
-<pre lang="C++" class="notranslate"><code class="notranslate">//英雄结构体
-struct hero
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>英雄结构体</span>
+<span class="pl-k">struct</span> <span class="pl-en">hero</span>
 {
 	string name;
-	int age;
+	<span class="pl-k">int</span> age;
 	string sex;
 };
-//冒泡排序
-void bubbleSort(hero arr[] , int len)
+<span class="pl-c"><span class="pl-c">//</span>冒泡排序</span>
+<span class="pl-k">void</span> <span class="pl-en">bubbleSort</span>(hero arr[] , <span class="pl-k">int</span> len)
 {
-	for (int i = 0; i &lt; len - 1; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; len - <span class="pl-c1">1</span>; i++)
 	{
-		for (int j = 0; j &lt; len - 1 - i; j++)
+		<span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; len - <span class="pl-c1">1</span> - i; j++)
 		{
-			if (arr[j].age &gt; arr[j + 1].age)
+			<span class="pl-k">if</span> (arr[j].<span class="pl-smi">age</span> &gt; arr[j + <span class="pl-c1">1</span>].<span class="pl-smi">age</span>)
 			{
 				hero temp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
+				arr[j] = arr[j + <span class="pl-c1">1</span>];
+				arr[j + <span class="pl-c1">1</span>] = temp;
 			}
 		}
 	}
 }
-//打印数组
-void printHeros(hero arr[], int len)
+<span class="pl-c"><span class="pl-c">//</span>打印数组</span>
+<span class="pl-k">void</span> <span class="pl-en">printHeros</span>(hero arr[], <span class="pl-k">int</span> len)
 {
-	for (int i = 0; i &lt; len; i++)
+	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; len; i++)
 	{
-		cout &lt;&lt; "姓名： " &lt;&lt; arr[i].name &lt;&lt; " 性别： " &lt;&lt; arr[i].sex &lt;&lt; " 年龄： " &lt;&lt; arr[i].age &lt;&lt; endl;
+		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>姓名： <span class="pl-pds">"</span></span> &lt;&lt; arr[i].<span class="pl-smi">name</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 性别： <span class="pl-pds">"</span></span> &lt;&lt; arr[i].<span class="pl-smi">sex</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span> 年龄： <span class="pl-pds">"</span></span> &lt;&lt; arr[i].<span class="pl-smi">age</span> &lt;&lt; endl;
 	}
 }
 
-int main() {
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
 
-	struct hero arr[5] =
+	<span class="pl-k">struct</span> <span class="pl-en">hero</span> arr[<span class="pl-c1">5</span>] =
 	{
-		{"刘备",23,"男"},
-		{"关羽",22,"男"},
-		{"张飞",20,"男"},
-		{"赵云",21,"男"},
-		{"貂蝉",19,"女"},
+		{<span class="pl-s"><span class="pl-pds">"</span>刘备<span class="pl-pds">"</span></span>,<span class="pl-c1">23</span>,<span class="pl-s"><span class="pl-pds">"</span>男<span class="pl-pds">"</span></span>},
+		{<span class="pl-s"><span class="pl-pds">"</span>关羽<span class="pl-pds">"</span></span>,<span class="pl-c1">22</span>,<span class="pl-s"><span class="pl-pds">"</span>男<span class="pl-pds">"</span></span>},
+		{<span class="pl-s"><span class="pl-pds">"</span>张飞<span class="pl-pds">"</span></span>,<span class="pl-c1">20</span>,<span class="pl-s"><span class="pl-pds">"</span>男<span class="pl-pds">"</span></span>},
+		{<span class="pl-s"><span class="pl-pds">"</span>赵云<span class="pl-pds">"</span></span>,<span class="pl-c1">21</span>,<span class="pl-s"><span class="pl-pds">"</span>男<span class="pl-pds">"</span></span>},
+		{<span class="pl-s"><span class="pl-pds">"</span>貂蝉<span class="pl-pds">"</span></span>,<span class="pl-c1">19</span>,<span class="pl-s"><span class="pl-pds">"</span>女<span class="pl-pds">"</span></span>},
 	};
 
-	int len = sizeof(arr) / sizeof(hero); //获取数组元素个数
+	<span class="pl-k">int</span> len = <span class="pl-k">sizeof</span>(arr) / <span class="pl-k">sizeof</span>(hero); <span class="pl-c"><span class="pl-c">//</span>获取数组元素个数</span>
 
-	bubbleSort(arr, len); //排序
+	<span class="pl-c1">bubbleSort</span>(arr, len); <span class="pl-c"><span class="pl-c">//</span>排序</span>
 
-	printHeros(arr, len); //打印
+	<span class="pl-c1">printHeros</span>(arr, len); <span class="pl-c"><span class="pl-c">//</span>打印</span>
 
-	system("pause");
+	<span class="pl-c1">system</span>(<span class="pl-s"><span class="pl-pds">"</span>pause<span class="pl-pds">"</span></span>);
 
-	return 0;
-}
-</code></pre>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h1></h1></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处，拜谢！</div>
 
@@ -3242,7 +3185,7 @@ if(""!=""){
 </script></div>
 </body>
 <script>
-var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
 var utterancesLoad=0;
 
 let themeSettings={
@@ -3315,7 +3258,70 @@ function iFrameLoading(){
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
 
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
 
 </script>
 <script src='https://blog.meekdai.com/Gmeek/plugins/articletoc.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script><script src='https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js'></script>
