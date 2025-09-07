@@ -3,7 +3,7 @@
     "subTitle":"童话是一种生活态度，仅此而已。",
     "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
     "GMEEK_VERSION":"last",
-    "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script>",
+    "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script>;<style>body[data-ui-pending] #content {opacity:0;transition:opacity 0.3s ease;}</style><script>document.documentElement.setAttribute('data-ui-pending','true');</script><link rel='stylesheet' href='https://code.buxiantang.top/assets/GmeekBaseTheme.css'><script src='https://code.buxiantang.top/assets/GmeekCustomizeCss.js' defer></script>",
     "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/articletoc.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script><script src='https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js'></script>",
     "bottomText":"转载请注明出处，拜谢！"
 }
