@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    <script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script>
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# 从零开始安装和配置 IntelliJ IDEA 指南
+
+## 第一步：安装 Java 环境 (JDK)
+
+IntelliJ IDEA 是用来编写 Java 程序的主要工具之一，但它本身不包含 Java 运行环境。">
+<meta property="og:title" content="从零开始安装和配置 IntelliJ IDEA 指南">
+<meta property="og:description" content="# 从零开始安装和配置 IntelliJ IDEA 指南
+
+## 第一步：安装 Java 环境 (JDK)
+
+IntelliJ IDEA 是用来编写 Java 程序的主要工具之一，但它本身不包含 Java 运行环境。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hmho000.github.io/post/cong-ling-kai-shi-an-zhuang-he-pei-zhi-%20IntelliJ%20IDEA%20-zhi-nan.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>从零开始安装和配置 IntelliJ IDEA 指南</title>
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">从零开始安装和配置 IntelliJ IDEA 指南</h1>
+<div class="title-right">
+    <a href="https://hmho000.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/hmho000/hmho000.github.io/issues/6" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>从零开始安装和配置 IntelliJ IDEA 指南</h1>
+<h2>第一步：安装 Java 环境 (JDK)</h2>
+<p>IntelliJ IDEA 是用来编写 Java 程序的主要工具之一，但它本身不包含 Java 运行环境。所以我们需要先安装 <strong>JDK</strong>。</p>
+<h3>1. 下载 JDK</h3>
+<ol>
+<li>访问 Oracle 官方网站的 JDK 下载页面：<br>
+<a href="https://www.oracle.com/java/technologies/downloads/" rel="nofollow">https://www.oracle.com/java/technologies/downloads/</a></li>
+<li>选择最新的 <strong>LTS</strong> 版本（目前推荐 <strong>JDK 21</strong> ）。LTS 版本更稳定，支持时间更长。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/49fb9700ba15d6a012d0af2a0ccd00f7c1cc284a432c0053818a357091e4ddf9/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b7979742e6d642e706e67"><img src="https://camo.githubusercontent.com/49fb9700ba15d6a012d0af2a0ccd00f7c1cc284a432c0053818a357091e4ddf9/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b7979742e6d642e706e67" alt="下载jdk21" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlKyyt.md.png" style="max-width: 100%;"></a></li>
+<li>根据你的操作系统选择正确的安装包：<br>
+<em>Windows</em>:</li>
+</ol>
+<ul>
+<li>下载 <code class="notranslate">x64 Installer</code> 版本（文件名为 <code class="notranslate">jdk-21_windows-x64_bin.exe</code> 类似）<br>
+<em>macOS</em>:</li>
+<li><strong>Intel 芯片</strong>：下载 <code class="notranslate">x64 DMG Installer</code></li>
+<li><strong>Apple Silicon 芯片 (M1/M2/M3)</strong>：下载 <code class="notranslate">AArch64 DMG Installer</code></li>
+<li>（对于新手，安装器 <code class="notranslate">.exe</code> 或 <code class="notranslate">.dmg</code> 是最简单的选择）</li>
+</ul>
+<h3>2. 安装 JDK</h3>
+<p><em>Windows</em> :</p>
+<ol>
+<li>双击下载好的 <code class="notranslate">.exe</code> 文件。</li>
+<li>出现安装向导，点击“下一步”。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/280aaa2c12fd79ff7f1800f9b03d57fbeb56d3b46481533c67a28b8427e64ad5/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b4679422e6d642e706e67"><img src="https://camo.githubusercontent.com/280aaa2c12fd79ff7f1800f9b03d57fbeb56d3b46481533c67a28b8427e64ad5/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b4679422e6d642e706e67" alt="安装jdk" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlKFyB.md.png" style="max-width: 100%;"></a></li>
+<li>可以默认安装路径（通常是 <code class="notranslate">C:\Program Files\Java\jdk-21\</code>），也可以更改。<strong>记住这个路径，后面要用！</strong></li>
+<li>继续点击“下一步”，直到安装完成。</li>
+</ol>
+<p><em>macOS</em>:</p>
+<ol>
+<li>双击下载好的 <code class="notranslate">.dmg</code> 文件。</li>
+<li>打开后，双击包中的 <code class="notranslate">.pkg</code> 图标。</li>
+<li>根据安装向导的提示，一路点击“继续”，同意许可协议，并输入你的电脑密码完成安装。</li>
+<li>JDK 会自动安装到标准目录（<code class="notranslate">/Library/Java/JavaVirtualMachines/</code>），无需手动设置路径。</li>
+</ol>
+<h3>3. 验证 JDK 是否安装成功</h3>
+<ul>
+<li><strong>Windows</strong>:</li>
+</ul>
+<ol>
+<li>按下键盘上的 <code class="notranslate">Win + R</code> 键，输入 <code class="notranslate">cmd</code>，然后按回车，打开命令提示符。</li>
+<li>输入命令 <code class="notranslate">java -version</code> 并按回车。</li>
+<li>如果显示类似下面的版本信息（版本号和你下载的一致），说明安装成功。</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">java version "21.0.2" 2024-01-16 LTS
+Java(TM) SE Runtime Environment (build 21.0.2+13-LTS-58)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.2+13-LTS-58, mixed mode, sharing)
+</code></pre>
+<ul>
+<li><strong>macOS</strong>:</li>
+</ul>
+<ol>
+<li>打开“启动台” -&gt; “其他” -&gt; “终端”。</li>
+<li>输入命令 <code class="notranslate">java -version</code> 并按回车。</li>
+<li>同样检查版本信息是否正确。</li>
+</ol>
+<hr>
+<h2>第二步：下载并安装 IntelliJ IDEA</h2>
+<h3>1. 选择版本</h3>
+<p>IntelliJ IDEA 有两个版本：</p>
+<ul>
+<li><strong>Ultimate (旗舰版)</strong>：功能全面，支持各种语言和框架（如 Spring, Python, JavaScript），但<strong>收费</strong>（对学生免费）。</li>
+<li><strong>Community (社区版)</strong>：免费，功能足够用于学习 <strong>Java</strong> 和 Android 开发。</li>
+</ul>
+<p><strong>作为新手，咱们先下载免费的 Community 版本。</strong></p>
+<h3>2. 下载安装</h3>
+<ol>
+<li>访问 JetBrains 官网下载页：<br>
+<a href="https://www.jetbrains.com/zh-cn/idea/download/" rel="nofollow">https://www.jetbrains.com/zh-cn/idea/download/</a></li>
+<li>向下滑在“Community”栏目下，点击你的操作系统（Windows, macOS, Linux）对应的 <strong>下载</strong> 按钮。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/06790d479470c7a98b242d860511f4d89196effea320e4df9044b754003ba75e/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b7655582e6d642e706e67"><img src="https://camo.githubusercontent.com/06790d479470c7a98b242d860511f4d89196effea320e4df9044b754003ba75e/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b7655582e6d642e706e67" alt="安装ide" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlKvUX.md.png" style="max-width: 100%;"></a></li>
+<li>下载完成后，运行安装程序。 * <strong>Windows</strong>:</li>
+</ol>
+<ul>
+<li>双击安装程序 <code class="notranslate">.exe</code>。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/30af4cf1cbf68692ab60c331c6eb366372c587d826b1dfd42a5fe689cb7519cb/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b3165612e6d642e706e67"><img src="https://camo.githubusercontent.com/30af4cf1cbf68692ab60c331c6eb366372c587d826b1dfd42a5fe689cb7519cb/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b3165612e6d642e706e67" alt="安装ide" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlK1ea.md.png" style="max-width: 100%;"></a></li>
+<li>选择安装路径（默认会安装到C盘，我这边选择的D）。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/3eb449be47da54ff41267658c5a3d0d88cb4e2a52d89f9e63f71555546d91b85/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b70616a2e6d642e706e67"><img src="https://camo.githubusercontent.com/3eb449be47da54ff41267658c5a3d0d88cb4e2a52d89f9e63f71555546d91b85/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b70616a2e6d642e706e67" alt="选择安装目录" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlKpaj.md.png" style="max-width: 100%;"></a></li>
+<li>在安装选项界面，勾选如图选项：<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/7b13bcec367f751bf1601d229a8c95b6672702f872d31ed39bd61dcb778984bf/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b6864732e6d642e706e67"><img src="https://camo.githubusercontent.com/7b13bcec367f751bf1601d229a8c95b6672702f872d31ed39bd61dcb778984bf/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b6864732e6d642e706e67" alt="配置项" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlKhds.md.png" style="max-width: 100%;"></a></li>
+<li><code class="notranslate">64-bit launcher</code> (创建桌面快捷方式)</li>
+<li><code class="notranslate">Add "Open Folder as Project"</code> (增加右键菜单)</li>
+<li><code class="notranslate">.java</code> (关联 Java 文件)</li>
+<li>点击“下一步（Next）”直到安装完成，最后点击“完成（Finish）”。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/7a7077b11e1a31d43c56492f989e36d08d61c97bdc21464bab48a671fca73e0c/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b4b6a692e6d642e706e67"><img src="https://camo.githubusercontent.com/7a7077b11e1a31d43c56492f989e36d08d61c97bdc21464bab48a671fca73e0c/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b4b6a692e6d642e706e67" alt="等待ide安装" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlKKji.md.png" style="max-width: 100%;"></a></li>
+<li><strong>macOS</strong>:</li>
+<li>双击下载的 <code class="notranslate">.dmg</code> 文件。</li>
+<li>将 IntelliJ IDEA CE 的图标拖拽到 <code class="notranslate">Applications</code> 文件夹中即可完成安装。</li>
+</ul>
+<hr>
+<h2>第三步：首次运行与基本配置</h2>
+<h3>1. 启动 IDEA</h3>
+<ul>
+<li><strong>Windows</strong>: 从开始菜单或桌面快捷方式启动。</li>
+<li><strong>macOS</strong>: 在“应用程序”中找到并启动它。</li>
+</ul>
+<p>首次运行会进行一些初始化配置。</p>
+<h3>2. 重要初始设置</h3>
+<ol>
+<li><strong>是否导入设置</strong>：第一次启动会问你是否导入之前的设置，选择 <code class="notranslate">跳过导入（Do not import settings）</code>（不导入设置，使用默认配置）。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/d32fc3b7764b54cdda4558f61ea85ac5b39539e9c6b38e2af09218f79036e56a/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b41524c2e6d642e706e67"><img src="https://camo.githubusercontent.com/d32fc3b7764b54cdda4558f61ea85ac5b39539e9c6b38e2af09218f79036e56a/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b41524c2e6d642e706e67" alt="导入配置" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlKARL.md.png" style="max-width: 100%;"></a></li>
+<li><strong>接受用户协议</strong>：勾选同意，然后点击“Continue”。</li>
+<li><strong>数据分享</strong>：是否发送使用数据给 JetBrains 以帮助他们改进产品，可以选择“Don't Send”不发送。</li>
+<li><strong>UI 主题选择</strong>：选择你喜欢的主题，比如 <code class="notranslate">Light</code> (浅色) 或 <code class="notranslate">Dark</code> (深色)。之后可以随时更改。</li>
+<li><strong>插件安装</strong>：初始界面会推荐一些插件，作为新手可以先直接点击“Skip Remaining and Set Defaults”（跳过其余并设置默认），后续有需要再安装。</li>
+<li><strong>激活</strong>：社区版不需要激活，直接点击“Start trial”或“Start using IDEA”即可开始使用。</li>
+</ol>
+<h3>3. 配置 JDK（关键步骤！！！）</h3>
+<p>现在我们要告诉 IntelliJ IDEA 我们刚才安装的 JDK 在哪里。</p>
+<ol>
+<li>在欢迎界面，点击左侧的 <code class="notranslate">项目（Projects）</code> 。</li>
+<li>右侧选择 <code class="notranslate">新建项目（New Project）</code>。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/97500671b1b43d0819cc51363f0538d96fae8652179b4d68e443cdbcc09c8536/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b6773782e6d642e706e67"><img src="https://camo.githubusercontent.com/97500671b1b43d0819cc51363f0538d96fae8652179b4d68e443cdbcc09c8536/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b6773782e6d642e706e67" alt="创建新项目" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlKgsx.md.png" style="max-width: 100%;"></a></li>
+<li>在页面中部 <strong>“JDK”</strong> 旁边，点击下拉菜单。</li>
+</ol>
+<ul>
+<li><strong>如果这里自动检测到了你安装的 JDK 21</strong>（例如显示 <code class="notranslate">21</code>），那么太好了，你可以直接下一步。</li>
+<li><strong>如果没有检测到</strong>，点击 <code class="notranslate">从磁盘中添加JDK...（Add JDK...）</code>。</li>
+</ul>
+<blockquote>
+<p>3.1. 在弹出的文件选择窗口中，找到你安装 JDK 的路径：</p>
+<ul>
+<li><strong>Windows</strong>: 通常是在 <code class="notranslate">C:\Program Files\Java\</code> 下，选择你安装的 <code class="notranslate">jdk-21</code> 这个文件夹。</li>
+<li><strong>macOS</strong>: 路径是 <code class="notranslate">/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home</code>（请将 <code class="notranslate">21</code> 替换为你下载的实际版本号）。</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li>选择好 JDK 路径后，点击 <code class="notranslate">创建</code>。此时 IDEA 就配置好了 Java 环境。</li>
+<li>项目名称（<code class="notranslate">Name</code>）可以取一个简单的，比如 <code class="notranslate">HelloWorld</code>。</li>
+<li>点击 <code class="notranslate">创建</code> 按钮，你的第一个项目就创建成功了！<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/cce2f37c8910b4a0e0918f075f0d6db539ed8109c0696aeff62067899adba709/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b7246432e6d642e706e67"><img src="https://camo.githubusercontent.com/cce2f37c8910b4a0e0918f075f0d6db539ed8109c0696aeff62067899adba709/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b7246432e6d642e706e67" alt="选择jdk" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlKrFC.md.png" style="max-width: 100%;"></a></li>
+</ol>
+<hr>
+<h2>第四步：创建并运行你的第一个程序</h2>
+<p>现在你进入了 IDEA 的主界面。</p>
+<ol>
+<li><strong>创建Java类</strong>：</li>
+</ol>
+<ul>
+<li>在左侧的项目结构栏（称为“项目工具窗口”），找到 <code class="notranslate">src</code> 文件夹。</li>
+<li>右键点击 <code class="notranslate">src</code> -&gt; <code class="notranslate">新建（New）</code> -&gt; <code class="notranslate">Java类（Java Class）</code>。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/51d1b00d26b45f9dfe25237accb4a742d4df0f0947d370f523b3cbcfa55a7606/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b3745532e6d642e706e67"><img src="https://camo.githubusercontent.com/51d1b00d26b45f9dfe25237accb4a742d4df0f0947d370f523b3cbcfa55a7606/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b3745532e6d642e706e67" alt="创建JAVA类" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlK7ES.md.png" style="max-width: 100%;"></a></li>
+<li>输入类名，例如 <code class="notranslate">Main</code>，按回车。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/b38966efdca1e8fa013cec2a09037b2f1cd605664938ebc1911d99d294b2a758/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b4e494e2e6d642e706e67"><img src="https://camo.githubusercontent.com/b38966efdca1e8fa013cec2a09037b2f1cd605664938ebc1911d99d294b2a758/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b4e494e2e6d642e706e67" alt="类名" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlKNIN.md.png" style="max-width: 100%;"></a></li>
+</ul>
+<ol start="2">
+<li><strong>编写代码</strong>：</li>
+</ol>
+<ul>
+<li>IDEA 会自动生成类结构。我们写入一个经典的入门程序：</li>
+</ul>
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-smi">Main</span> {
+   <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-smi">void</span> <span class="pl-en">main</span>(<span class="pl-smi">String</span>[] <span class="pl-s1">args</span>) {
+       <span class="pl-smi">System</span>.<span class="pl-s1">out</span>.<span class="pl-en">println</span>(<span class="pl-s">"Hello, World! 我终于成功啦！"</span>);
+   }
+}</pre></div>
+<ol start="3">
+<li><strong>运行程序</strong>：</li>
+</ol>
+<ul>
+<li>你会看到代码编辑器顶部区域，<code class="notranslate">当前文件</code> 字样的旁边有一个小小的 <strong>绿色三角</strong> <g-emoji class="g-emoji" alias="arrow_forward">▶️</g-emoji> 图标。</li>
+<li>点击这个绿色三角。</li>
+<li>或者，直接在代码编辑器内右键，选择 <code class="notranslate">Run 'Main.main()'</code>。</li>
+</ul>
+<ol start="4">
+<li><strong>查看结果</strong>：</li>
+</ol>
+<ul>
+<li>程序运行后，IDE 底部会弹出一个 <strong>“Run”</strong> 工具窗口。</li>
+<li>里面会显示程序的输出：<code class="notranslate">Hello, World! 我终于成功啦！</code><br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ad38f928b6f7f150f6fe03a2c5baade6385df7d6e871939397749297e75d2857/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b4a65702e6d642e706e67"><img src="https://camo.githubusercontent.com/ad38f928b6f7f150f6fe03a2c5baade6385df7d6e871939397749297e75d2857/68747470733a2f2f6f6f6f2e3078302e6f6f6f2f323032352f30392f30382f4f6c4b4a65702e6d642e706e67" alt="成功运行" data-canonical-src="https://ooo.0x0.ooo/2025/09/08/OlKJep.md.png" style="max-width: 100%;"></a></li>
+</ul>
+<p>恭喜你！你已经成功完成了从安装到运行的全部步骤！🎉</p>
+<h2>总结与后续建议</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th align="left">步骤</th>
+<th align="left">内容</th>
+<th align="left">关键点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>1</strong></td>
+<td align="left"><strong>安装 JDK</strong></td>
+<td align="left">去 Oracle 官网下载，并验证 <code class="notranslate">java -version</code></td>
+</tr>
+<tr>
+<td align="left"><strong>2</strong></td>
+<td align="left"><strong>安装 IDEA</strong></td>
+<td align="left">下载 <strong>Community (社区版)</strong>，按向导安装</td>
+</tr>
+<tr>
+<td align="left"><strong>3</strong></td>
+<td align="left"><strong>配置环境</strong></td>
+<td align="left">首次创建项目时，通过 <code class="notranslate">Add JDK...</code> 指定 JDK 安装路径</td>
+</tr>
+<tr>
+<td align="left"><strong>4</strong></td>
+<td align="left"><strong>创建运行</strong></td>
+<td align="left">在 <code class="notranslate">src</code> 下新建 Java Class，写代码，点击绿色三角运行</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<ul>
+<li><strong>不要怕出错</strong>：编程过程中会遇到无数错误，这是学习过程的必经之路。学会阅读错误信息（通常是红色的）是最重要的技能之一。</li>
+<li><strong>善用搜索</strong>：任何问题，都可以尝试将错误信息复制到百度或 Bing 中搜索，很大概率已经有人遇到过同样的问题并提供了解决方案。</li>
+<li><strong>熟悉界面</strong>：多点点看 IDEA 的各个菜单，了解一下各个窗口（如 Project, Run, Terminal）是干什么的。</li>
+</ul>
+<h2>Q&amp;A</h2>
+<hr>
+<h3>Q：为什么“不用去配置系统的环境变量”？</h3>
+<blockquote>
+<p>A：因为 IntelliJ IDEA 是一个高度集成的开发环境，它在<strong>自己内部</strong>已经管理了你为项目指定的 JDK。当你按照上一步教程，在创建新项目时通过 &gt; <code class="notranslate">Add JDK...</code> 告诉了 IDEA JDK 的安装路径后，IDEA 就知道去哪里找编译器 (<code class="notranslate">javac</code>) 和运行时 (<code class="notranslate">java</code>) 来编译和运行你的代码了。</p>
+<p>所以，<strong>仅仅在 IDEA 里写代码、点绿色三角运行程序，不配置系统环境变量是完全没问题的。</strong></p>
+</blockquote>
+<hr>
+<h3>Q：为什么“强烈建议”配置环境变量？</h3>
+<blockquote>
+<p>A：因为配置系统环境变量 <code class="notranslate">JAVA_HOME</code> 和 <code class="notranslate">PATH</code> 是为了让<strong>整个操作系统</strong>而不仅仅是 IDEA 知道 Java 的存在。这会在很多场景下带来便利：</p>
+<ol>
+<li><strong>在命令行（终端/CMD）中使用 Java</strong>：</li>
+</ol>
+<ul>
+<li>你想在 IDEA 自带的终端或者系统自带的 <code class="notranslate">cmd</code> 或 <code class="notranslate">PowerShell</code> 中直接输入 <code class="notranslate">java -version</code>、<code class="notranslate">javac</code> 等命令时，系统需要知道去哪里找这些命令。</li>
+<li><strong>未来你一定会用到</strong>，比如使用 <code class="notranslate">Maven</code>、<code class="notranslate">Gradle</code> 等构建工具，它们通常依赖于 <code class="notranslate">JAVA_HOME</code> 这个环境变量来定位 JDK。</li>
+</ul>
+<ol start="2">
+<li><strong>其他开发工具</strong>：</li>
+</ol>
+<ul>
+<li>很多其他软件（比如服务器软件 Tomcat、构建工具 Gradle 等）在启动时都会查找 <code class="notranslate">JAVA_HOME</code> 环境变量来确定使用哪个 Java 环境。</li>
+</ul>
+<ol start="3">
+<li><strong>避免未来 confusion</strong>：</li>
+</ol>
+<ul>
+<li>提前配置好是一劳永逸的事情，可以避免未来某个时候突然出现“命令找不到”的错误而不知所措。</li>
+</ul>
+</blockquote>
+<hr>
+<h2>如何配置系统环境变量 (详细步骤)</h2>
+<p>下面为你提供 Windows 和 macOS 的详细配置方法。</p>
+<h3>🔧 对于 Windows 系统</h3>
+<ol>
+<li><strong>确认 JDK 安装路径</strong>：</li>
+</ol>
+<ul>
+<li>通常路径是 <code class="notranslate">C:\Program Files\Java\jdk-21</code> (请将 <code class="notranslate">21</code> 替换为你安装的实际版本号)。</li>
+<li><strong>非常重要</strong>：请打开文件资源管理器确认这个路径存在。路径中应该包含 <code class="notranslate">bin</code>, <code class="notranslate">lib</code> 等文件夹。</li>
+</ul>
+<ol start="2">
+<li><strong>打开环境变量设置</strong>：</li>
+</ol>
+<ul>
+<li>在开始菜单搜索 <strong>“编辑系统环境变量”</strong> 并打开。</li>
+<li>或者按 <code class="notranslate">Win + R</code>，输入 <code class="notranslate">sysdm.cpl</code> 回车，然后选择“高级”选项卡，点击“环境变量”按钮。</li>
+</ul>
+<ol start="3">
+<li><strong>新建 <code class="notranslate">JAVA_HOME</code> 变量</strong> (系统变量)：</li>
+</ol>
+<ul>
+<li>在下面的“系统变量”区域，点击 <strong>“新建...”</strong>。</li>
+<li><strong>变量名</strong>： <code class="notranslate">JAVA_HOME</code></li>
+<li><strong>变量值</strong>：你的 JDK 安装路径，例如 <code class="notranslate">C:\Program Files\Java\jdk-21</code></li>
+<li>点击“确定”。</li>
+</ul>
+<ol start="4">
+<li><strong>修改 <code class="notranslate">Path</code> 变量</strong>：</li>
+</ol>
+<ul>
+<li>在“系统变量”区域，找到并选中 <code class="notranslate">Path</code> 变量，点击 <strong>“编辑...”</strong>。</li>
+<li>点击 <strong>“新建”</strong>，然后添加一条新记录： <code class="notranslate">%JAVA_HOME%\bin</code></li>
+<li><strong>说明</strong>：<code class="notranslate">%JAVA_HOME%</code> 会动态引用你上一步设置的路径，<code class="notranslate">\bin</code> 是包含所有可执行文件（如 <code class="notranslate">java</code>, <code class="notranslate">javac</code>）的目录。</li>
+<li>点击“确定”保存。</li>
+</ul>
+<ol start="5">
+<li><strong>验证配置</strong>：</li>
+</ol>
+<ul>
+<li>关闭所有已经打开的命令行窗口，<strong>重新打开一个新的 <code class="notranslate">cmd</code> 或 <code class="notranslate">PowerShell</code></strong>。</li>
+<li>输入 <code class="notranslate">java -version</code>，应该显示你安装的版本号。</li>
+<li>输入 <code class="notranslate">javac -version</code>，应该显示同样的版本号。</li>
+<li>输入 <code class="notranslate">echo %JAVA_HOME%</code>，应该显示你设置的路径。</li>
+<li>如果这些命令都返回了正确信息，恭喜你，配置成功！</li>
+</ul>
+<h3>🍎 对于 macOS 系统</h3>
+<p>macOS 在安装 JDK <code class="notranslate">.dmg</code> 包时，通常会自动在 <code class="notranslate">/usr/libexec/java_home</code> 这个位置创建一个链接，命令行工具已经可以找到 Java。但手动设置 <code class="notranslate">JAVA_HOME</code> 仍然是一个好习惯。</p>
+<ol>
+<li><strong>打开终端</strong>（Terminal）。</li>
+<li><strong>确定 JDK 的安装路径</strong>：</li>
+</ol>
+<ul>
+<li>在终端中输入以下命令并回车：</li>
+</ul>
+<div class="highlight highlight-source-shell"><pre class="notranslate">/usr/libexec/java_home</pre></div>
+<ul>
+<li>它会输出 JDK 的完整安装路径，例如：<code class="notranslate">/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home</code></li>
+<li>复制这个路径。</li>
+</ul>
+<ol start="3">
+<li><strong>编辑 shell 配置文件</strong>：</li>
+</ol>
+<ul>
+<li>macOS 通常使用 <code class="notranslate">zsh</code>（新系统）或 <code class="notranslate">bash</code>（旧系统）作为默认 shell。</li>
+<li>首先判断你用的哪种，在终端输入 <code class="notranslate">echo $SHELL</code>：</li>
+<li>如果输出 <code class="notranslate">/bin/zsh</code> -&gt; 编辑 <code class="notranslate">~/.zshrc</code> 文件</li>
+<li>如果输出 <code class="notranslate">/bin/bash</code> -&gt; 编辑 <code class="notranslate">~/.bash_profile</code> 文件</li>
+<li>（近年来新的 macOS 系统基本都是 <code class="notranslate">zsh</code>）</li>
+</ul>
+<ol start="4">
+<li><strong>以 <code class="notranslate">zsh</code> 为例</strong>，在终端输入以下命令来编辑配置文件：</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">nano <span class="pl-k">~</span>/.zshrc</pre></div>
+<ol start="5">
+<li><strong>添加环境变量</strong>：</li>
+</ol>
+<ul>
+<li>在打开的文件末尾（如果之前没有内容，就在空文件中），添加以下两行：</li>
+</ul>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">export</span> JAVA_HOME=<span class="pl-s"><span class="pl-pds">$(</span>/usr/libexec/java_home<span class="pl-pds">)</span></span>
+<span class="pl-k">export</span> PATH=<span class="pl-smi">$JAVA_HOME</span>/bin:<span class="pl-smi">$PATH</span></pre></div>
+<ul>
+<li><strong>说明</strong>：第一行使用 <code class="notranslate">$(/usr/libexec/java_home)</code> 命令自动获取当前 JDK 路径并赋值给 <code class="notranslate">JAVA_HOME</code>。第二行将 JDK 的 <code class="notranslate">bin</code> 目录添加到 <code class="notranslate">PATH</code> 的最前面。</li>
+</ul>
+<ol start="6">
+<li><strong>保存并退出</strong>：</li>
+</ol>
+<ul>
+<li>按 <code class="notranslate">Ctrl + O</code> 回车来保存文件。</li>
+<li>按 <code class="notranslate">Ctrl + X</code> 退出 nano 编辑器。</li>
+</ul>
+<ol start="7">
+<li><strong>使配置生效</strong>：</li>
+</ol>
+<ul>
+<li>在终端中输入以下命令，让刚修改的配置立即生效：</li>
+</ul>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c1">source</span> <span class="pl-k">~</span>/.zshrc</pre></div>
+<ol start="8">
+<li><strong>验证配置</strong>：</li>
+</ol>
+<ul>
+<li>关闭终端再重新打开，或直接在新终端中输入：</li>
+</ul>
+<div class="highlight highlight-source-shell"><pre class="notranslate">java -version
+javac -version
+<span class="pl-c1">echo</span> <span class="pl-smi">$JAVA_HOME</span></pre></div>
+<ul>
+<li>如果所有命令都返回正确信息，则配置成功。</li>
+</ul>
+<hr>
+<h3>总结</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th align="left">场景</th>
+<th align="left">是否需要配置环境变量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>仅使用 IntelliJ IDEA 的图形界面按钮运行程序</strong></td>
+<td align="left"><strong>不需要</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>需要在系统命令行中使用 <code class="notranslate">java</code>, <code class="notranslate">javac</code> 等命令</strong></td>
+<td align="left"><strong>必须</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>为了未来使用 Maven、Gradle 等工具做准备</strong></td>
+<td align="left"><strong>必须</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>让系统环境更整洁，避免未来可能出现的问题</strong></td>
+<td align="left"><strong>强烈建议</strong></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p><strong>给你的最终建议：</strong> 既然你已经走到了这一步，<strong>花 5 分钟时间把它配置好</strong>，这是一项一次性的投资，能为你的后续开发学习省去很多不必要的麻烦。</p>
+<p>现在，你已经搭建好了强大的开发环境，可以开始探索精彩的编程世界了！</p></div>
+<div style="font-size:small;margin-top:8px;float:right;">转载请注明出处，拜谢！</div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://hmho000.github.io">Kj的Blog</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","hmho000/hmho000.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+<script src='https://blog.meekdai.com/Gmeek/plugins/articletoc.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script><script src='https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js'></script>
+
+</html>
