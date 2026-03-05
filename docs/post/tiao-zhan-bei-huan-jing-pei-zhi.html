@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://hmho000.github.io/post/tiao-zhan-bei-huan-jing-pei-zhi.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>挑战杯环境配置</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -170,21 +170,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </ul>
 <h3>2. 安装依赖</h3>
 <p><strong>后端依赖:</strong></p>
-<pre lang="bash" class="notranslate"><code class="notranslate">pip install fastapi uvicorn sqlmodel pymupdf requests python-multipart
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate">pip install fastapi uvicorn sqlmodel pymupdf requests python-multipart</pre></div>
 <p><strong>前端依赖 (仅需修改前端代码时):</strong></p>
-<pre lang="bash" class="notranslate"><code class="notranslate">cd frontend
-npm install
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c1">cd</span> frontend
+npm install</pre></div>
 <h3>3. 配置 API Key</h3>
 <p>在项目根目录创建 <code class="notranslate">.env</code> 文件：</p>
-<pre lang="env" class="notranslate"><code class="notranslate">DEEPSEEK_API_KEY=your_api_key_here
-</code></pre>
+<div class="highlight highlight-source-dotenv"><pre class="notranslate"><span class="pl-v">DEEPSEEK_API_KEY</span><span class="pl-k">=</span><span class="pl-s">your_api_key_here</span></pre></div>
 <p>可以从群公告获取</p>
 <h3>4. 启动应用</h3>
 <p><strong>方式一：直接运行 (推荐)</strong></p>
-<pre lang="bash" class="notranslate"><code class="notranslate">python run_app.py
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate">python run_app.py</pre></div>
 <p>此命令会：</p>
 <ul>
 <li>启动 FastAPI 后端 (<a href="http://127.0.0.1:8000" rel="nofollow">http://127.0.0.1:8000</a>)</li>
@@ -200,12 +196,10 @@ npm install
 <h3>Pip 镜像源配置 (加速下载)</h3>
 <p><strong>设为默认</strong></p>
 <p>升级 pip 到最新的版本后进行配置：</p>
-<pre lang="bash" class="notranslate"><code class="notranslate">python -m pip install --upgrade pip
-pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate">python -m pip install --upgrade pip
+pip config <span class="pl-c1">set</span> global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple</pre></div>
 <p>如果您到 pip 默认源的网络连接较差，临时使用本镜像站来升级 pip：</p>
-<pre lang="bash" class="notranslate"><code class="notranslate">python -m pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple --upgrade pip
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate">python -m pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple --upgrade pip</pre></div>
 <ul>
 <li>如果 <code class="notranslate">npm install</code> 失败，请检查 FlClash 是否开启了系统代理。</li>
 </ul>
