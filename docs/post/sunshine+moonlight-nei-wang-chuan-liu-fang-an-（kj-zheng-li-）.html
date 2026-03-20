@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    <script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script>
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# Windows 部署 Moonlight + Sunshine 内网串流完整教程
+
+Moonlight 配合 Sunshine 是目前体验最佳、延迟最低的开源局域网/公网串流方案，完美替代了已经被 NVIDIA 弃用的 GameStream 功能。">
+<meta property="og:title" content="sunshine+moonlight内网串流方案（kj整理）">
+<meta property="og:description" content="# Windows 部署 Moonlight + Sunshine 内网串流完整教程
+
+Moonlight 配合 Sunshine 是目前体验最佳、延迟最低的开源局域网/公网串流方案，完美替代了已经被 NVIDIA 弃用的 GameStream 功能。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hmho000.github.io/post/sunshine%2Bmoonlight-nei-wang-chuan-liu-fang-an-%EF%BC%88kj-zheng-li-%EF%BC%89.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>sunshine+moonlight内网串流方案（kj整理）</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">sunshine+moonlight内网串流方案（kj整理）</h1>
+<div class="title-right">
+    <a href="https://hmho000.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/hmho000/hmho000.github.io/issues/9" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>Windows 部署 Moonlight + Sunshine 内网串流完整教程</h1>
+<p>Moonlight 配合 Sunshine 是目前体验最佳、延迟最低的开源局域网/公网串流方案，完美替代了已经被 NVIDIA 弃用的 GameStream 功能。本教程将指导你在 Windows 环境下完成内网串流的部署。</p>
+<h2>📋 准备工作</h2>
+<p>在开始之前，请确保你具备以下条件：</p>
+<ul>
+<li>
+<p><strong>被控端（被控主机/Host）</strong>：一台运行 Windows 10/11 的电脑（建议配备独立显卡以获得最佳硬件编码性能）。</p>
+</li>
+<li>
+<p><strong>控制端（接收端/Client）</strong>：任意安装了 Moonlight 的设备（支持 Windows、macOS、Linux、Android、iOS、Apple TV 等）。</p>
+</li>
+<li>
+<p><strong>网络环境</strong>：双方设备处于同一局域网下。强烈建议<strong>被控主机使用千兆有线网线连接路由器</strong>，控制端使用 5GHz 或 Wi-Fi 6 网络，以保证低延迟和高画质。</p>
+</li>
+</ul>
+<hr>
+<h2>🛠️ 第一步：在被控主机安装并配置 Sunshine (被控端)</h2>
+<p>Sunshine 是运行在你的游戏电脑上的服务端软件，负责捕获画面、编码并发送给客户端。</p>
+<ol>
+<li>
+<p><strong>下载 Sunshine：</strong></p>
+<ul>
+<li>
+<p>前往 <a href="https://github.com/LizardByte/Sunshine/releases">Sunshine GitHub Releases 页面</a>。</p>
+</li>
+<li>
+<p>找到最新的 Release 版本，下载对应的 Windows 安装包（通常名为 <code class="notranslate">sunshine-windows-installer.exe</code>）。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>安装 Sunshine：</strong></p>
+<ul>
+<li>
+<p>双击运行安装包，按照默认提示无脑点击“下一步”完成安装。</p>
+</li>
+<li>
+<p>安装完成后，Sunshine 通常会自动在后台运行。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>初始化设置 (Web UI)：</strong></p>
+<ul>
+<li>
+<p>在游戏主机的浏览器中输入：<code class="notranslate">https://localhost:47990</code> 并回车。</p>
+</li>
+<li>
+<p><strong>注意：</strong> 浏览器可能会提示“您的连接不是私密连接”或“存在安全风险”。这是因为使用了本地自签发证书，请点击<strong>高级 -&gt; 继续访问</strong>。</p>
+</li>
+<li>
+<p>首次打开页面时，系统会要求你<strong>设置一个用户名和密码</strong>。请务必记住这组账号密码，以后进入后台设置都需要用到。</p>
+</li>
+<li>
+<p>设置完成后，页面会自动刷新，使用刚才设置的账号密码登录 Sunshine 后台。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>校园环境针对性设置<g-emoji class="g-emoji" alias="warning">⚠️</g-emoji><g-emoji class="g-emoji" alias="warning">⚠️</g-emoji><g-emoji class="g-emoji" alias="warning">⚠️</g-emoji>：</strong></p>
+<ul>
+<li>
+<p>经测试本校封禁20000以上的端口，所有导致moonlight默认的47990等端口无法使用</p>
+</li>
+<li>
+<p>在被控端的 <code class="notranslate">https://localhost:47990</code> 配置界面<strong>修改端口号</strong>，然后对应的端口族都会自动变，请记住图中所示的端口信息以及协议<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ca7aa10ffc00fe0379c3f14e821b97c4a37126bc182e0bc1a08181c689fe2a6a/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032362f30332f37663133653562616631653162393231383335653538373439663733366565632e706e67"><img src="https://camo.githubusercontent.com/ca7aa10ffc00fe0379c3f14e821b97c4a37126bc182e0bc1a08181c689fe2a6a/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032362f30332f37663133653562616631653162393231383335653538373439663733366565632e706e67" alt="moonlight端口设置图" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2026/03/7f13e5baf1e1b921835e58749f736eec.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p><del>由于学校不同ap下有隔离</del>（未知），所以需要用到一个路由器做<strong>端口转发</strong>，这里以OpenWrt系统做演示，其他路由器以及系统只需做对应操作即可,如图所示192.168.9.100为路由器下被控端地址（可以在路由器内对被控端设备dhcp做静态绑定以免ip地址变化导致连接失败）<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/18cb997317eaf5741302168f0a66127eccdbbf7c1efe2b6fc292df5df4e17cda/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032362f30332f32343961326166383831383838643133616566633133653731396632663166352e706e67"><img src="https://camo.githubusercontent.com/18cb997317eaf5741302168f0a66127eccdbbf7c1efe2b6fc292df5df4e17cda/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032362f30332f32343961326166383831383838643133616566633133653731396632663166352e706e67" alt="OpenWrt端口转发配置界面" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2026/03/249a2af881888d13aefc13e719f2f1f5.png" style="max-width: 100%;"></a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>💡 提示：</strong> 给路由器通网需要使用到<strong>Mac地址欺骗</strong>的办法，操作方法为分两种<br>
+可选工具：<a href="https://wwaln.lanzoum.com/iyNIl3l2ndjc" rel="nofollow">网卡MAC地址修改工具.exe 密码:6iss</a>(实测此软件win10有效，win11无效)</p>
+<ol>
+<li>路由器为插电不插wan口的状态，将A设备的网口Mac地址改为路由器wan口的网口Mac，然后登录校园网后开启无感认证，之后将A设备的的Mac恢复真实Mac或者先禁用网络适配器，然后插上路由器wan口稍等几秒即可通网（经测试，在路由器先通网A设备后通网且mac一致的情况下路由器会保持网络连接且A设备能正常使用，但是长久来看还是不用使用同Mac）</li>
+<li>路由器为插电不插wan口的状态，将路由器设备wan口Mac改为A设备网口Mac，然后A设备登录校园网后开启无感认证后禁用网络适配器，插上路由器wan口稍等几秒即可通网</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h2>📱 第二步：在接收端安装 Moonlight (控制端)</h2>
+<p>Moonlight 是客户端软件，负责接收画面并将你的手柄/键鼠操作发送回游戏主机。</p>
+<ol>
+<li>
+<p><strong>下载 Moonlight：</strong></p>
+<ul>
+<li>
+<p>前往 <a href="https://moonlight-stream.org/" rel="nofollow">Moonlight 官网</a> 或各大应用商店（如 App Store, Google Play）。</p>
+</li>
+<li>
+<p>根据你的接收端设备系统，下载并安装对应的客户端。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>搜索主机：</strong></p>
+<ul>
+<li>
+<p>确保接收端和游戏主机连接在<strong>同一个路由器或局域网的网络</strong>下。</p>
+</li>
+<li>
+<p>打开 Moonlight 客户端（这里演示为手机端，其他同理），它通常会自动扫描局域网内可用的串流主机，但是只会自动扫描默认的<code class="notranslate">47990</code>端口，如果我们进行了自定义操作则需要手动添加你的设备例<code class="notranslate">10.x.x.x:5777</code>。<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e5d4e8ee7c3fba6ede48a8349a06dfc1aafdd6d27bf1bb5e51006a43e2ffbfd9/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032362f30332f39326666623633636466643636373230316638303561303039626339396331372e6a7067"><img src="https://camo.githubusercontent.com/e5d4e8ee7c3fba6ede48a8349a06dfc1aafdd6d27bf1bb5e51006a43e2ffbfd9/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032362f30332f39326666623633636466643636373230316638303561303039626339396331372e6a7067" alt="moonlight连接界面" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2026/03/92ffb63cdfd667201f805a009bc99c17.jpg" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>如果你看到一个带有锁图标的电脑（你的游戏主机名称），说明扫描成功。</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>💡 提示：</strong> 如果没有自动扫描到，可以点击 Moonlight 界面右上角的 <code class="notranslate">+</code> 号，手动输入被控主机的局域网 IPv4 地址（在被控主机上打开 CMD，输入 <code class="notranslate">ipconfig</code> 查看）。</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h2>🔗 第三步：配对与连接</h2>
+<ol>
+<li>
+<p><strong>发起配对：</strong></p>
+<ul>
+<li>
+<p>在 Moonlight 客户端中，点击扫描到的那台电脑图标。</p>
+</li>
+<li>
+<p>此时，Moonlight 屏幕上会弹出一个 <strong>4位数的 PIN 码</strong>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>在 Sunshine 中输入 PIN 码：</strong></p>
+<ul>
+<li>
+<p>回到游戏主机，打开浏览器进入 Sunshine 的 Web 后台 (<code class="notranslate">https://localhost:xxxx</code>)。</p>
+</li>
+<li>
+<p>点击顶部导航栏的 <strong>PIN</strong> 选项卡。</p>
+</li>
+<li>
+<p>输入 Moonlight 上显示的 4 位 PIN 码，按回车或点击确认。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>配对成功：</strong></p>
+<ul>
+<li>
+<p>配对成功后，Moonlight 上的电脑图标上的锁会消失。</p>
+</li>
+<li>
+<p>点击该电脑，你就能看到默认配置的串流选项（如 <code class="notranslate">Desktop</code> 桌面，或 <code class="notranslate">Steam Big Picture</code> 模式）。</p>
+</li>
+<li>
+<p>点击 <code class="notranslate">Desktop</code>，你现在应该已经能在控制端看到游戏主机的桌面，并可以滑动屏幕/使用鼠标控制了！</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>第四步：进阶设置 (优化)</h2>
+<h3>1. Moonlight 客户端画质与延迟优化</h3>
+<p>在 Moonlight 的设置（齿轮图标）中，建议根据网络情况进行调整：</p>
+<ul>
+<li>
+<p><strong>分辨率与帧率</strong>：手机/平板建议 <code class="notranslate">1080P 60FPS</code>，大屏电视建议 <code class="notranslate">4K 60FPS</code>（需网络良好）。</p>
+</li>
+<li>
+<p><strong>视频码率 (Bitrate)</strong>：</p>
+<ul>
+<li>
+<p>1080P 建议设置在 <code class="notranslate">20 - 30 Mbps</code>。</p>
+</li>
+<li>
+<p>4K 建议设置在 <code class="notranslate">50 - 80 Mbps</code>。</p>
+</li>
+<li>
+<p>如果画面卡顿或出现马赛克，请<strong>降低</strong>码率；如果网络极佳且追求画质，可以适当调高。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>视频解码器</strong>：建议勾选“自动选择”或强制开启“HEVC (H.265)”，以获得更低的带宽占用。</p>
+</li>
+</ul>
+<hr>
+<h2>❓ 常见问题排查</h2>
+<ul>
+<li>
+<p><strong>路由器掉网封禁5分钟提示被多设备共享网络</strong></p>
+<ul>
+<li>这里推荐使用OpenWrt路由器系统并刷入ua3f固件包拦截路由器设备下的ua字头[UA3F 与 Clash 从零开始的部署教程]，拦截效果如图所示<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/0be0a80761ceb2d56a3bf8fdd2b02ba71b23f382b721acb02311febc3b8f164f/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032362f30332f31373233306666333131626234633330613164313139303532306432363163652e706e67"><img src="https://camo.githubusercontent.com/0be0a80761ceb2d56a3bf8fdd2b02ba71b23f382b721acb02311febc3b8f164f/687474703a2f2f3173312e63633a383038302f77702d636f6e74656e742f75706c6f6164732f323032362f30332f31373233306666333131626234633330613164313139303532306432363163652e706e67" alt="ua拦截效果图" data-canonical-src="http://1s1.cc:8080/wp-content/uploads/2026/03/17230ff311bb4c30a1d1190520d261ce.png" style="max-width: 100%;"></a></li>
+</ul>
+</li>
+<li>
+<p><strong>Moonlight 连不上 / 找不到主机？</strong></p>
+<ul>
+<li>
+<p>检查防火墙：确保 Windows Defender 防火墙允许 Sunshine 通过。你可以尝试临时关闭防火墙测试是否是此原因。</p>
+</li>
+<li>
+<p>确认网络：检查两台设备是否在同一个局域网的同一网段下。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>串流没有声音？</strong></p>
+<ul>
+<li>检查 Sunshine Web UI 的 <code class="notranslate">Configuration -&gt; Audio</code> 设置，确保选择的是正确的音频输出设备（Virtual Audio Sink）。</li>
+</ul>
+</li>
+<li>
+<p><strong>画面发灰 / 颜色泛白？</strong></p>
+<ul>
+<li>如果你开启了 HDR 但客户端屏幕不支持，画面会发灰。请在 Windows 设置中关闭 HDR，或在 Moonlight 中关闭 HDR 串流请求。</li>
+</ul>
+</li>
+</ul></div>
+<div style="font-size:small;margin-top:8px;float:right;">🤞转载请注明出处🤞</div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://hmho000.github.io">Kj的Blog</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","hmho000/hmho000.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+<script src='https://blog.meekdai.com/Gmeek/plugins/articletoc.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script><script src='https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js'></script>
+
+</html>
