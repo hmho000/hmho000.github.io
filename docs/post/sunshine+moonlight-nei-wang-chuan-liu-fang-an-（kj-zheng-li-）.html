@@ -262,6 +262,29 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p><strong>视频解码器</strong>：建议勾选“自动选择”或强制开启“HEVC (H.265)”，以获得更低的带宽占用。</p>
 </li>
 </ul>
+<h2>其他方案（未测试<g-emoji class="g-emoji" alias="warning">⚠️</g-emoji>）</h2>
+<p><strong>虚拟局域网神器（Tailscale 或 ZeroTier）</strong></p>
+<p>这是目前串流玩家用得最多的方案。它们能在你的“宿舍电脑”和“教学楼电脑”之间，强制打通一条基于 WireGuard 协议的 P2P 专属加密隧道。</p>
+<p><strong>原理：</strong> 软件会在两台电脑上各生成一个虚拟网卡和一个固定的虚拟 IP（比如 <code class="notranslate">100.x.x.x</code>）。只要两台电脑都联网，它们就会互相寻找对方并尝试 UDP 打洞穿透。一旦穿透成功，就是完全无视路由器的 P2P 直连，延迟极低。</p>
+<p><strong>具体操作步骤（以 Tailscale 为例）：</strong></p>
+<ol>
+<li>
+<p><strong>注册与安装</strong>：去 Tailscale 官网注册个账号。在宿舍电脑和教学楼电脑上，分别下载并安装 Tailscale 客户端。</p>
+</li>
+<li>
+<p><strong>登录</strong>：两边都用同一个账号登录。</p>
+</li>
+<li>
+<p><strong>获取虚拟 IP</strong>：打开 Tailscale 的面板，你会看到两台电脑都在列表里，并且各自拥有一个 <code class="notranslate">100.</code> 开头的 IP 地址。</p>
+</li>
+<li>
+<p><strong>Moonlight 连接</strong>：在宿舍电脑打开 Moonlight，点击右上角添加电脑，<strong>直接输入教学楼电脑那个 <code class="notranslate">100.</code> 开头的 Tailscale IP</strong>。</p>
+</li>
+<li>
+<p><strong>搞定！</strong> 只要穿透成功，画面瞬间出来，根本不需要管 TP-LINK 路由器里设置了什么，也不需要管校园网怎么拦截端口。</p>
+</li>
+</ol>
+<p><em>注意：即便用这个方案，教学楼电脑的 Windows 防火墙依然需要放行 Sunshine 程序（或者临时关掉防火墙）。</em></p>
 <hr>
 <h2>❓ 常见问题排查</h2>
 <ul>
